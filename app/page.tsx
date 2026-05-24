@@ -41,8 +41,8 @@ export default function HomePage() {
         {/* Right photo */}
         <div className="relative flex-1">
           <HeroImage
-            src="https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?w=1400&q=80"
-            alt="Mediterranean village"
+            src="/hero-beynac.jpg"
+            alt="Beynac-et-Cazenac, Dordogne"
             className="absolute inset-0"
             priority
           />
