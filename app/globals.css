@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background-color: #F7F5F1;
+    color: #163A70;
+  }
+
+  /* Leaflet tooltip override */
+  .leaflet-tooltip.village-tooltip {
+    font-family: var(--font-cormorant), Georgia, serif;
+    font-style: italic;
+    font-size: 12px;
+    color: #163A70;
+    background: rgba(247, 245, 241, 0.95);
+    border: 1px solid #DCC9A3;
+    border-radius: 2px;
+    padding: 3px 8px;
+    box-shadow: 0 2px 8px rgba(22, 58, 112, 0.1);
+  }
+
+  .leaflet-tooltip.village-tooltip::before {
+    border-top-color: #DCC9A3;
+  }
+}
+
+@media print {
+  .no-print { display: none !important; }
+  .print-break { page-break-before: always; }
+}
