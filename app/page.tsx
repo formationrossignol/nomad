@@ -76,7 +76,7 @@ export default function HomePage() {
             Design a Journey
           </h2>
           <span className="font-inter text-[9px] tracking-[0.15em] uppercase text-champagne border-b border-champagne/50 pb-0.5 w-fit relative z-10 group-hover:border-champagne transition-colors duration-200">
-            Create →
+            Create <span aria-hidden="true">→</span>
           </span>
         </Link>
 
@@ -89,7 +89,7 @@ export default function HomePage() {
             184 Villages of France
           </h2>
           <span className="font-inter text-[9px] tracking-[0.15em] uppercase text-deep-blue border-b border-deep-blue/40 pb-0.5 w-fit group-hover:border-deep-blue transition-colors duration-200">
-            Explore map →
+            Explore map <span aria-hidden="true">→</span>
           </span>
         </Link>
 
@@ -102,7 +102,7 @@ export default function HomePage() {
             Plan an Itinerary
           </h2>
           <span className="font-inter text-[9px] tracking-[0.15em] uppercase text-deep-blue border-b border-deep-blue/40 pb-0.5 w-fit group-hover:border-deep-blue transition-colors duration-200">
-            Generate route →
+            Generate route <span aria-hidden="true">→</span>
           </span>
         </Link>
       </section>
