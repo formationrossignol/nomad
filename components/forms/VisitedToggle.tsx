@@ -10,6 +10,7 @@ export function VisitedToggle({ isVisited, onToggle }: VisitedToggleProps) {
   return (
     <motion.button
       onClick={onToggle}
+      aria-pressed={isVisited}
       whileTap={{ scale: 0.97 }}
       className={`flex items-center gap-3 px-5 py-2.5 border transition-all duration-300 font-inter text-[9px] tracking-[0.18em] uppercase ${
         isVisited

@@ -16,19 +16,19 @@ interface Props {
 export default function VillageDetailPage({ params }: Props) {
   const { slug } = use(params)
   const village = getVillageBySlug(slug)
-  if (!village) notFound()
-
-  const nearby = getNearbyVillages(village!, 4)
   const { visitedSlugs, getVisitedRecord, toggleVisited } = useVisited()
   const [note, setNote] = useState('')
   const [noteSaved, setNoteSaved] = useState(false)
 
-  const visitedRecord = getVisitedRecord(village.slug)
-  const isVisited = visitedSlugs.has(village.slug)
+  const visitedRecord = village ? getVisitedRecord(village.slug) : null
+  const isVisited = village ? visitedSlugs.has(village.slug) : false
+  const nearby = village ? getNearbyVillages(village, 4) : []
 
   useEffect(() => {
     if (visitedRecord?.personal_note) setNote(visitedRecord.personal_note)
   }, [visitedRecord])
+
+  if (!village) notFound()
 
   async function saveNote() {
     await supabase
