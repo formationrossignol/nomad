@@ -10,7 +10,7 @@ create table journeys (
 
 create table memories (
   id            uuid primary key default gen_random_uuid(),
-  journey_id    uuid references journeys(id) on delete cascade,
+  journey_id    uuid not null references journeys(id) on delete cascade,
   title         text,
   body          text,
   location_name text,
@@ -21,7 +21,7 @@ create table memories (
 
 create table memory_photos (
   id           uuid primary key default gen_random_uuid(),
-  memory_id    uuid references memories(id) on delete cascade,
+  memory_id    uuid not null references memories(id) on delete cascade,
   storage_url  text not null,
   caption      text,
   sort_order   integer default 0
@@ -39,7 +39,7 @@ create table itineraries (
   id            uuid primary key default gen_random_uuid(),
   title         text,
   days          integer,
-  pace          text,
+  pace          text check (pace in ('slow', 'moderate', 'intensive')),
   style         text[],
   village_slugs text[],
   created_at    timestamptz default now()
