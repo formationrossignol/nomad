@@ -19,6 +19,11 @@ describe('generateItinerary', () => {
     result.days.forEach(day => expect(day.stops.length).toBeLessThanOrEqual(3))
   })
 
+  it('respects pace: intensive=4 villages/day', () => {
+    const result = generateItinerary(villages, { days: 1, styles: [], pace: 'intensive' })
+    result.days.forEach(day => expect(day.stops.length).toBeLessThanOrEqual(4))
+  })
+
   it('filters by style tags', () => {
     const result = generateItinerary(villages, { days: 2, styles: ['wine'], pace: 'moderate' })
     result.days.flatMap(d => d.stops).forEach(stop => {
