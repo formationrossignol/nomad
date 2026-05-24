@@ -1,0 +1,112 @@
+[
+  {
+    "slug": "gordes",
+    "name": "Gordes",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "department": "Vaucluse",
+    "lat": 43.9117,
+    "lng": 5.2011,
+    "description": "Perched dramatically on a rocky hilltop in the Luberon, Gordes is one of the most photographed villages in France. Its terraced stone houses cascade down the cliff face, lit gold in the late afternoon sun.",
+    "tags": ["provence", "medieval", "photography", "gastronomy", "hidden"],
+    "heroImage": "https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?w=1200&q=80"
+  },
+  {
+    "slug": "les-baux-de-provence",
+    "name": "Les Baux-de-Provence",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "department": "Bouches-du-Rhône",
+    "lat": 43.7443,
+    "lng": 4.7948,
+    "description": "A medieval citadel rising from the limestone Alpilles, Les Baux commands sweeping views across olive groves and vineyards. Its ruined castle and Renaissance hôtels particuliers make it feel frozen in the 16th century.",
+    "tags": ["provence", "medieval", "wine", "photography", "architectural"],
+    "heroImage": "https://images.unsplash.com/photo-1499678329028-101435549a4e?w=1200&q=80"
+  },
+  {
+    "slug": "eguisheim",
+    "name": "Eguisheim",
+    "region": "Grand Est",
+    "department": "Haut-Rhin",
+    "lat": 48.0430,
+    "lng": 7.3073,
+    "description": "Eguisheim is a perfectly preserved medieval village built in concentric circles around its octagonal castle. Half-timbered houses painted in ochre, rose and pale blue line cobblestone streets.",
+    "tags": ["alsace", "wine", "medieval", "gastronomy", "photography"],
+    "heroImage": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&q=80"
+  },
+  {
+    "slug": "rocamadour",
+    "name": "Rocamadour",
+    "region": "Occitanie",
+    "department": "Lot",
+    "lat": 44.7989,
+    "lng": 1.6183,
+    "description": "Built vertically into a sheer cliff face above the Alzou canyon, Rocamadour defies gravity. A medieval pilgrimage site, its sanctuaries and carved stone stairs create one of France's most dramatic architectural silhouettes.",
+    "tags": ["medieval", "architectural", "hidden", "photography"],
+    "heroImage": "https://images.unsplash.com/photo-1520466809213-7b9a56adcd45?w=1200&q=80"
+  },
+  {
+    "slug": "la-roque-gageac",
+    "name": "La Roque-Gageac",
+    "region": "Nouvelle-Aquitaine",
+    "department": "Dordogne",
+    "lat": 44.8288,
+    "lng": 1.1916,
+    "description": "Nestled between a golden limestone cliff and the Dordogne river, La Roque-Gageac is one of France's most beautiful villages. Its troglodyte fort and the slow rhythm of the river give it a timeless quality.",
+    "tags": ["dordogne", "medieval", "gastronomy", "photography", "hidden"],
+    "heroImage": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=1200&q=80"
+  },
+  {
+    "slug": "vezelay",
+    "name": "Vézelay",
+    "region": "Bourgogne-Franche-Comté",
+    "department": "Yonne",
+    "lat": 47.4647,
+    "lng": 3.7453,
+    "description": "Crowned by a UNESCO-listed Romanesque basilica, Vézelay sits atop a hill above the Cure valley. The village is a starting point for the pilgrimage to Santiago de Compostela and exudes quiet spiritual beauty.",
+    "tags": ["medieval", "architectural", "wine", "gastronomy", "hidden"],
+    "heroImage": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1200&q=80"
+  },
+  {
+    "slug": "locronan",
+    "name": "Locronan",
+    "region": "Bretagne",
+    "department": "Finistère",
+    "lat": 48.0986,
+    "lng": -4.2093,
+    "description": "Locronan's Renaissance granite square is so perfectly preserved that it regularly doubles as a film set. The village's grey stone architecture and misty Atlantic light create an otherworldly atmosphere.",
+    "tags": ["bretagne", "medieval", "architectural", "photography", "hidden"],
+    "heroImage": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&q=80"
+  },
+  {
+    "slug": "saint-cirq-lapopie",
+    "name": "Saint-Cirq-Lapopie",
+    "region": "Occitanie",
+    "department": "Lot",
+    "lat": 44.4648,
+    "lng": 1.6686,
+    "description": "Hanging above a bend in the Lot river, Saint-Cirq-Lapopie is a village of medieval houses and craftsmen's workshops clinging to a promontory 100m above the valley. André Breton called it 'the impossible'.",
+    "tags": ["medieval", "hidden", "photography", "gastronomy"],
+    "heroImage": "https://images.unsplash.com/photo-1533587851505-d119e13fa0d7?w=1200&q=80"
+  },
+  {
+    "slug": "riquewihr",
+    "name": "Riquewihr",
+    "region": "Grand Est",
+    "department": "Haut-Rhin",
+    "lat": 48.1668,
+    "lng": 7.2954,
+    "description": "One of the wine capitals of Alsace, Riquewihr is encircled by 16th-century ramparts and filled with Renaissance half-timbered houses. Its vineyards produce some of France's finest Rieslings.",
+    "tags": ["alsace", "wine", "medieval", "gastronomy"],
+    "heroImage": "https://images.unsplash.com/photo-1597757212040-6f0e3eff0d3b?w=1200&q=80"
+  },
+  {
+    "slug": "beynac-et-cazenac",
+    "name": "Beynac-et-Cazenac",
+    "region": "Nouvelle-Aquitaine",
+    "department": "Dordogne",
+    "lat": 44.8282,
+    "lng": 1.1509,
+    "description": "A medieval castle perches impossibly on a sheer cliff above the Dordogne valley at Beynac. The village below, with its stone houses and riverside views, was fought over by English and French kings for centuries.",
+    "tags": ["dordogne", "medieval", "architectural", "photography"],
+    "heroImage": "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=1200&q=80"
+  }
+]
