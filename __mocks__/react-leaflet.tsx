@@ -16,3 +16,4 @@ export const CircleMarker = ({ children }: { children?: React.ReactNode }) => (
 export const Tooltip = ({ children }: { children?: React.ReactNode }) => (
   <div data-testid="tooltip">{children}</div>
 )
+export const useMapEvents = (handlers: Record<string, (e: unknown) => void>) => null
