@@ -47,11 +47,13 @@ export interface VisitedVillage {
   personal_note: string | null
 }
 
+export type TravelPace = 'slow' | 'moderate' | 'intensive'
+
 export interface Itinerary {
   id: string
   title: string | null
   days: number | null
-  pace: 'slow' | 'moderate' | 'intensive' | null
+  pace: TravelPace | null
   style: string[]
   village_slugs: string[]
   created_at: string
@@ -78,6 +80,6 @@ export interface ItineraryInput {
   days: number
   region?: string
   styles: string[]
-  pace: 'slow' | 'moderate' | 'intensive'
+  pace: TravelPace
   excludeVisited?: string[]
 }
