@@ -1,5 +1,5 @@
 'use client'
-import { useState, use } from 'react'
+import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import dynamic from 'next/dynamic'
 import { PageTransition } from '@/components/layout/PageTransition'
@@ -13,11 +13,11 @@ const LocationPicker = dynamic(() => import('@/components/forms/LocationPicker')
 })
 
 interface Props {
-  params: Promise<{ id: string }>
+  params: { id: string }
 }
 
 export default function NewMemoryPage({ params }: Props) {
-  const { id: journeyId } = use(params)
+  const { id: journeyId } = params
   const router = useRouter()
   const [title, setTitle] = useState('')
   const [body, setBody] = useState('')

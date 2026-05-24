@@ -1,5 +1,5 @@
 'use client'
-import { use, useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { notFound } from 'next/navigation'
 import { HeroImage } from '@/components/ui/HeroImage'
 import { VillageCard } from '@/components/village/VillageCard'
@@ -10,11 +10,11 @@ import { getVillageBySlug, getNearbyVillages } from '@/lib/villages'
 import { supabase } from '@/lib/supabase/client'
 
 interface Props {
-  params: Promise<{ slug: string }>
+  params: { slug: string }
 }
 
 export default function VillageDetailPage({ params }: Props) {
-  const { slug } = use(params)
+  const { slug } = params
   const village = getVillageBySlug(slug)
   const { visitedSlugs, getVisitedRecord, toggleVisited } = useVisited()
   const [note, setNote] = useState('')

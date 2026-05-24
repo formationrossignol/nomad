@@ -10,11 +10,11 @@ import type { Journey, Memory } from '@/types'
 export const dynamic = 'force-dynamic'
 
 interface Props {
-  params: Promise<{ id: string }>
+  params: { id: string }
 }
 
 export default async function JourneyDetailPage({ params }: Props) {
-  const { id } = await params
+  const { id } = params
   const supabase = createSupabaseServerClient()
 
   const [{ data: journey }, { data: memories }] = await Promise.all([

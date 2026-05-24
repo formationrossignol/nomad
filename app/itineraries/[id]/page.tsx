@@ -10,13 +10,13 @@ import type { Itinerary } from '@/types'
 export const dynamic = 'force-dynamic'
 
 interface Props {
-  params: Promise<{ id: string }>
+  params: { id: string }
 }
 
 const VILLAGES_PER_DAY = { slow: 2, moderate: 3, intensive: 4 }
 
 export default async function ItineraryDetailPage({ params }: Props) {
-  const { id } = await params
+  const { id } = params
   const supabase = createSupabaseServerClient()
   const { data } = await supabase.from('itineraries').select('*').eq('id', id).single()
   if (!data) notFound()
