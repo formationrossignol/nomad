@@ -1,7 +1,15 @@
+import React from 'react'
 import { render, screen } from '@testing-library/react'
 import { NavBar } from './NavBar'
 
-jest.mock('next/navigation', () => ({ usePathname: () => '/' }))
+jest.mock('framer-motion', () => ({
+  motion: {
+    div: ({ children, style, className }: React.HTMLAttributes<HTMLDivElement>) =>
+      React.createElement('div', { style, className }, children),
+  },
+  useScroll: () => ({ scrollY: { get: () => 0 } }),
+  useTransform: () => 0,
+}))
 
 describe('NavBar', () => {
   it('renders the Voyages logo link', () => {

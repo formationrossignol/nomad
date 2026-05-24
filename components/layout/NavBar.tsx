@@ -18,22 +18,22 @@ export function NavBar() {
       >
         Voyages
       </Link>
-      <nav className="relative z-10 flex gap-7 items-center">
+      <nav aria-label="Site navigation" className="relative z-10 flex gap-7 items-center">
         <Link
           href="/villages"
-          className="font-inter text-[9px] tracking-[0.2em] uppercase text-ivory/70 hover:text-ivory transition-colors duration-200"
+          className="font-inter text-[9px] tracking-[0.2em] uppercase text-ivory/70 hover:text-ivory focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ivory/60 transition-colors duration-200"
         >
           Villages
         </Link>
         <Link
           href="/journeys"
-          className="font-inter text-[9px] tracking-[0.2em] uppercase text-ivory/70 hover:text-ivory transition-colors duration-200"
+          className="font-inter text-[9px] tracking-[0.2em] uppercase text-ivory/70 hover:text-ivory focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ivory/60 transition-colors duration-200"
         >
           Journeys
         </Link>
         <Link
           href="/itineraries"
-          className="font-inter text-[9px] tracking-[0.2em] uppercase text-ivory/70 hover:text-ivory transition-colors duration-200"
+          className="font-inter text-[9px] tracking-[0.2em] uppercase text-ivory/70 hover:text-ivory focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ivory/60 transition-colors duration-200"
         >
           Itineraries
         </Link>
