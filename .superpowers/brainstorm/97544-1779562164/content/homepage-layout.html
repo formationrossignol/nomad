@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Homepage Layout — Voyages</title>
+<script src="../state/../../../../../../../.claude/plugins/cache/superpowers-marketplace/superpowers/5.0.7/skills/brainstorming/scripts/helper.js" defer></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #0D1B2A;
+    color: #F7F5F1;
+    font-family: 'Georgia', serif;
+    padding: 32px 24px 60px;
+  }
+
+  .page-title {
+    font-family: 'Georgia', serif;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #D6C3A5;
+    margin-bottom: 8px;
+  }
+
+  .page-subtitle {
+    font-size: 28px;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    color: #F7F5F1;
+    margin-bottom: 10px;
+    font-weight: 400;
+  }
+
+  .page-desc {
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    color: #8A9BAE;
+    margin-bottom: 40px;
+    letter-spacing: 0.02em;
+  }
+
+  /* Layout cards container */
+  .layouts {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .layout-card {
+    border: 1.5px solid #1F4EA3;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.25s, box-shadow 0.25s;
+    background: #0D1B2A;
+  }
+
+  .layout-card:hover {
+    border-color: #D6C3A5;
+    box-shadow: 0 0 0 1px #D6C3A510, 0 8px 40px #00000060;
+  }
+
+  .layout-card.selected {
+    border-color: #D6C3A5;
+    box-shadow: 0 0 0 2px #D6C3A530, 0 12px 50px #00000070;
+  }
+
+  .layout-label {
+    padding: 14px 20px;
+    background: #163A70;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border-bottom: 1px solid #1F4EA3;
+  }
+
+  .layout-letter {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #D6C3A5;
+    color: #0D1B2A;
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.05em;
+    flex-shrink: 0;
+  }
+
+  .layout-name {
+    font-family: 'Georgia', serif;
+    font-size: 15px;
+    font-style: italic;
+    color: #F7F5F1;
+    flex: 1;
+  }
+
+  .layout-tag {
+    font-family: 'Arial', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #8A9BAE;
+  }
+
+  /* ======= MOCKUP STYLES ======= */
+
+  .mockup-wrap {
+    padding: 20px;
+    background: #F7F5F1;
+  }
+
+  /* STRIPES utility */
+  .stripes-v {
+    background-image: repeating-linear-gradient(
+      90deg,
+      #163A70 0px,
+      #163A70 3px,
+      #F7F5F1 3px,
+      #F7F5F1 18px
+    );
+  }
+
+  /* === LAYOUT A: Full-screen centered cinematic === */
+  .hero-a {
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(160deg, #163A70 0%, #0D1B2A 60%, #234A6B 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-a .stripe-overlay {
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+      90deg,
+      rgba(22,58,112,0.55) 0px,
+      rgba(22,58,112,0.55) 3px,
+      transparent 3px,
+      transparent 22px
+    );
+    z-index: 1;
+  }
+
+  .hero-a .photo-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(160deg, #234A6B 0%, #163A70 40%, #0D1B2A 100%);
+    opacity: 0.7;
+    /* Simulating a coastal photo with gradient */
+    background: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=60') center/cover no-repeat;
+  }
+
+  .hero-a .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(13,27,42,0.45) 0%, rgba(13,27,42,0.72) 100%);
+    z-index: 2;
+  }
+
+  .hero-a .content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+  }
+
+  .hero-a .eyebrow {
+    font-family: 'Arial', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: #D6C3A5;
+    margin-bottom: 14px;
+  }
+
+  .hero-a .headline {
+    font-family: 'Georgia', serif;
+    font-size: 38px;
+    font-weight: 400;
+    font-style: italic;
+    color: #F7F5F1;
+    line-height: 1.1;
+    margin-bottom: 18px;
+    letter-spacing: -0.01em;
+  }
+
+  .hero-a .sub {
+    font-family: 'Arial', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #D6C3A5;
+  }
+
+  .hero-a .cta {
+    margin-top: 24px;
+    display: inline-block;
+    border: 1px solid #D6C3A5;
+    color: #D6C3A5;
+    font-family: 'Arial', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 9px 22px;
+  }
+
+  /* Nav bar mockup */
+  .nav-mock {
+    height: 44px;
+    background: rgba(13,27,42,0.96);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    border-bottom: 1px solid #1F4EA330;
+  }
+
+  .nav-logo {
+    font-family: 'Georgia', serif;
+    font-size: 13px;
+    font-style: italic;
+    letter-spacing: 0.12em;
+    color: #F7F5F1;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 22px;
+    font-family: 'Arial', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #8A9BAE;
+  }
+
+  /* Below-hero blocks mockup */
+  .below-hero-a {
+    background: #F7F5F1;
+    padding: 22px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .feature-block {
+    height: 80px;
+    border: 1px solid #DCC9A360;
+    background: white;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .feature-block.blue {
+    background: #163A70;
+  }
+
+  .feature-block .block-stripe {
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+      90deg,
+      rgba(255,255,255,0.06) 0px,
+      rgba(255,255,255,0.06) 2px,
+      transparent 2px,
+      transparent 14px
+    );
+  }
+
+  .feature-block-label {
+    font-family: 'Georgia', serif;
+    font-size: 11px;
+    font-style: italic;
+    color: #F7F5F1;
+    position: relative;
+    z-index: 1;
+  }
+
+  .feature-block-label.dark {
+    color: #163A70;
+  }
+
+  /* === LAYOUT B: Split hero === */
+  .hero-b {
+    height: 280px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+  }
+
+  .hero-b-left {
+    background: #F7F5F1;
+    padding: 30px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid #DCC9A3;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-b-stripes {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: repeating-linear-gradient(
+      90deg,
+      #163A7008 0px,
+      #163A7008 3px,
+      transparent 3px,
+      transparent 20px
+    );
+  }
+
+  .hero-b-left .eyebrow {
+    font-family: 'Arial', sans-serif;
+    font-size: 8px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #8A9BAE;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-b-left .headline {
+    font-family: 'Georgia', serif;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: italic;
+    color: #163A70;
+    line-height: 1.15;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-b-left .cta {
+    display: inline-block;
+    background: #163A70;
+    color: #F7F5F1;
+    font-family: 'Arial', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 9px 18px;
+    position: relative;
+    z-index: 1;
+    width: fit-content;
+  }
+
+  .hero-b-right {
+    position: relative;
+    overflow: hidden;
+    background: url('https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?w=600&q=60') center/cover no-repeat;
+  }
+
+  .hero-b-right-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(13,27,42,0.15) 0%, transparent 50%);
+  }
+
+  .hero-b-caption {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    font-family: 'Arial', sans-serif;
+    font-size: 8px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #F7F5F180;
+  }
+
+  /* Below B */
+  .below-hero-b {
+    background: #F7F5F1;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 0;
+    border-top: 1px solid #DCC9A360;
+  }
+
+  .b-block {
+    height: 70px;
+    border-right: 1px solid #DCC9A360;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 4px;
+  }
+
+  .b-block.dark {
+    background: #163A70;
+  }
+
+  .b-block-num {
+    font-family: 'Georgia', serif;
+    font-size: 22px;
+    font-style: italic;
+    color: #D6C3A5;
+    line-height: 1;
+  }
+
+  .b-block-label {
+    font-family: 'Arial', sans-serif;
+    font-size: 8px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #8A9BAE;
+  }
+
+  .b-block-label.light {
+    color: #F7F5F160;
+  }
+
+  /* === LAYOUT C: Asymmetric oversized === */
+  .hero-c {
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+    background: #F7F5F1;
+  }
+
+  .hero-c-photo {
+    position: absolute;
+    top: 0; right: 0;
+    width: 70%;
+    bottom: 0;
+    background: url('https://images.unsplash.com/photo-1499678329028-101435549a4e?w=700&q=60') center/cover no-repeat;
+  }
+
+  .hero-c-photo-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #F7F5F1 0%, #F7F5F100 40%);
+  }
+
+  .hero-c-stripes {
+    position: absolute;
+    top: 0; left: 0;
+    width: 38%;
+    bottom: 0;
+    background-image: repeating-linear-gradient(
+      90deg,
+      #163A70 0px,
+      #163A70 2px,
+      #F7F5F1 2px,
+      #F7F5F1 16px
+    );
+    opacity: 0.12;
+  }
+
+  .hero-c-content {
+    position: absolute;
+    top: 0; left: 0;
+    width: 42%;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 28px 24px;
+    z-index: 2;
+  }
+
+  .hero-c-eyebrow {
+    font-family: 'Arial', sans-serif;
+    font-size: 8px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #8A9BAE;
+    margin-bottom: 14px;
+  }
+
+  .hero-c-headline {
+    font-family: 'Georgia', serif;
+    font-size: 28px;
+    font-weight: 400;
+    font-style: italic;
+    color: #163A70;
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
+
+  .hero-c-rule {
+    width: 32px;
+    height: 1px;
+    background: #D6C3A5;
+    margin-bottom: 16px;
+  }
+
+  .hero-c-sub {
+    font-family: 'Arial', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    color: #8A9BAE;
+    line-height: 1.6;
+    margin-bottom: 22px;
+  }
+
+  .hero-c-cta {
+    display: inline-block;
+    border-bottom: 1px solid #163A70;
+    color: #163A70;
+    font-family: 'Arial', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding-bottom: 3px;
+    width: fit-content;
+  }
+
+  .hero-c-badge {
+    position: absolute;
+    bottom: 20px;
+    right: 24px;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba(13,27,42,0.75);
+    border: 1px solid #D6C3A540;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+  }
+
+  .hero-c-badge-num {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    font-style: italic;
+    color: #D6C3A5;
+    line-height: 1;
+  }
+
+  .hero-c-badge-label {
+    font-family: 'Arial', sans-serif;
+    font-size: 6px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #8A9BAE;
+  }
+
+  /* Below C */
+  .below-hero-c {
+    background: #F7F5F1;
+    padding: 16px 20px;
+    display: flex;
+    gap: 12px;
+    border-top: 1px solid #DCC9A360;
+  }
+
+  .c-pill {
+    flex: 1;
+    height: 56px;
+    border: 1px solid #DCC9A3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Georgia', serif;
+    font-size: 11px;
+    font-style: italic;
+    color: #163A70;
+    background: white;
+  }
+
+  .c-pill.dark {
+    background: #163A70;
+    color: #F7F5F1;
+    border-color: #163A70;
+  }
+
+  /* Selection indicator */
+  .sel-indicator {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #163A70;
+    color: #D6C3A5;
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    padding: 10px 18px;
+    border: 1px solid #D6C3A540;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
+
+  .sel-indicator.visible {
+    opacity: 1;
+  }
+</style>
+</head>
+<body>
+
+<div style="max-width:960px;margin:0 auto;">
+  <p class="page-title">Homepage Layout — Voyages</p>
+  <p class="page-subtitle">Three approaches to the hero & opening structure</p>
+  <p class="page-desc">Click a layout to select it. All three use the same palette, typography, and stripe motif.</p>
+
+  <div class="layouts">
+
+    <!-- LAYOUT A -->
+    <div class="layout-card" data-choice="a" onclick="toggleSelect(this)">
+      <div class="layout-label">
+        <div class="layout-letter">A</div>
+        <div class="layout-name">Full-screen Cinematic</div>
+        <div class="layout-tag">Most immersive</div>
+      </div>
+      <div class="mockup-wrap" style="padding:0;">
+        <div class="nav-mock">
+          <div class="nav-logo">Voyages</div>
+          <div class="nav-links">
+            <span>Journeys</span>
+            <span>Villages</span>
+            <span>Itineraries</span>
+          </div>
+        </div>
+        <div class="hero-a">
+          <div class="photo-bg"></div>
+          <div class="stripe-overlay"></div>
+          <div class="overlay"></div>
+          <div class="content">
+            <div class="eyebrow">A private luxury world</div>
+            <div class="headline">Beautiful<br>Journeys</div>
+            <div class="sub">Mediterranean · France · Elsewhere</div>
+            <div class="cta">Begin Exploring</div>
+          </div>
+        </div>
+        <div class="below-hero-a">
+          <div class="feature-block blue">
+            <div class="block-stripe"></div>
+            <div class="feature-block-label">Design a Journey</div>
+          </div>
+          <div class="feature-block" style="background:#DCC9A3;">
+            <div class="feature-block-label dark">184 Villages</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LAYOUT B -->
+    <div class="layout-card" data-choice="b" onclick="toggleSelect(this)">
+      <div class="layout-label">
+        <div class="layout-letter">B</div>
+        <div class="layout-name">Editorial Split</div>
+        <div class="layout-tag">Most editorial</div>
+      </div>
+      <div class="mockup-wrap" style="padding:0;">
+        <div class="nav-mock">
+          <div class="nav-logo">Voyages</div>
+          <div class="nav-links">
+            <span>Journeys</span>
+            <span>Villages</span>
+            <span>Itineraries</span>
+          </div>
+        </div>
+        <div class="hero-b">
+          <div class="hero-b-left">
+            <div class="hero-b-stripes"></div>
+            <div class="hero-b-left eyebrow">A private luxury world</div>
+            <div class="hero-b-left headline">Beautiful<br>Journeys</div>
+            <div class="hero-b-left cta">Begin Exploring</div>
+          </div>
+          <div class="hero-b-right">
+            <div class="hero-b-right-overlay"></div>
+            <div class="hero-b-caption">Gordes · Provence</div>
+          </div>
+        </div>
+        <div class="below-hero-b">
+          <div class="b-block dark" style="position:relative;overflow:hidden;">
+            <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,0.05) 0px,rgba(255,255,255,0.05) 2px,transparent 2px,transparent 16px);"></div>
+            <div class="b-block-num">184</div>
+            <div class="b-block-label light">Most beautiful villages</div>
+          </div>
+          <div class="b-block">
+            <div class="b-block-num" style="color:#163A70;">12</div>
+            <div class="b-block-label">Journeys created</div>
+          </div>
+          <div class="b-block" style="border-right:none;">
+            <div class="b-block-num" style="color:#163A70;">∞</div>
+            <div class="b-block-label">Memories</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LAYOUT C -->
+    <div class="layout-card" data-choice="c" onclick="toggleSelect(this)">
+      <div class="layout-label">
+        <div class="layout-letter">C</div>
+        <div class="layout-name">Asymmetric Atlas</div>
+        <div class="layout-tag">Most distinctive</div>
+      </div>
+      <div class="mockup-wrap" style="padding:0;">
+        <div class="nav-mock">
+          <div class="nav-logo">Voyages</div>
+          <div class="nav-links">
+            <span>Journeys</span>
+            <span>Villages</span>
+            <span>Itineraries</span>
+          </div>
+        </div>
+        <div class="hero-c">
+          <div class="hero-c-photo">
+            <div class="hero-c-photo-overlay"></div>
+          </div>
+          <div class="hero-c-stripes"></div>
+          <div class="hero-c-content">
+            <div class="hero-c-eyebrow">A private luxury world</div>
+            <div class="hero-c-headline">Beautiful<br>Journeys</div>
+            <div class="hero-c-rule"></div>
+            <div class="hero-c-sub">A cinematic atlas of<br>Mediterranean travel</div>
+            <div class="hero-c-cta">Begin Exploring</div>
+          </div>
+          <div class="hero-c-badge">
+            <div class="hero-c-badge-num">184</div>
+            <div class="hero-c-badge-label">Villages</div>
+          </div>
+        </div>
+        <div class="below-hero-c">
+          <div class="c-pill dark">Design a Journey</div>
+          <div class="c-pill">Explore Villages</div>
+          <div class="c-pill">Plan an Itinerary</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="sel-indicator" id="selIndicator">Layout selected ✓</div>
+
+<script>
+function toggleSelect(el) {
+  document.querySelectorAll('.layout-card').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+  const ind = document.getElementById('selIndicator');
+  ind.classList.add('visible');
+  setTimeout(() => ind.classList.remove('visible'), 2000);
+
+  if (window.__recordChoice) {
+    window.__recordChoice(el.dataset.choice, 'Layout ' + el.dataset.choice.toUpperCase());
+  }
+}
+</script>
+
+</body>
+</html>

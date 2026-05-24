@@ -1,0 +1,27 @@
+{"type":"server-started","port":64880,"host":"127.0.0.1","url_host":"localhost","url":"http://localhost:64880","screen_dir":"/Users/loicrossignol/Desktop/vibecoding/voyages/.superpowers/brainstorm/97544-1779562164/content","state_dir":"/Users/loicrossignol/Desktop/vibecoding/voyages/.superpowers/brainstorm/97544-1779562164/state"}
+{"type":"screen-added","file":"/Users/loicrossignol/Desktop/vibecoding/voyages/.superpowers/brainstorm/97544-1779562164/content/homepage-layout.html"}
+{"type":"screen-updated","file":"/Users/loicrossignol/Desktop/vibecoding/voyages/.superpowers/brainstorm/97544-1779562164/content/homepage-layout.html"}
+{"type":"screen-updated","file":"/Users/loicrossignol/Desktop/vibecoding/voyages/.superpowers/brainstorm/97544-1779562164/content/homepage-layout.html"}
+{"type":"screen-updated","file":"/Users/loicrossignol/Desktop/vibecoding/voyages/.superpowers/brainstorm/97544-1779562164/content/homepage-layout.html"}
+{"type":"screen-updated","file":"/Users/loicrossignol/Desktop/vibecoding/voyages/.superpowers/brainstorm/97544-1779562164/content/homepage-layout.html"}
+{"source":"user-event","type":"click","text":"B\n        Editorial Split\n        Most editorial\n      \n      \n        \n          Voyages\n          \n            Journeys\n            Villages\n            Itineraries\n          \n        \n        \n          \n            \n            A private luxury world\n            BeautifulJourneys\n            Begin Exploring\n          \n          \n            \n            Gordes · Provence\n          \n        \n        \n          \n            \n            184\n            Most beautiful villages\n          \n          \n            12\n            Journeys created\n          \n          \n            ∞\n            Memories","choice":"b","id":null,"timestamp":1779562863442}
+{"source":"user-event","type":"click","text":"C\n        Asymmetric Atlas\n        Most distinctive\n      \n      \n        \n          Voyages\n          \n            Journeys\n            Villages\n            Itineraries\n          \n        \n        \n          \n            \n          \n          \n          \n            A private luxury world\n            BeautifulJourneys\n            \n            A cinematic atlas ofMediterranean travel\n            Begin Exploring\n          \n          \n            184\n            Villages\n          \n        \n        \n          Design a Journey\n          Explore Villages\n          Plan an Itinerary","choice":"c","id":null,"timestamp":1779562939582}
+{"type":"screen-added","file":"/Users/loicrossignol/Desktop/vibecoding/voyages/.superpowers/brainstorm/97544-1779562164/content/navigation-style.html"}
+{"type":"screen-updated","file":"/Users/loicrossignol/Desktop/vibecoding/voyages/.superpowers/brainstorm/97544-1779562164/content/navigation-style.html"}
+{"type":"screen-updated","file":"/Users/loicrossignol/Desktop/vibecoding/voyages/.superpowers/brainstorm/97544-1779562164/content/navigation-style.html"}
+{"type":"screen-updated","file":"/Users/loicrossignol/Desktop/vibecoding/voyages/.superpowers/brainstorm/97544-1779562164/content/navigation-style.html"}
+{"type":"screen-updated","file":"/Users/loicrossignol/Desktop/vibecoding/voyages/.superpowers/brainstorm/97544-1779562164/content/navigation-style.html"}
+{"type":"screen-added","file":"/Users/loicrossignol/Desktop/vibecoding/voyages/.superpowers/brainstorm/97544-1779562164/content/village-cards.html"}
+{"type":"screen-updated","file":"/Users/loicrossignol/Desktop/vibecoding/voyages/.superpowers/brainstorm/97544-1779562164/content/village-cards.html"}
+{"type":"screen-updated","file":"/Users/loicrossignol/Desktop/vibecoding/voyages/.superpowers/brainstorm/97544-1779562164/content/village-cards.html"}
+{"type":"screen-updated","file":"/Users/loicrossignol/Desktop/vibecoding/voyages/.superpowers/brainstorm/97544-1779562164/content/village-cards.html"}
+{"type":"screen-updated","file":"/Users/loicrossignol/Desktop/vibecoding/voyages/.superpowers/brainstorm/97544-1779562164/content/village-cards.html"}
+{"type":"screen-added","file":"/Users/loicrossignol/Desktop/vibecoding/voyages/.superpowers/brainstorm/97544-1779562164/content/map-aesthetic.html"}
+{"type":"screen-updated","file":"/Users/loicrossignol/Desktop/vibecoding/voyages/.superpowers/brainstorm/97544-1779562164/content/map-aesthetic.html"}
+{"type":"screen-updated","file":"/Users/loicrossignol/Desktop/vibecoding/voyages/.superpowers/brainstorm/97544-1779562164/content/map-aesthetic.html"}
+{"type":"screen-updated","file":"/Users/loicrossignol/Desktop/vibecoding/voyages/.superpowers/brainstorm/97544-1779562164/content/map-aesthetic.html"}
+{"type":"screen-added","file":"/Users/loicrossignol/Desktop/vibecoding/voyages/.superpowers/brainstorm/97544-1779562164/content/waiting.html"}
+{"type":"screen-updated","file":"/Users/loicrossignol/Desktop/vibecoding/voyages/.superpowers/brainstorm/97544-1779562164/content/waiting.html"}
+{"type":"screen-updated","file":"/Users/loicrossignol/Desktop/vibecoding/voyages/.superpowers/brainstorm/97544-1779562164/content/waiting.html"}
+{"type":"screen-updated","file":"/Users/loicrossignol/Desktop/vibecoding/voyages/.superpowers/brainstorm/97544-1779562164/content/waiting.html"}
+{"type":"server-stopped","reason":"idle timeout"}

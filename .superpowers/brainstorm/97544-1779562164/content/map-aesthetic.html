@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Map Aesthetic — Voyages</title>
+<script src="../state/../../../../../../../.claude/plugins/cache/superpowers-marketplace/superpowers/5.0.7/skills/brainstorming/scripts/helper.js" defer></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0D1B2A; color: #F7F5F1;
+    font-family: 'Georgia', serif;
+    padding: 32px 24px 80px;
+  }
+  .page-title {
+    font-family: 'Arial', sans-serif; font-size: 11px;
+    letter-spacing: 0.22em; text-transform: uppercase; color: #D6C3A5; margin-bottom: 8px;
+  }
+  .page-subtitle {
+    font-size: 26px; font-family: 'Georgia', serif; font-style: italic;
+    color: #F7F5F1; margin-bottom: 8px; font-weight: 400;
+  }
+  .page-desc {
+    font-family: 'Arial', sans-serif; font-size: 12px;
+    color: #8A9BAE; margin-bottom: 36px;
+  }
+
+  .option-block {
+    border: 1.5px solid #1F4EA3; border-radius: 3px; overflow: hidden;
+    cursor: pointer; transition: border-color 0.25s, box-shadow 0.25s;
+    margin-bottom: 24px; max-width: 900px; margin-left: auto; margin-right: auto;
+  }
+  .option-block:hover { border-color: #D6C3A5; box-shadow: 0 8px 40px #00000060; }
+  .option-block.selected { border-color: #D6C3A5; box-shadow: 0 0 0 2px #D6C3A530; }
+  .option-label {
+    padding: 12px 20px; background: #163A70;
+    display: flex; align-items: center; gap: 14px;
+    border-bottom: 1px solid #1F4EA3;
+  }
+  .opt-letter {
+    width: 26px; height: 26px; border-radius: 50%; background: #D6C3A5; color: #0D1B2A;
+    font-family: 'Arial', sans-serif; font-size: 11px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .opt-name { font-family: 'Georgia', serif; font-size: 15px; font-style: italic; color: #F7F5F1; flex: 1; }
+  .opt-tag { font-family: 'Arial', sans-serif; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #8A9BAE; }
+  .option-desc {
+    background: #0D2040; padding: 10px 20px;
+    font-family: 'Arial', sans-serif; font-size: 10px;
+    color: #8A9BAE; letter-spacing: 0.06em; border-top: 1px solid #163A7060;
+  }
+
+  /* ==================== MAP A: Ivory Atlas ==================== */
+  .map-stage-a {
+    height: 280px; position: relative; overflow: hidden;
+    background: #EDE8E0;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  /* SVG map of France outline */
+  .map-stage-a svg.france-outline {
+    position: absolute;
+    width: 200px; height: auto;
+    opacity: 0.18;
+    left: 50%; top: 50%; transform: translate(-50%, -50%);
+  }
+
+  /* Subtle grid / graticule lines */
+  .map-grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(22,58,112,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(22,58,112,0.06) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  /* Topography bands — very subtle */
+  .map-topo {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 60% 40% at 72% 60%, rgba(200,185,160,0.35) 0%, transparent 65%),
+      radial-gradient(ellipse 40% 30% at 30% 35%, rgba(200,185,160,0.25) 0%, transparent 60%),
+      radial-gradient(ellipse 30% 20% at 85% 25%, rgba(180,168,145,0.2) 0%, transparent 50%);
+  }
+
+  /* River lines */
+  .map-rivers {
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(135deg, transparent 30%, rgba(22,58,112,0.08) 31%, rgba(22,58,112,0.08) 31.5%, transparent 32%),
+      linear-gradient(160deg, transparent 45%, rgba(22,58,112,0.06) 45.5%, rgba(22,58,112,0.06) 46%, transparent 46.5%);
+  }
+
+  .map-a-markers { position: absolute; inset: 0; }
+
+  /* Ivory atlas marker: small circle, navy fill visited, ring unvisited */
+  .marker {
+    position: absolute;
+    display: flex; flex-direction: column; align-items: center;
+    transform: translate(-50%, -50%);
+  }
+  .marker-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    border: 1.5px solid #163A70;
+    background: white;
+    transition: transform 0.2s;
+  }
+  .marker-dot.visited {
+    background: #163A70;
+    box-shadow: 0 0 0 3px rgba(22,58,112,0.15);
+  }
+  .marker-dot.champagne {
+    background: #D6C3A5;
+    border-color: #D6C3A5;
+    box-shadow: 0 0 0 4px rgba(214,195,165,0.25);
+  }
+  .marker-label {
+    font-family: 'Georgia', serif; font-size: 7.5px; font-style: italic;
+    color: #163A70; white-space: nowrap; margin-top: 3px;
+    text-shadow: 0 0 4px #EDE8E0, 0 0 8px #EDE8E0;
+  }
+  .marker-label.light { color: #8A9BAE; }
+
+  /* Region label */
+  .map-region-label {
+    position: absolute;
+    font-family: 'Arial', sans-serif; font-size: 8px;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: rgba(22,58,112,0.35);
+  }
+
+  /* Map UI overlay */
+  .map-ui {
+    position: absolute; top: 14px; left: 14px; right: 14px;
+    display: flex; justify-content: space-between; align-items: flex-start;
+  }
+  .map-search {
+    background: white; border: 1px solid #DCC9A3;
+    padding: 7px 14px; font-family: 'Arial', sans-serif;
+    font-size: 9px; letter-spacing: 0.1em; color: #8A9BAE;
+    display: flex; align-items: center; gap: 8px;
+    box-shadow: 0 2px 12px rgba(22,58,112,0.08);
+  }
+  .map-legend {
+    background: white; border: 1px solid #DCC9A3;
+    padding: 8px 12px;
+    box-shadow: 0 2px 12px rgba(22,58,112,0.08);
+  }
+  .map-legend-row {
+    display: flex; align-items: center; gap: 7px; margin-bottom: 5px;
+    font-family: 'Arial', sans-serif; font-size: 8px;
+    letter-spacing: 0.08em; color: #8A9BAE;
+  }
+  .map-legend-row:last-child { margin-bottom: 0; }
+  .legend-dot { width: 7px; height: 7px; border-radius: 50%; }
+
+  /* ==================== MAP B: Deep Navy Night ==================== */
+  .map-stage-b {
+    height: 280px; position: relative; overflow: hidden;
+    background: #0D1B2A;
+  }
+  .map-b-grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(31,78,163,0.12) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(31,78,163,0.12) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .map-b-topo {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 60% 40% at 72% 60%, rgba(31,78,163,0.2) 0%, transparent 65%),
+      radial-gradient(ellipse 40% 30% at 30% 35%, rgba(35,74,107,0.18) 0%, transparent 60%);
+  }
+  .map-b-region {
+    position: absolute;
+    font-family: 'Arial', sans-serif; font-size: 8px;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: rgba(214,195,165,0.18);
+  }
+  .marker-b {
+    position: absolute;
+    display: flex; flex-direction: column; align-items: center;
+    transform: translate(-50%, -50%);
+  }
+  .marker-b-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    border: 1px solid #1F4EA3;
+    background: #163A70;
+  }
+  .marker-b-dot.visited {
+    background: #D6C3A5;
+    border-color: #D6C3A5;
+    box-shadow: 0 0 0 4px rgba(214,195,165,0.12), 0 0 12px rgba(214,195,165,0.2);
+  }
+  .marker-b-label {
+    font-family: 'Georgia', serif; font-size: 7.5px; font-style: italic;
+    color: #D6C3A590; white-space: nowrap; margin-top: 3px;
+  }
+  .marker-b-label.light { color: #1F4EA3; }
+  .map-b-ui {
+    position: absolute; top: 14px; left: 14px; right: 14px;
+    display: flex; justify-content: space-between; align-items: flex-start;
+  }
+  .map-b-search {
+    background: rgba(22,58,112,0.8); border: 1px solid #1F4EA3;
+    backdrop-filter: blur(8px);
+    padding: 7px 14px; font-family: 'Arial', sans-serif;
+    font-size: 9px; letter-spacing: 0.1em; color: #8A9BAE;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .map-b-legend {
+    background: rgba(13,27,42,0.85); border: 1px solid #1F4EA3;
+    backdrop-filter: blur(8px);
+    padding: 8px 12px;
+  }
+
+  /* ==================== MAP C: Desaturated Terrain ==================== */
+  .map-stage-c {
+    height: 280px; position: relative; overflow: hidden;
+    background: #E8E4DC;
+  }
+  .map-c-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 70% 50% at 75% 65%, #D8D0C0 0%, transparent 60%),
+      radial-gradient(ellipse 50% 35% at 25% 30%, #DDD7CC 0%, transparent 55%),
+      radial-gradient(ellipse 35% 25% at 88% 20%, #D4CEC4 0%, transparent 50%);
+  }
+  .map-c-roads {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(45deg, transparent 49.5%, rgba(22,58,112,0.1) 49.5%, rgba(22,58,112,0.1) 50.5%, transparent 50.5%),
+      linear-gradient(135deg, transparent 39.5%, rgba(22,58,112,0.07) 39.5%, rgba(22,58,112,0.07) 40.2%, transparent 40.2%),
+      linear-gradient(170deg, transparent 60%, rgba(22,58,112,0.08) 60%, rgba(22,58,112,0.08) 60.5%, transparent 61%);
+    background-size: 200px 200px, 300px 300px, 250px 250px;
+  }
+  .map-c-region {
+    position: absolute;
+    font-family: 'Arial', sans-serif; font-size: 8.5px;
+    letter-spacing: 0.25em; text-transform: uppercase;
+    color: rgba(22,58,112,0.22);
+  }
+  .marker-c {
+    position: absolute;
+    display: flex; flex-direction: column; align-items: center;
+    transform: translate(-50%, -50%);
+  }
+  .marker-c-outer {
+    width: 14px; height: 14px; border-radius: 50%;
+    border: 1px solid rgba(22,58,112,0.3);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .marker-c-outer.visited { border-color: #D6C3A5; box-shadow: 0 0 0 3px rgba(214,195,165,0.2); }
+  .marker-c-inner {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: rgba(22,58,112,0.4);
+  }
+  .marker-c-inner.visited { background: #D6C3A5; }
+  .marker-c-label {
+    font-family: 'Georgia', serif; font-size: 7.5px; font-style: italic;
+    color: #163A70; white-space: nowrap; margin-top: 3px;
+    text-shadow: 0 0 4px #E8E4DC, 0 0 8px #E8E4DC;
+  }
+  .marker-c-label.light { color: #8A9BAE; }
+  .map-c-ui {
+    position: absolute; top: 14px; left: 14px; right: 14px;
+    display: flex; justify-content: space-between; align-items: flex-start;
+  }
+  .map-c-search {
+    background: rgba(247,245,241,0.92); border: 1px solid #DCC9A3;
+    padding: 7px 14px; font-family: 'Arial', sans-serif;
+    font-size: 9px; letter-spacing: 0.1em; color: #8A9BAE;
+    box-shadow: 0 2px 12px rgba(22,58,112,0.08);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .map-c-legend {
+    background: rgba(247,245,241,0.92); border: 1px solid #DCC9A3;
+    padding: 8px 12px;
+    box-shadow: 0 2px 12px rgba(22,58,112,0.08);
+  }
+
+  .map-scale {
+    position: absolute; bottom: 14px; right: 14px;
+    display: flex; flex-direction: column; align-items: flex-end; gap: 3px;
+  }
+  .map-scale-bar {
+    width: 36px; height: 2px; background: currentColor; opacity: 0.3;
+  }
+  .map-scale-label {
+    font-family: 'Arial', sans-serif; font-size: 7px;
+    letter-spacing: 0.1em; opacity: 0.4;
+  }
+</style>
+</head>
+<body>
+
+<div style="max-width:900px;margin:0 auto;">
+  <p class="page-title">Map Aesthetic — Voyages</p>
+  <p class="page-subtitle">The France villages map atmosphere</p>
+  <p class="page-desc">Markers show visited (champagne/navy filled) vs unvisited (ring only). All use Leaflet + MapTiler tiles.</p>
+
+  <!-- MAP A: Ivory Atlas -->
+  <div class="option-block" data-choice="a" onclick="toggleSelect(this)">
+    <div class="option-label">
+      <div class="opt-letter">A</div>
+      <div class="opt-name">Ivory Atlas — warm parchment, editorial</div>
+      <div class="opt-tag">MapTiler: Basic / Positron</div>
+    </div>
+    <div class="map-stage-a">
+      <div class="map-grid"></div>
+      <div class="map-topo"></div>
+      <div class="map-rivers"></div>
+
+      <!-- Region labels -->
+      <div class="map-region-label" style="top:22%;left:25%;">Normandie</div>
+      <div class="map-region-label" style="top:55%;left:65%;">Provence</div>
+      <div class="map-region-label" style="top:40%;left:12%;">Bretagne</div>
+
+      <!-- Markers -->
+      <div class="map-a-markers">
+        <div class="marker" style="top:52%;left:62%;">
+          <div class="marker-dot visited"></div>
+          <div class="marker-label">Gordes</div>
+        </div>
+        <div class="marker" style="top:35%;left:76%;">
+          <div class="marker-dot visited champagne"></div>
+          <div class="marker-label">Eguisheim</div>
+        </div>
+        <div class="marker" style="top:62%;left:55%;">
+          <div class="marker-dot"></div>
+          <div class="marker-label light">Les Baux</div>
+        </div>
+        <div class="marker" style="top:48%;left:42%;">
+          <div class="marker-dot visited"></div>
+          <div class="marker-label">La Roque-Gageac</div>
+        </div>
+        <div class="marker" style="top:30%;left:48%;">
+          <div class="marker-dot"></div>
+          <div class="marker-label light">Vézelay</div>
+        </div>
+        <div class="marker" style="top:68%;left:32%;">
+          <div class="marker-dot"></div>
+          <div class="marker-label light">Saint-Cirq-Lapopie</div>
+        </div>
+        <div class="marker" style="top:25%;left:32%;">
+          <div class="marker-dot visited"></div>
+          <div class="marker-label">Rochefort-en-Terre</div>
+        </div>
+      </div>
+
+      <div class="map-ui">
+        <div class="map-search">
+          <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><circle cx="5" cy="5" r="4" stroke="#8A9BAE" stroke-width="1.2"/><path d="M8.5 8.5l2 2" stroke="#8A9BAE" stroke-width="1.2" stroke-linecap="round"/></svg>
+          Rechercher un village…
+        </div>
+        <div class="map-legend">
+          <div class="map-legend-row"><div class="legend-dot" style="background:#163A70;"></div> Visité</div>
+          <div class="map-legend-row"><div class="legend-dot" style="background:white;border:1.5px solid #163A70;"></div> À découvrir</div>
+          <div class="map-legend-row"><div class="legend-dot" style="background:#D6C3A5;"></div> Favori</div>
+        </div>
+      </div>
+
+      <div class="map-scale" style="color:#163A70;">
+        <div class="map-scale-bar"></div>
+        <div class="map-scale-label">50 km</div>
+      </div>
+    </div>
+    <div class="option-desc">Warm ivory/parchment tiles (MapTiler Positron or Basic). Feels like printed luxury atlas. Navy markers, champagne for favourites. Best contrast with light UI panels.</div>
+  </div>
+
+  <!-- MAP B: Deep Navy Night -->
+  <div class="option-block" data-choice="b" onclick="toggleSelect(this)">
+    <div class="option-label">
+      <div class="opt-letter">B</div>
+      <div class="opt-name">Deep Navy Night — cinematic dark mode</div>
+      <div class="opt-tag">MapTiler: Backdrop Dark / Night</div>
+    </div>
+    <div class="map-stage-b">
+      <div class="map-b-grid"></div>
+      <div class="map-b-topo"></div>
+
+      <div class="map-b-region" style="top:22%;left:24%;">Normandie</div>
+      <div class="map-b-region" style="top:55%;left:63%;">Provence</div>
+      <div class="map-b-region" style="top:40%;left:11%;">Bretagne</div>
+
+      <div class="marker-b" style="top:52%;left:62%;">
+        <div class="marker-b-dot visited"></div>
+        <div class="marker-b-label">Gordes</div>
+      </div>
+      <div class="marker-b" style="top:35%;left:76%;">
+        <div class="marker-b-dot visited"></div>
+        <div class="marker-b-label">Eguisheim</div>
+      </div>
+      <div class="marker-b" style="top:62%;left:55%;">
+        <div class="marker-b-dot"></div>
+        <div class="marker-b-label light">Les Baux</div>
+      </div>
+      <div class="marker-b" style="top:48%;left:42%;">
+        <div class="marker-b-dot visited"></div>
+        <div class="marker-b-label">La Roque-Gageac</div>
+      </div>
+      <div class="marker-b" style="top:30%;left:48%;">
+        <div class="marker-b-dot"></div>
+        <div class="marker-b-label light">Vézelay</div>
+      </div>
+      <div class="marker-b" style="top:25%;left:32%;">
+        <div class="marker-b-dot visited"></div>
+        <div class="marker-b-label">Rochefort-en-Terre</div>
+      </div>
+
+      <div class="map-b-ui">
+        <div class="map-b-search">
+          <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><circle cx="5" cy="5" r="4" stroke="#8A9BAE" stroke-width="1.2"/><path d="M8.5 8.5l2 2" stroke="#8A9BAE" stroke-width="1.2" stroke-linecap="round"/></svg>
+          Rechercher un village…
+        </div>
+        <div class="map-b-legend">
+          <div class="map-legend-row"><div class="legend-dot" style="background:#D6C3A5;box-shadow:0 0 6px rgba(214,195,165,0.3);"></div> Visité</div>
+          <div class="map-legend-row"><div class="legend-dot" style="background:#163A70;border:1px solid #1F4EA3;"></div> À découvrir</div>
+        </div>
+      </div>
+
+      <div class="map-scale" style="color:#F7F5F1;">
+        <div class="map-scale-bar"></div>
+        <div class="map-scale-label">50 km</div>
+      </div>
+    </div>
+    <div class="option-desc">Deep navy tiles, champagne glowing markers for visited villages. Cinematic, immersive. Best for dark mode. Champagne dots glow against dark — very premium feel.</div>
+  </div>
+
+  <!-- MAP C: Desaturated Terrain -->
+  <div class="option-block" data-choice="c" onclick="toggleSelect(this)">
+    <div class="option-label">
+      <div class="opt-letter">C</div>
+      <div class="opt-name">Desaturated Terrain — stone grey, topo feel</div>
+      <div class="opt-tag">MapTiler: Topo / Outdoor desaturated</div>
+    </div>
+    <div class="map-stage-c">
+      <div class="map-c-bg"></div>
+      <div class="map-c-roads"></div>
+
+      <div class="map-c-region" style="top:22%;left:24%;">Normandie</div>
+      <div class="map-c-region" style="top:55%;left:63%;">Provence</div>
+      <div class="map-c-region" style="top:40%;left:11%;">Bretagne</div>
+
+      <div class="marker-c" style="top:52%;left:62%;">
+        <div class="marker-c-outer visited"><div class="marker-c-inner visited"></div></div>
+        <div class="marker-c-label">Gordes</div>
+      </div>
+      <div class="marker-c" style="top:35%;left:76%;">
+        <div class="marker-c-outer visited"><div class="marker-c-inner visited"></div></div>
+        <div class="marker-c-label">Eguisheim</div>
+      </div>
+      <div class="marker-c" style="top:62%;left:55%;">
+        <div class="marker-c-outer"><div class="marker-c-inner"></div></div>
+        <div class="marker-c-label light">Les Baux</div>
+      </div>
+      <div class="marker-c" style="top:48%;left:42%;">
+        <div class="marker-c-outer visited"><div class="marker-c-inner visited"></div></div>
+        <div class="marker-c-label">La Roque-Gageac</div>
+      </div>
+      <div class="marker-c" style="top:30%;left:48%;">
+        <div class="marker-c-outer"><div class="marker-c-inner"></div></div>
+        <div class="marker-c-label light">Vézelay</div>
+      </div>
+      <div class="marker-c" style="top:25%;left:32%;">
+        <div class="marker-c-outer visited"><div class="marker-c-inner visited"></div></div>
+        <div class="marker-c-label">Rochefort-en-Terre</div>
+      </div>
+
+      <div class="map-c-ui">
+        <div class="map-c-search">
+          <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><circle cx="5" cy="5" r="4" stroke="#8A9BAE" stroke-width="1.2"/><path d="M8.5 8.5l2 2" stroke="#8A9BAE" stroke-width="1.2" stroke-linecap="round"/></svg>
+          Rechercher un village…
+        </div>
+        <div class="map-c-legend">
+          <div class="map-legend-row"><div class="legend-dot" style="background:#D6C3A5;"></div> Visité</div>
+          <div class="map-legend-row"><div class="legend-dot" style="background:rgba(22,58,112,0.4);border:1px solid rgba(22,58,112,0.3);"></div> À découvrir</div>
+        </div>
+      </div>
+
+      <div class="map-scale" style="color:#163A70;">
+        <div class="map-scale-bar"></div>
+        <div class="map-scale-label">50 km</div>
+      </div>
+    </div>
+    <div class="option-desc">Desaturated terrain/topo tiles (stone grey, sand, subtle relief). Feels like a vintage printed map. Double-ring markers. More geographical, less editorial.</div>
+  </div>
+
+</div>
+
+<script>
+function toggleSelect(el) {
+  document.querySelectorAll('.option-block').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+  if (window.__recordChoice) window.__recordChoice(el.dataset.choice, el.querySelector('.opt-name').textContent.trim());
+}
+</script>
+</body>
+</html>

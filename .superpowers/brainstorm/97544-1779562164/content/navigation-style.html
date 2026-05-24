@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigation Style — Voyages</title>
+<script src="../state/../../../../../../../.claude/plugins/cache/superpowers-marketplace/superpowers/5.0.7/skills/brainstorming/scripts/helper.js" defer></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0D1B2A;
+    color: #F7F5F1;
+    font-family: 'Georgia', serif;
+    padding: 32px 24px 60px;
+  }
+  .page-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #D6C3A5;
+    margin-bottom: 8px;
+  }
+  .page-subtitle {
+    font-size: 26px;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    color: #F7F5F1;
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+  .page-desc {
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    color: #8A9BAE;
+    margin-bottom: 36px;
+    letter-spacing: 0.02em;
+  }
+
+  .layouts {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .layout-card {
+    border: 1.5px solid #1F4EA3;
+    border-radius: 3px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.25s, box-shadow 0.25s;
+  }
+  .layout-card:hover { border-color: #D6C3A5; box-shadow: 0 8px 40px #00000060; }
+  .layout-card.selected { border-color: #D6C3A5; box-shadow: 0 0 0 2px #D6C3A530; }
+
+  .layout-label {
+    padding: 12px 20px;
+    background: #163A70;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border-bottom: 1px solid #1F4EA3;
+  }
+  .layout-letter {
+    width: 26px; height: 26px; border-radius: 50%;
+    background: #D6C3A5; color: #0D1B2A;
+    font-family: 'Arial', sans-serif; font-size: 11px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    letter-spacing: 0.05em; flex-shrink: 0;
+  }
+  .layout-name { font-family: 'Georgia', serif; font-size: 15px; font-style: italic; color: #F7F5F1; flex: 1; }
+  .layout-tag { font-family: 'Arial', sans-serif; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #8A9BAE; }
+
+  /* ==================== NAV A: Transparent Floating ==================== */
+  .demo-a {
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+    background: url('https://images.unsplash.com/photo-1499678329028-101435549a4e?w=700&q=50') center/cover no-repeat;
+  }
+  .demo-a-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, rgba(13,27,42,0.5) 0%, rgba(13,27,42,0.2) 50%, rgba(13,27,42,0.6) 100%);
+  }
+  .nav-a {
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 52px;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 32px;
+    z-index: 2;
+    /* No background — fully transparent */
+  }
+  .nav-a-logo {
+    font-family: 'Georgia', serif; font-size: 14px; font-style: italic;
+    letter-spacing: 0.15em; color: #F7F5F1;
+  }
+  .nav-a-links {
+    display: flex; gap: 28px;
+    font-family: 'Arial', sans-serif; font-size: 9px;
+    letter-spacing: 0.2em; text-transform: uppercase; color: rgba(247,245,241,0.7);
+  }
+  .nav-a-links span:hover { color: #F7F5F1; }
+  .nav-a-cta {
+    font-family: 'Arial', sans-serif; font-size: 9px;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    border: 1px solid rgba(214,195,165,0.6); color: #D6C3A5;
+    padding: 7px 14px;
+  }
+  .demo-a-hero-text {
+    position: absolute; bottom: 28px; left: 32px; z-index: 2;
+  }
+  .demo-a-hero-text .eyebrow {
+    font-family: 'Arial', sans-serif; font-size: 8px;
+    letter-spacing: 0.28em; text-transform: uppercase; color: #D6C3A5; margin-bottom: 8px;
+  }
+  .demo-a-hero-text .headline {
+    font-family: 'Georgia', serif; font-size: 30px; font-style: italic;
+    color: #F7F5F1; font-weight: 400; line-height: 1.1;
+  }
+  .nav-a-desc {
+    background: #0D2040; padding: 10px 20px;
+    font-family: 'Arial', sans-serif; font-size: 10px;
+    color: #8A9BAE; letter-spacing: 0.06em;
+    border-top: 1px solid #163A7060;
+  }
+
+  /* ==================== NAV B: Ivory Bar with Stripe Accent ==================== */
+  .demo-b { overflow: hidden; }
+  .nav-b {
+    height: 52px;
+    background: #F7F5F1;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 28px;
+    border-bottom: 3px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+  }
+  .nav-b::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+    background-image: repeating-linear-gradient(
+      90deg,
+      #163A70 0px, #163A70 3px,
+      #F7F5F1 3px, #F7F5F1 18px
+    );
+  }
+  .nav-b-logo {
+    font-family: 'Georgia', serif; font-size: 14px; font-style: italic;
+    letter-spacing: 0.15em; color: #163A70;
+  }
+  .nav-b-links {
+    display: flex; gap: 26px;
+    font-family: 'Arial', sans-serif; font-size: 9px;
+    letter-spacing: 0.18em; text-transform: uppercase; color: #8A9BAE;
+  }
+  .nav-b-links span.active { color: #163A70; border-bottom: 1px solid #163A70; padding-bottom: 2px; }
+  .nav-b-cta {
+    font-family: 'Arial', sans-serif; font-size: 9px;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    background: #163A70; color: #F7F5F1; padding: 7px 14px;
+  }
+  .demo-b-body {
+    height: 160px; display: grid; grid-template-columns: 40% 60%;
+  }
+  .demo-b-text {
+    background: #F7F5F1;
+    padding: 24px 24px;
+    position: relative; overflow: hidden;
+    display: flex; flex-direction: column; justify-content: center; gap: 10px;
+  }
+  .demo-b-text-stripes {
+    position: absolute; inset: 0;
+    background-image: repeating-linear-gradient(
+      90deg, #163A7009 0px, #163A7009 3px, transparent 3px, transparent 20px
+    );
+  }
+  .demo-b-text .eyebrow {
+    font-family: 'Arial', sans-serif; font-size: 8px;
+    letter-spacing: 0.28em; text-transform: uppercase; color: #8A9BAE;
+    position: relative; z-index: 1;
+  }
+  .demo-b-text .headline {
+    font-family: 'Georgia', serif; font-size: 24px; font-style: italic;
+    color: #163A70; line-height: 1.1; position: relative; z-index: 1;
+  }
+  .demo-b-photo {
+    background: url('https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?w=500&q=50') center/cover no-repeat;
+  }
+  .nav-b-desc {
+    background: #0D2040; padding: 10px 20px;
+    font-family: 'Arial', sans-serif; font-size: 10px;
+    color: #8A9BAE; letter-spacing: 0.06em;
+    border-top: 1px solid #163A7060;
+  }
+
+  /* ==================== NAV C: Minimal Side Panel ==================== */
+  .demo-c { display: grid; grid-template-columns: 56px 1fr; height: 216px; overflow: hidden; }
+  .nav-c-side {
+    background: #163A70;
+    display: flex; flex-direction: column;
+    align-items: center; padding: 16px 0; gap: 20px;
+    border-right: 1px solid #1F4EA3;
+    position: relative;
+    z-index: 2;
+  }
+  .nav-c-side::after {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background-image: repeating-linear-gradient(
+      0deg, rgba(247,245,241,0.04) 0px, rgba(247,245,241,0.04) 2px, transparent 2px, transparent 18px
+    );
+  }
+  .nav-c-logo-v {
+    writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg);
+    font-family: 'Georgia', serif; font-size: 11px; font-style: italic;
+    letter-spacing: 0.15em; color: #F7F5F1; margin-bottom: 8px;
+    position: relative; z-index: 1;
+  }
+  .nav-c-icons {
+    display: flex; flex-direction: column; gap: 16px; align-items: center;
+    position: relative; z-index: 1;
+  }
+  .nav-c-icon {
+    width: 30px; height: 30px; border-radius: 50%;
+    background: rgba(247,245,241,0.08); border: 1px solid rgba(247,245,241,0.12);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Arial', sans-serif; font-size: 8px; letter-spacing: 0.06em;
+    color: rgba(247,245,241,0.5);
+  }
+  .nav-c-icon.active {
+    background: #D6C3A520; border-color: #D6C3A560;
+    color: #D6C3A5;
+  }
+  .nav-c-main {
+    position: relative; overflow: hidden;
+    background: url('https://images.unsplash.com/photo-1499678329028-101435549a4e?w=700&q=50') center/cover no-repeat;
+  }
+  .nav-c-main-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(90deg, rgba(22,58,112,0.3) 0%, rgba(13,27,42,0.5) 100%);
+  }
+  .nav-c-main-content {
+    position: absolute; bottom: 24px; left: 24px; z-index: 2;
+  }
+  .nav-c-main-content .eyebrow {
+    font-family: 'Arial', sans-serif; font-size: 8px;
+    letter-spacing: 0.28em; text-transform: uppercase; color: #D6C3A5; margin-bottom: 6px;
+  }
+  .nav-c-main-content .headline {
+    font-family: 'Georgia', serif; font-size: 26px; font-style: italic;
+    color: #F7F5F1; line-height: 1.1;
+  }
+  .nav-c-desc {
+    grid-column: 1 / -1;
+    background: #0D2040; padding: 10px 20px;
+    font-family: 'Arial', sans-serif; font-size: 10px;
+    color: #8A9BAE; letter-spacing: 0.06em;
+    border-top: 1px solid #163A7060;
+  }
+</style>
+</head>
+<body>
+
+<div style="max-width:900px;margin:0 auto;">
+  <p class="page-title">Navigation Style — Voyages</p>
+  <p class="page-subtitle">How users move through the platform</p>
+  <p class="page-desc">Shown in context with the Layout C hero. Click to select.</p>
+
+  <div class="layouts">
+
+    <!-- NAV A -->
+    <div class="layout-card" data-choice="a" onclick="toggleSelect(this)">
+      <div class="layout-label">
+        <div class="layout-letter">A</div>
+        <div class="layout-name">Transparent Floating</div>
+        <div class="layout-tag">Aman / luxury resort feel</div>
+      </div>
+      <div class="demo-a">
+        <div class="demo-a-overlay"></div>
+        <div class="nav-a">
+          <div class="nav-a-logo">Voyages</div>
+          <div class="nav-a-links">
+            <span>Journeys</span>
+            <span>Villages</span>
+            <span>Itineraries</span>
+          </div>
+          <div class="nav-a-cta">Explore</div>
+        </div>
+        <div class="demo-a-hero-text">
+          <div class="eyebrow">A private luxury world</div>
+          <div class="headline">Beautiful Journeys</div>
+        </div>
+      </div>
+      <div class="nav-a-desc">Transparent over hero. Scrolls into ivory/dark bar. Maximum immersion on landing. Most luxury hotel sites use this.</div>
+    </div>
+
+    <!-- NAV B -->
+    <div class="layout-card" data-choice="b" onclick="toggleSelect(this)">
+      <div class="layout-label">
+        <div class="layout-letter">B</div>
+        <div class="layout-name">Ivory Bar + Stripe Accent</div>
+        <div class="layout-tag">Editorial / magazine feel</div>
+      </div>
+      <div class="demo-b">
+        <div class="nav-b">
+          <div class="nav-b-logo">Voyages</div>
+          <div class="nav-b-links">
+            <span>Journeys</span>
+            <span class="active">Villages</span>
+            <span>Itineraries</span>
+          </div>
+          <div class="nav-b-cta">New Journey</div>
+        </div>
+        <div class="demo-b-body">
+          <div class="demo-b-text">
+            <div class="demo-b-text-stripes"></div>
+            <div class="eyebrow">A private luxury world</div>
+            <div class="headline">Beautiful<br>Journeys</div>
+          </div>
+          <div class="demo-b-photo"></div>
+        </div>
+      </div>
+      <div class="nav-b-desc">Ivory bar with stripe bottom border. Always visible, no transparency trick. Active page underlined. The stripe motif moves into the nav.</div>
+    </div>
+
+    <!-- NAV C -->
+    <div class="layout-card" data-choice="c" onclick="toggleSelect(this)">
+      <div class="layout-label">
+        <div class="layout-letter">C</div>
+        <div class="layout-name">Vertical Side Nav</div>
+        <div class="layout-tag">Portfolio / Awwwards feel</div>
+      </div>
+      <div class="demo-c">
+        <div class="nav-c-side">
+          <div class="nav-c-logo-v">Voyages</div>
+          <div class="nav-c-icons">
+            <div class="nav-c-icon active">J</div>
+            <div class="nav-c-icon">V</div>
+            <div class="nav-c-icon">I</div>
+          </div>
+        </div>
+        <div class="nav-c-main">
+          <div class="nav-c-main-overlay"></div>
+          <div class="nav-c-main-content">
+            <div class="eyebrow">A private luxury world</div>
+            <div class="headline">Beautiful<br>Journeys</div>
+          </div>
+        </div>
+        <div class="nav-c-desc">Narrow vertical sidebar with icon navigation. Logo rotated vertical. Maximum canvas for content. Uncommon — very distinctive.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+function toggleSelect(el) {
+  document.querySelectorAll('.layout-card').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+  if (window.__recordChoice) window.__recordChoice(el.dataset.choice, el.querySelector('.layout-name').textContent.trim());
+}
+</script>
+</body>
+</html>

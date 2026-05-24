@@ -11,17 +11,27 @@ describe('generateItinerary', () => {
 
   it('respects pace: slow=2 villages/day', () => {
     const result = generateItinerary(villages, { days: 2, styles: [], pace: 'slow' })
-    result.days.forEach(day => expect(day.stops.length).toBeLessThanOrEqual(2))
+    result.days.forEach(day => expect(day.stops.length).toBe(2))
   })
 
   it('respects pace: moderate=3 villages/day', () => {
     const result = generateItinerary(villages, { days: 2, styles: [], pace: 'moderate' })
-    result.days.forEach(day => expect(day.stops.length).toBeLessThanOrEqual(3))
+    result.days.forEach(day => expect(day.stops.length).toBe(3))
   })
 
   it('respects pace: intensive=4 villages/day', () => {
     const result = generateItinerary(villages, { days: 1, styles: [], pace: 'intensive' })
-    result.days.forEach(day => expect(day.stops.length).toBeLessThanOrEqual(4))
+    result.days.forEach(day => expect(day.stops.length).toBe(4))
+  })
+
+  it('sets poolExhausted when pool runs out before totalNeeded', () => {
+    const result = generateItinerary(villages, { days: 3, styles: ['wine'], pace: 'intensive' })
+    expect(result.poolExhausted).toBe(true)
+  })
+
+  it('poolExhausted is false when pool is sufficient', () => {
+    const result = generateItinerary(villages, { days: 1, styles: [], pace: 'slow' })
+    expect(result.poolExhausted).toBe(false)
   })
 
   it('filters by style tags', () => {

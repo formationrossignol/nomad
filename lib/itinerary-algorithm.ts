@@ -10,6 +10,7 @@ const ATMOSPHERE_NOTES: Record<string, string> = {
   medieval: 'Time moves differently among these ancient stones',
   photography: 'Golden hour arrives early — keep your camera ready',
   hidden: 'These villages reward those who stray from the main roads',
+  architectural: 'Every stone here was placed with intention and care',
   default: 'A slow day through France\'s quietest and most beautiful places',
 }
 
@@ -62,6 +63,7 @@ export function generateItinerary(villages: Village[], input: ItineraryInput): G
     }
   }
 
+  const atmosphereNote = getAtmosphereNote(styles)
   const itineraryDays: ItineraryDay[] = []
 
   for (let d = 0; d < days; d++) {
@@ -83,10 +85,14 @@ export function generateItinerary(villages: Village[], input: ItineraryInput): G
     itineraryDays.push({
       dayNumber: d + 1,
       label: `Day ${d + 1}`,
-      atmosphereNote: getAtmosphereNote(styles),
+      atmosphereNote,
       stops,
     })
   }
 
-  return { days: itineraryDays, totalVillages: selected.length }
+  return {
+    days: itineraryDays,
+    totalVillages: selected.length,
+    poolExhausted: selected.length < totalNeeded,
+  }
 }

@@ -27,7 +27,7 @@ describe('driveTimeMinutes', () => {
     expect(driveTimeMinutes(30)).toBe(30)
   })
 
-  it('rounds to nearest minute', () => {
-    expect(driveTimeMinutes(10)).toBe(10)
+  it('rounds fractional minutes to nearest integer', () => {
+    expect(driveTimeMinutes(40, 90)).toBe(27)
   })
 })

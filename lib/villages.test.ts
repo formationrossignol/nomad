@@ -1,4 +1,4 @@
-import { getAllVillages, getVillageBySlug, getVillagesByRegion, getNearbyVillages } from './villages'
+import { getAllVillages, getVillageBySlug, getVillagesByRegion, getUniqueRegions, getNearbyVillages } from './villages'
 
 describe('getAllVillages', () => {
   it('returns an array of villages', () => {
@@ -34,6 +34,21 @@ describe('getVillagesByRegion', () => {
   it('filters by region', () => {
     const villages = getVillagesByRegion('Grand Est')
     expect(villages.every(v => v.region === 'Grand Est')).toBe(true)
+  })
+})
+
+describe('getUniqueRegions', () => {
+  it('returns sorted array of unique regions', () => {
+    const regions = getUniqueRegions()
+    expect(Array.isArray(regions)).toBe(true)
+    expect(regions.length).toBeGreaterThan(0)
+    const sorted = [...regions].sort()
+    expect(regions).toEqual(sorted)
+  })
+
+  it('has no duplicates', () => {
+    const regions = getUniqueRegions()
+    expect(new Set(regions).size).toBe(regions.length)
   })
 })
 

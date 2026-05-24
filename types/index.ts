@@ -74,6 +74,7 @@ export interface ItineraryDay {
 export interface GeneratedItinerary {
   days: ItineraryDay[]
   totalVillages: number
+  poolExhausted: boolean
 }
 
 export interface ItineraryInput {

@@ -25,9 +25,8 @@ export function getUniqueRegions(): string[] {
 export function getNearbyVillages(source: Village, count: number): Village[] {
   return villages
     .filter(v => v.slug !== source.slug)
-    .sort((a, b) =>
-      haversineKm(source.lat, source.lng, a.lat, a.lng) -
-      haversineKm(source.lat, source.lng, b.lat, b.lng)
-    )
+    .map(v => ({ v, d: haversineKm(source.lat, source.lng, v.lat, v.lng) }))
+    .sort((a, b) => a.d - b.d)
     .slice(0, count)
+    .map(({ v }) => v)
 }
