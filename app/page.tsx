@@ -1,101 +1,111 @@
-import Image from "next/image";
+import Link from 'next/link'
+import { HeroImage } from '@/components/ui/HeroImage'
+import { PageTransition } from '@/components/layout/PageTransition'
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <PageTransition>
+      {/* HERO — Asymmetric Atlas */}
+      <section className="relative h-screen min-h-[600px] flex">
+        {/* Left editorial panel */}
+        <div className="relative z-10 flex flex-col justify-center px-12 w-[42%] flex-shrink-0">
+          {/* Stripe wash */}
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: 'repeating-linear-gradient(90deg, #163A70 0px, #163A70 3px, #F7F5F1 3px, #F7F5F1 18px)',
+              opacity: 0.07,
+            }}
+            aria-hidden="true"
+          />
+          <div className="relative z-10">
+            <p className="font-inter text-[9px] tracking-[0.28em] uppercase text-stone mb-8">
+              A private luxury world
+            </p>
+            <h1 className="font-cormorant italic text-[52px] text-deep-blue leading-[1.05] mb-6">
+              Beautiful<br />Journeys
+            </h1>
+            <div className="w-8 h-px bg-champagne mb-6" />
+            <p className="font-inter text-[11px] tracking-[0.06em] text-stone leading-relaxed mb-10">
+              A cinematic atlas of Mediterranean travel<br />and the most beautiful villages of France.
+            </p>
+            <Link
+              href="/villages"
+              className="font-inter text-[10px] tracking-[0.18em] uppercase text-deep-blue border-b border-deep-blue pb-0.5 hover:text-cobalt hover:border-cobalt transition-colors duration-200"
+            >
+              Begin Exploring
+            </Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+
+        {/* Right photo */}
+        <div className="relative flex-1">
+          <HeroImage
+            src="https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?w=1400&q=80"
+            alt="Mediterranean village"
+            className="absolute inset-0"
+            priority
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+          {/* Gradient bleed left */}
+          <div
+            className="absolute inset-0"
+            style={{ background: 'linear-gradient(90deg, #F7F5F1 0%, transparent 25%)' }}
+            aria-hidden="true"
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+          {/* Village count badge */}
+          <div className="absolute bottom-8 right-8 w-16 h-16 rounded-full bg-midnight/75 border border-champagne/30 flex flex-col items-center justify-center z-10">
+            <span className="font-cormorant italic text-[20px] text-champagne leading-none">184</span>
+            <span className="font-inter text-[7px] tracking-[0.1em] uppercase text-stone mt-0.5">Villages</span>
+          </div>
+        </div>
+      </section>
+
+      {/* FEATURE BLOCKS */}
+      <section className="grid grid-cols-3 h-[220px]">
+        {/* Block 1 — Design a Journey */}
+        <Link href="/journeys/new" className="group relative flex flex-col justify-end p-8 bg-deep-blue overflow-hidden">
+          <div
+            className="absolute inset-0 opacity-10"
+            style={{ backgroundImage: 'repeating-linear-gradient(90deg, #F7F5F1 0px, #F7F5F1 3px, transparent 3px, transparent 18px)' }}
+            aria-hidden="true"
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+          <p className="font-inter text-[8px] tracking-[0.22em] uppercase text-champagne/60 mb-3 relative z-10">
+            Start here
+          </p>
+          <h2 className="font-cormorant italic text-[22px] text-ivory leading-tight mb-4 relative z-10">
+            Design a Journey
+          </h2>
+          <span className="font-inter text-[9px] tracking-[0.15em] uppercase text-champagne border-b border-champagne/50 pb-0.5 w-fit relative z-10 group-hover:border-champagne transition-colors duration-200">
+            Create →
+          </span>
+        </Link>
+
+        {/* Block 2 — 184 Villages */}
+        <Link href="/villages" className="group relative flex flex-col justify-end p-8 bg-sand/40 overflow-hidden border-x border-sand">
+          <p className="font-inter text-[8px] tracking-[0.22em] uppercase text-stone mb-3">
+            Explorer
+          </p>
+          <h2 className="font-cormorant italic text-[22px] text-deep-blue leading-tight mb-4">
+            184 Villages of France
+          </h2>
+          <span className="font-inter text-[9px] tracking-[0.15em] uppercase text-deep-blue border-b border-deep-blue/40 pb-0.5 w-fit group-hover:border-deep-blue transition-colors duration-200">
+            Explore map →
+          </span>
+        </Link>
+
+        {/* Block 3 — Plan an Itinerary */}
+        <Link href="/itineraries" className="group relative flex flex-col justify-end p-8 bg-ivory overflow-hidden border-r border-sand">
+          <p className="font-inter text-[8px] tracking-[0.22em] uppercase text-stone mb-3">
+            Plan
+          </p>
+          <h2 className="font-cormorant italic text-[22px] text-deep-blue leading-tight mb-4">
+            Plan an Itinerary
+          </h2>
+          <span className="font-inter text-[9px] tracking-[0.15em] uppercase text-deep-blue border-b border-deep-blue/40 pb-0.5 w-fit group-hover:border-deep-blue transition-colors duration-200">
+            Generate route →
+          </span>
+        </Link>
+      </section>
+    </PageTransition>
+  )
 }
