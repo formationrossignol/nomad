@@ -1,8 +1,10 @@
 import Link from 'next/link'
 import { HeroImage } from '@/components/ui/HeroImage'
 import { PageTransition } from '@/components/layout/PageTransition'
+import { getAllVillages } from '@/lib/villages'
 
 export default function HomePage() {
+  const villageCount = getAllVillages().length
   return (
     <PageTransition>
       {/* HERO — Asymmetric Atlas */}
@@ -54,7 +56,7 @@ export default function HomePage() {
           />
           {/* Village count badge */}
           <div className="absolute bottom-8 right-8 w-16 h-16 rounded-full bg-midnight/75 border border-champagne/30 flex flex-col items-center justify-center z-10">
-            <span className="font-cormorant italic text-[20px] text-champagne leading-none">184</span>
+            <span className="font-cormorant italic text-[20px] text-champagne leading-none">{villageCount}</span>
             <span className="font-inter text-[7px] tracking-[0.1em] uppercase text-stone mt-0.5">Villages</span>
           </div>
         </div>
@@ -86,7 +88,7 @@ export default function HomePage() {
             Explorer
           </p>
           <h2 className="font-cormorant italic text-[22px] text-deep-blue leading-tight mb-4">
-            184 Villages of France
+            {villageCount} Villages of France
           </h2>
           <span className="font-inter text-[9px] tracking-[0.15em] uppercase text-deep-blue border-b border-deep-blue/40 pb-0.5 w-fit group-hover:border-deep-blue transition-colors duration-200">
             Explore map <span aria-hidden="true">→</span>
