@@ -85,7 +85,7 @@ export function NavBar() {
 
           {!loading && (
             user
-              ? <UserAvatar email={user.email ?? ''} onSignOut={signOut} />
+              ? <UserAvatar email={user.email ?? '?'} onSignOut={signOut} />
               : (
                 <button
                   onClick={() => setModalOpen(true)}
