@@ -36,7 +36,18 @@ describe('auth helpers', () => {
     expect(data.user?.email).toBe('new@test.com')
   })
 
+  it('signUp throws on error', async () => {
+    const { supabase } = require('@/lib/supabase/client')
+    supabase.auth.signUp.mockResolvedValueOnce({
+      data: null,
+      error: new Error('Email already exists'),
+    })
+    await expect(signUp('new@test.com', 'password123')).rejects.toThrow('Email already exists')
+  })
+
   it('signOut calls supabase.auth.signOut', async () => {
-    await expect(signOut()).resolves.not.toThrow()
+    const { supabase } = require('@/lib/supabase/client')
+    await signOut()
+    expect(supabase.auth.signOut).toHaveBeenCalled()
   })
 })
