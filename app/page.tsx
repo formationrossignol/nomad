@@ -35,7 +35,7 @@ export default function HomePage() {
               href="/villages"
               className="font-inter text-[10px] tracking-[0.18em] uppercase text-deep-blue border-b border-deep-blue pb-0.5 hover:text-cobalt hover:border-cobalt transition-colors duration-200"
             >
-              Commencer l'exploration
+              Commencer l&apos;exploration
             </Link>
           </div>
         </div>

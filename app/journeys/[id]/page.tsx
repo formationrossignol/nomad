@@ -74,7 +74,7 @@ export default async function JourneyDetailPage({ params }: Props) {
         <div className="w-full h-px bg-sand/60 mb-0" />
         {typedMemories.length === 0 ? (
           <p className="font-cormorant italic text-[18px] text-stone py-12">
-            Aucun souvenir pour l'instant — ajoutez le premier.
+            Aucun souvenir pour l&apos;instant — ajoutez le premier.
           </p>
         ) : (
           typedMemories.map(m => <MemoryBlock key={m.id} memory={m} />)

@@ -81,7 +81,7 @@ export default function NewMemoryPage({ params }: Props) {
             Nouveau souvenir
           </p>
           <h1 className="font-cormorant italic text-[36px] text-deep-blue mb-12">
-            Capturer l'instant
+            Capturer l&apos;instant
           </h1>
 
           <form onSubmit={handleSubmit}>
