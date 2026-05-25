@@ -1,11 +1,14 @@
 import React from 'react'
 import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import { AuthModal } from './AuthModal'
+import * as authModule from '@/lib/supabase/auth'
 
 jest.mock('@/lib/supabase/auth', () => ({
   signIn: jest.fn().mockResolvedValue({}),
   signUp: jest.fn().mockResolvedValue({}),
 }))
+
+const mockSignIn = authModule.signIn as jest.Mock
 
 describe('AuthModal', () => {
   afterEach(() => {
@@ -31,19 +34,17 @@ describe('AuthModal', () => {
   })
 
   it('calls signIn on login submit', async () => {
-    const { signIn } = require('@/lib/supabase/auth')
     const onClose = jest.fn()
     render(<AuthModal isOpen onClose={onClose} />)
     fireEvent.change(screen.getByPlaceholderText('Email'), { target: { value: 'test@test.com' } })
     fireEvent.change(screen.getByPlaceholderText('Mot de passe'), { target: { value: 'password123' } })
     fireEvent.submit(screen.getByRole('form'))
-    await waitFor(() => expect(signIn).toHaveBeenCalledWith('test@test.com', 'password123'))
+    await waitFor(() => expect(mockSignIn).toHaveBeenCalledWith('test@test.com', 'password123'))
     await waitFor(() => expect(onClose).toHaveBeenCalled())
   })
 
   it('displays error message on failed signIn', async () => {
-    const { signIn } = require('@/lib/supabase/auth')
-    signIn.mockRejectedValueOnce(new Error('Invalid login credentials'))
+    mockSignIn.mockRejectedValueOnce(new Error('Invalid login credentials'))
     render(<AuthModal isOpen onClose={jest.fn()} />)
     fireEvent.change(screen.getByPlaceholderText('Email'), { target: { value: 'bad@test.com' } })
     fireEvent.change(screen.getByPlaceholderText('Mot de passe'), { target: { value: 'wrong' } })

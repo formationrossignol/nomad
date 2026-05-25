@@ -1,4 +1,5 @@
 import { signIn, signUp, signOut } from './auth'
+import { supabase } from '@/lib/supabase/client'
 
 jest.mock('@/lib/supabase/client', () => ({
   supabase: {
@@ -16,6 +17,10 @@ jest.mock('@/lib/supabase/client', () => ({
   },
 }))
 
+const mockSignIn = supabase.auth.signInWithPassword as jest.Mock
+const mockSignUp = supabase.auth.signUp as jest.Mock
+const mockSignOut = supabase.auth.signOut as jest.Mock
+
 describe('auth helpers', () => {
   it('signIn calls signInWithPassword and returns data', async () => {
     const data = await signIn('test@test.com', 'password123')
@@ -23,8 +28,7 @@ describe('auth helpers', () => {
   })
 
   it('signIn throws on error', async () => {
-    const { supabase } = require('@/lib/supabase/client')
-    supabase.auth.signInWithPassword.mockResolvedValueOnce({
+    mockSignIn.mockResolvedValueOnce({
       data: null,
       error: new Error('Invalid credentials'),
     })
@@ -37,8 +41,7 @@ describe('auth helpers', () => {
   })
 
   it('signUp throws on error', async () => {
-    const { supabase } = require('@/lib/supabase/client')
-    supabase.auth.signUp.mockResolvedValueOnce({
+    mockSignUp.mockResolvedValueOnce({
       data: null,
       error: new Error('Email already exists'),
     })
@@ -46,8 +49,7 @@ describe('auth helpers', () => {
   })
 
   it('signOut calls supabase.auth.signOut', async () => {
-    const { supabase } = require('@/lib/supabase/client')
     await signOut()
-    expect(supabase.auth.signOut).toHaveBeenCalled()
+    expect(mockSignOut).toHaveBeenCalled()
   })
 })

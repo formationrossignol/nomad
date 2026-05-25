@@ -1,5 +1,6 @@
 import { renderHook, waitFor } from '@testing-library/react'
 import { useAuth } from './useAuth'
+import { supabase } from '@/lib/supabase/client'
 
 const mockUnsubscribe = jest.fn()
 
@@ -21,10 +22,12 @@ jest.mock('@/lib/supabase/auth', () => ({
   signOut: jest.fn(),
 }))
 
+const mockGetSession = supabase.auth.getSession as jest.Mock
+const mockOnAuthStateChange = supabase.auth.onAuthStateChange as jest.Mock
+
 beforeEach(() => {
   jest.clearAllMocks()
-  const { supabase } = require('@/lib/supabase/client')
-  supabase.auth.onAuthStateChange.mockReturnValue({
+  mockOnAuthStateChange.mockReturnValue({
     data: { subscription: { unsubscribe: mockUnsubscribe } },
   })
 })
@@ -47,9 +50,8 @@ describe('useAuth', () => {
   })
 
   it('sets user when session exists', async () => {
-    const { supabase } = require('@/lib/supabase/client')
     const mockUser = { id: '1', email: 'user@test.com' }
-    supabase.auth.getSession.mockResolvedValueOnce({
+    mockGetSession.mockResolvedValueOnce({
       data: { session: { user: mockUser } },
     })
     const { result } = renderHook(() => useAuth())
