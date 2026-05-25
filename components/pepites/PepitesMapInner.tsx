@@ -3,8 +3,8 @@ import { useEffect } from 'react'
 import { MapContainer, TileLayer, Marker, useMap } from 'react-leaflet'
 import MarkerClusterGroup from 'react-leaflet-cluster'
 import L from 'leaflet'
-import 'react-leaflet-cluster/dist/assets/MarkerCluster.css'
-import 'react-leaflet-cluster/dist/assets/MarkerCluster.Default.css'
+import 'react-leaflet-cluster/lib/assets/MarkerCluster.css'
+import 'react-leaflet-cluster/lib/assets/MarkerCluster.Default.css'
 import type { Pepite, PepiteFilterCategory } from '@/types'
 
 const MAPTILER_KEY = process.env.NEXT_PUBLIC_MAPTILER_KEY
