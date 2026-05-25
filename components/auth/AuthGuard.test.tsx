@@ -19,6 +19,7 @@ describe('AuthGuard', () => {
     mockUseAuth.mockReturnValue({ user: null, loading: true })
     render(<AuthGuard><p>Protected</p></AuthGuard>)
     expect(screen.queryByText('Protected')).not.toBeInTheDocument()
+    expect(document.querySelector('[aria-hidden="true"]')).toBeInTheDocument()
   })
 
   it('redirects to / when not authenticated', () => {
