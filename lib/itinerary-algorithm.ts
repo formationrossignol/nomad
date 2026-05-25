@@ -1,7 +1,7 @@
-import type { Village, ItineraryInput, GeneratedItinerary, ItineraryDay, ItineraryStop } from '@/types'
+import type { Village, ItineraryInput, GeneratedItinerary, ItineraryDay, ItineraryStop, DepartureCity } from '@/types'
 import { haversineKm, driveTimeMinutes } from './haversine'
 
-const VILLAGES_PER_DAY = { slow: 2, moderate: 3, intensive: 4 } as const
+const DAY_BUDGET_MINUTES = { slow: 360, moderate: 480, intensive: 600 } as const
 
 const ATMOSPHERE_NOTES: Record<string, string> = {
   wine: 'Follow the wine routes through sun-drenched hillside vineyards',
@@ -20,7 +20,7 @@ function getAtmosphereNote(styles: string[]): string {
 }
 
 export function generateItinerary(villages: Village[], input: ItineraryInput): GeneratedItinerary {
-  const { days, region, styles, pace, excludeVisited = [] } = input
+  const { days, regions, styles, pace, excludeVisited = [], departureLat, departureLng, departureName } = input
 
   let pool = villages.filter(v => !excludeVisited.includes(v.slug))
 
@@ -28,9 +28,9 @@ export function generateItinerary(villages: Village[], input: ItineraryInput): G
     pool = pool.filter(v => v.tags.some(t => styles.includes(t)))
   }
 
-  if (region) {
-    const regionVillages = pool.filter(v => v.region === region)
-    const others = pool.filter(v => v.region !== region)
+  if (regions && regions.length > 0) {
+    const regionVillages = pool.filter(v => regions.includes(v.region))
+    const others = pool.filter(v => !regions.includes(v.region))
     if (regionVillages.length > 0) {
       const centerLat = regionVillages.reduce((s, v) => s + v.lat, 0) / regionVillages.length
       const centerLng = regionVillages.reduce((s, v) => s + v.lng, 0) / regionVillages.length
@@ -44,14 +44,24 @@ export function generateItinerary(villages: Village[], input: ItineraryInput): G
     }
   }
 
-  const vpd = VILLAGES_PER_DAY[pace]
-  const totalNeeded = days * vpd
+  const budget = DAY_BUDGET_MINUTES[pace]
   const selected: Village[] = []
   const remaining = [...pool]
 
   if (remaining.length > 0) {
-    selected.push(remaining.splice(0, 1)[0])
-    while (selected.length < totalNeeded && remaining.length > 0) {
+    if (departureLat !== undefined && departureLng !== undefined) {
+      let nearestIdx = 0
+      let nearestDist = Infinity
+      remaining.forEach((v, i) => {
+        const d = haversineKm(departureLat, departureLng, v.lat, v.lng)
+        if (d < nearestDist) { nearestDist = d; nearestIdx = i }
+      })
+      selected.push(remaining.splice(nearestIdx, 1)[0])
+    } else {
+      selected.push(remaining.splice(0, 1)[0])
+    }
+
+    while (selected.length < Math.max(days * 5, 30) && remaining.length > 0) {
       const last = selected[selected.length - 1]
       let nearestIdx = 0
       let nearestDist = Infinity
@@ -65,34 +75,82 @@ export function generateItinerary(villages: Village[], input: ItineraryInput): G
 
   const atmosphereNote = getAtmosphereNote(styles)
   const itineraryDays: ItineraryDay[] = []
+  let villageIdx = 0
 
-  for (let d = 0; d < days; d++) {
-    const dayVillages = selected.slice(d * vpd, (d + 1) * vpd)
+  for (let d = 0; d < days && villageIdx < selected.length; d++) {
+    const dayVillages: Village[] = []
+    let usedMinutes = 0
+    let prevVillage: Village | null = d === 0 ? null : selected[villageIdx - 1] ?? null
+
+    while (villageIdx < selected.length) {
+      const v = selected[villageIdx]
+      const driveToV = prevVillage
+        ? driveTimeMinutes(haversineKm(prevVillage.lat, prevVillage.lng, v.lat, v.lng))
+        : (departureLat !== undefined && departureLng !== undefined
+            ? driveTimeMinutes(haversineKm(departureLat, departureLng, v.lat, v.lng))
+            : 0)
+
+      const cost = driveToV + v.visitDurationMinutes
+
+      if (dayVillages.length > 0 && usedMinutes + cost > budget) break
+
+      dayVillages.push(v)
+      usedMinutes += cost
+      prevVillage = v
+      villageIdx++
+
+      if (dayVillages.length >= 1 && usedMinutes >= budget * 0.8) break
+    }
+
     if (dayVillages.length === 0) break
 
     const stops: ItineraryStop[] = dayVillages.map((v, i) => {
-      const prevVillage = i === 0
-        ? (d === 0 ? null : selected[d * vpd - 1])
+      const prev = i === 0
+        ? (d === 0
+            ? (departureLat !== undefined && departureLng !== undefined ? { lat: departureLat, lng: departureLng } : null)
+            : selected[villageIdx - dayVillages.length - 1] ?? null)
         : dayVillages[i - 1]
 
-      const driveTimeFromPrevMinutes = prevVillage
-        ? driveTimeMinutes(haversineKm(prevVillage.lat, prevVillage.lng, v.lat, v.lng))
+      const driveTimeFromPrevMinutes = prev
+        ? driveTimeMinutes(haversineKm(prev.lat, prev.lng, v.lat, v.lng))
         : null
 
-      return { village: v, driveTimeFromPrevMinutes }
+      return { village: v, driveTimeFromPrevMinutes, visitDurationMinutes: v.visitDurationMinutes }
     })
+
+    const totalTimeMinutes = stops.reduce((sum, s) => {
+      return sum + s.visitDurationMinutes + (s.driveTimeFromPrevMinutes ?? 0)
+    }, 0)
 
     itineraryDays.push({
       dayNumber: d + 1,
-      label: `Day ${d + 1}`,
+      label: `Jour ${d + 1}`,
       atmosphereNote,
       stops,
+      totalTimeMinutes,
     })
+  }
+
+  const departureCity: DepartureCity | null =
+    departureLat !== undefined && departureLng !== undefined && departureName
+      ? { name: departureName, lat: departureLat, lng: departureLng }
+      : null
+
+  // Return drive time from last stop to departure city
+  let returnTimeMinutes: number | null = null
+  if (departureCity && itineraryDays.length > 0) {
+    const lastDay = itineraryDays[itineraryDays.length - 1]
+    const lastStop = lastDay.stops[lastDay.stops.length - 1]
+    returnTimeMinutes = driveTimeMinutes(
+      haversineKm(lastStop.village.lat, lastStop.village.lng, departureCity.lat, departureCity.lng)
+    )
   }
 
   return {
     days: itineraryDays,
-    totalVillages: selected.length,
-    poolExhausted: selected.length < totalNeeded,
+    totalVillages: itineraryDays.reduce((s, d) => s + d.stops.length, 0),
+    poolExhausted: villageIdx >= selected.length && itineraryDays.length < days,
+    departureCity,
+    returnTimeMinutes,
   }
 }

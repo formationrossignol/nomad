@@ -6,6 +6,7 @@ const mockVillages: Village[] = [
   {
     slug: 'gordes', name: 'Gordes', region: 'Provence', department: 'Vaucluse',
     lat: 43.9117, lng: 5.2011, description: '', tags: [], heroImage: '',
+    visitDurationMinutes: 120,
   },
 ]
 

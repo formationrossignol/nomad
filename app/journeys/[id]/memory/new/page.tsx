@@ -78,19 +78,19 @@ export default function NewMemoryPage({ params }: Props) {
       <div className="min-h-screen bg-ivory pt-[52px]">
         <div className="max-w-2xl mx-auto px-8 py-16">
           <p className="font-inter text-[9px] tracking-[0.25em] uppercase text-stone mb-6">
-            New memory
+            Nouveau souvenir
           </p>
           <h1 className="font-cormorant italic text-[36px] text-deep-blue mb-12">
-            Capture the moment
+            Capturer l'instant
           </h1>
 
           <form onSubmit={handleSubmit}>
-            <EditorialField label="Title (optional)">
+            <EditorialField label="Titre (optionnel)">
               <input
                 type="text"
                 value={title}
                 onChange={e => setTitle(e.target.value)}
-                placeholder="Sunset at the ramparts"
+                placeholder="Coucher de soleil sur les remparts"
                 className={editorialInputClass}
               />
             </EditorialField>
@@ -99,27 +99,27 @@ export default function NewMemoryPage({ params }: Props) {
               <textarea
                 value={body}
                 onChange={e => setBody(e.target.value)}
-                placeholder="What did it feel like…"
+                placeholder="Qu'avez-vous ressenti…"
                 rows={5}
                 className={editorialTextareaClass}
               />
             </EditorialField>
 
-            <EditorialField label="Location">
+            <EditorialField label="Lieu">
               <input
                 type="text"
                 value={locationName}
                 onChange={e => setLocationName(e.target.value)}
-                placeholder="Village or place name"
+                placeholder="Nom du village ou du lieu"
                 className={`${editorialInputClass} mb-4`}
               />
               <p className="font-inter text-[8px] tracking-[0.1em] uppercase text-stone mb-2">
-                Pin on map (optional)
+                Épingler sur la carte (optionnel)
               </p>
               <LocationPicker value={coords} onChange={setCoords} />
             </EditorialField>
 
-            <EditorialField label="Photographs">
+            <EditorialField label="Photographies">
               {previews.length > 0 && (
                 <div className="grid grid-cols-3 gap-2 mb-4">
                   {previews.map((src, i) => (
@@ -129,7 +129,7 @@ export default function NewMemoryPage({ params }: Props) {
               )}
               <label className="flex items-center justify-center h-16 border border-dashed border-sand cursor-pointer hover:border-deep-blue transition-colors duration-200">
                 <span className="font-inter text-[9px] tracking-[0.15em] uppercase text-stone">
-                  Add photos
+                  Ajouter des photos
                 </span>
                 <input
                   type="file"
@@ -147,7 +147,7 @@ export default function NewMemoryPage({ params }: Props) {
                 disabled={saving}
                 className="font-inter text-[10px] tracking-[0.18em] uppercase px-8 py-3 bg-deep-blue text-ivory hover:bg-cobalt disabled:opacity-40 transition-colors duration-200"
               >
-                {saving ? 'Saving…' : 'Save Memory'}
+                {saving ? 'Enregistrement…' : 'Enregistrer le souvenir'}
               </button>
             </div>
           </form>

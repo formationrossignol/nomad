@@ -8,6 +8,10 @@ const nextConfig = {
       },
       {
         protocol: 'https',
+        hostname: 'media.les-plus-beaux-villages-de-france.org',
+      },
+      {
+        protocol: 'https',
         hostname: '*.supabase.co',
       },
     ],

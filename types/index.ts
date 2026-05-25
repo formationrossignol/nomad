@@ -1,3 +1,25 @@
+export type PepiteFilterCategory =
+  | 'Promenades'
+  | 'Grottes'
+  | 'Parcs & jardins'
+  | 'Villages'
+  | 'Châteaux'
+  | 'Monuments & musées'
+  | 'Littoral & îles'
+
+export interface Pepite {
+  id: string
+  name: string
+  slug: string
+  filterCategory: PepiteFilterCategory
+  region: string
+  department: string
+  lat: number
+  lng: number
+  shortDescription: string
+  imageUrl: string
+}
+
 export interface Village {
   slug: string
   name: string
@@ -8,6 +30,7 @@ export interface Village {
   description: string
   tags: string[]
   heroImage: string
+  visitDurationMinutes: number
 }
 
 export interface Journey {
@@ -62,6 +85,7 @@ export interface Itinerary {
 export interface ItineraryStop {
   village: Village
   driveTimeFromPrevMinutes: number | null
+  visitDurationMinutes: number
 }
 
 export interface ItineraryDay {
@@ -69,18 +93,30 @@ export interface ItineraryDay {
   label: string
   atmosphereNote: string
   stops: ItineraryStop[]
+  totalTimeMinutes: number
+}
+
+export interface DepartureCity {
+  name: string
+  lat: number
+  lng: number
 }
 
 export interface GeneratedItinerary {
   days: ItineraryDay[]
   totalVillages: number
   poolExhausted: boolean
+  departureCity: DepartureCity | null
+  returnTimeMinutes: number | null
 }
 
 export interface ItineraryInput {
   days: number
-  region?: string
+  regions?: string[]
   styles: string[]
   pace: TravelPace
   excludeVisited?: string[]
+  departureLat?: number
+  departureLng?: number
+  departureName?: string
 }

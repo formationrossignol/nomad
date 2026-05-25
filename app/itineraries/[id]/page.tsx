@@ -47,14 +47,14 @@ export default async function ItineraryDetailPage({ params }: Props) {
       {heroVillage && (
         <div className="relative h-[50vh] overflow-hidden">
           <img
-            src={`${heroVillage.heroImage}&w=1600&q=80`}
+            src={heroVillage.heroImage}
             alt={heroVillage.name}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-midnight/80 to-transparent" />
           <div className="absolute bottom-10 left-12">
             <p className="font-inter text-[8px] tracking-[0.22em] uppercase text-champagne/70 mb-3">
-              Itinerary
+              Itinéraire
             </p>
             <h1 className="font-cormorant italic text-[40px] text-ivory leading-tight">
               {itinerary.title}
@@ -74,15 +74,16 @@ export default async function ItineraryDetailPage({ params }: Props) {
         <div className="no-print">
           <div className="sticky top-[72px]">
             <p className="font-inter text-[8px] tracking-[0.2em] uppercase text-stone mb-4">
-              Route
+              Itinéraire
             </p>
             <RouteMap
               days={preview.days}
+              departureCity={preview.departureCity}
               className="h-80 border border-sand/60 mb-6"
             />
             <div className="space-y-1">
               <p className="font-inter text-[8px] tracking-[0.1em] text-stone">
-                {preview.totalVillages} villages · {itinerary.days} days · {pace}
+                {preview.totalVillages} villages · {itinerary.days} jours · {pace === 'slow' ? 'lent' : pace === 'moderate' ? 'modéré' : 'intensif'}
               </p>
             </div>
           </div>

@@ -60,7 +60,7 @@ export default async function JourneyDetailPage({ params }: Props) {
       {typedMemories.some(m => m.lat && m.lng) && (
         <div className="max-w-4xl mx-auto px-8 mb-16">
           <p className="font-inter text-[8px] tracking-[0.2em] uppercase text-stone mb-4">
-            Route
+            Itinéraire
           </p>
           <JourneyMap memories={typedMemories} className="h-64 border border-sand/60" />
         </div>
@@ -69,12 +69,12 @@ export default async function JourneyDetailPage({ params }: Props) {
       {/* Memory timeline */}
       <div className="max-w-4xl mx-auto px-8 pb-32">
         <p className="font-inter text-[9px] tracking-[0.22em] uppercase text-stone mb-2">
-          Memories
+          Souvenirs
         </p>
         <div className="w-full h-px bg-sand/60 mb-0" />
         {typedMemories.length === 0 ? (
           <p className="font-cormorant italic text-[18px] text-stone py-12">
-            No memories yet — add your first.
+            Aucun souvenir pour l'instant — ajoutez le premier.
           </p>
         ) : (
           typedMemories.map(m => <MemoryBlock key={m.id} memory={m} />)
@@ -85,7 +85,7 @@ export default async function JourneyDetailPage({ params }: Props) {
       <Link
         href={`/journeys/${id}/memory/new`}
         className="no-print fixed bottom-8 right-8 w-14 h-14 rounded-full bg-deep-blue text-ivory flex items-center justify-center shadow-lg hover:bg-cobalt transition-colors duration-200 z-40"
-        aria-label="Add memory"
+        aria-label="Ajouter un souvenir"
       >
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
           <path d="M10 4v12M4 10h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />

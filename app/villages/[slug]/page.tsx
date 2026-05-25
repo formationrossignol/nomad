@@ -59,7 +59,16 @@ export default function VillageDetailPage({ params }: Props) {
           <h1 className="font-cormorant italic text-[42px] text-deep-blue leading-tight mb-6">
             {village.name}
           </h1>
-          <div className="w-8 h-px bg-champagne mb-8" />
+          <div className="flex items-center gap-4 mb-8">
+            <div className="w-8 h-px bg-champagne flex-shrink-0" />
+            <p className="font-inter text-[8px] tracking-[0.18em] uppercase text-stone">
+              {(() => {
+                const h = Math.floor(village.visitDurationMinutes / 60)
+                const m = village.visitDurationMinutes % 60
+                return h > 0 ? `${h}h${m > 0 ? m.toString().padStart(2, '0') : ''}` : `${m} min`
+              })()} de visite conseillée
+            </p>
+          </div>
           <p className="font-cormorant text-[17px] text-midnight/80 leading-[1.8] mb-10">
             {village.description}
           </p>
@@ -71,18 +80,18 @@ export default function VillageDetailPage({ params }: Props) {
           {/* Personal notes */}
           <div className="mt-10">
             <label className="font-inter text-[8px] tracking-[0.2em] uppercase text-stone block mb-3">
-              Your memories
+              Vos souvenirs
             </label>
             <textarea
               value={note}
               onChange={e => setNote(e.target.value)}
               onBlur={isVisited ? saveNote : undefined}
-              placeholder="Your memories of this village…"
+              placeholder="Vos souvenirs de ce village…"
               rows={4}
               className="w-full font-cormorant text-[16px] text-midnight/80 leading-[1.8] bg-transparent border-0 border-b border-sand/60 focus:outline-none focus:border-deep-blue resize-none placeholder:text-stone/50 pb-2 transition-colors duration-200"
             />
             {noteSaved && (
-              <p className="font-inter text-[8px] tracking-[0.1em] uppercase text-champagne mt-1">Saved</p>
+              <p className="font-inter text-[8px] tracking-[0.1em] uppercase text-champagne mt-1">Sauvegardé</p>
             )}
           </div>
         </div>
@@ -90,11 +99,11 @@ export default function VillageDetailPage({ params }: Props) {
         {/* Right — photos placeholder */}
         <div>
           <p className="font-inter text-[8px] tracking-[0.2em] uppercase text-stone mb-6">
-            Your photos
+            Vos photos
           </p>
           <div className="h-64 border border-dashed border-sand flex items-center justify-center">
             <p className="font-cormorant italic text-[14px] text-stone">
-              Photos attached to memories appear here
+              Les photos liées à vos souvenirs apparaissent ici
             </p>
           </div>
         </div>
@@ -104,7 +113,7 @@ export default function VillageDetailPage({ params }: Props) {
       <div className="border-t border-sand/60 py-16">
         <div className="max-w-6xl mx-auto px-8">
           <p className="font-inter text-[9px] tracking-[0.22em] uppercase text-stone mb-8">
-            Nearby villages
+            Villages proches
           </p>
           <div className="grid grid-cols-4 gap-4">
             {nearby.map(v => (

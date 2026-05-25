@@ -1,102 +1,313 @@
 [
   {
-    "slug": "gordes",
-    "name": "Gordes",
+    "slug": "aigueze",
+    "name": "Aiguèze",
+    "region": "Occitanie",
+    "department": "Gard",
+    "lat": 44.3177,
+    "lng": 4.5464,
+    "description": "À l'embouchure des gorges de l'Ardèche sur la rive gardoise, Aiguèze dresse ses remparts médiévaux face au pont d'Arc. Depuis ses tours, la vue sur la rivière émeraude en contrebas est parmi les plus belles du Midi.",
+    "tags": [
+      "medieval",
+      "photography",
+      "architectural"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1630/aigueze-survol-du-village-et-de-lardeche.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "ainhoa",
+    "name": "Ainhoa",
+    "region": "Nouvelle-Aquitaine",
+    "department": "Pyrénées-Atlantiques",
+    "lat": 43.3082,
+    "lng": -1.4973,
+    "description": "Village basque aux maisons à colombages rouges et blancs, Ainhoa déroule sa rue principale unique sur le chemin de Saint-Jacques. Ses frontons de pelote et ses stèles discoïdales témoignent d'une culture immémoriale.",
+    "tags": [
+      "architectural",
+      "photography",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1677/ainhoa-rue-et-facades-colorees.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "angles-sur-l-anglin",
+    "name": "Angles-sur-l'Anglin",
+    "region": "Centre-Val de Loire",
+    "department": "Vienne",
+    "lat": 46.6929,
+    "lng": 0.8799,
+    "description": "Les ruines romantiques du château médiéval se mirent dans l'Anglin, au cœur d'un village aux maisons de tuffeau pâle. La rivière, les lavoirs et les falaises troglodytes forment un tableau d'une douceur poitevine.",
+    "tags": [
+      "medieval",
+      "photography",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1590/angles-sur-langlin-moulin.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "ansouis",
+    "name": "Ansouis",
     "region": "Provence-Alpes-Côte d'Azur",
     "department": "Vaucluse",
-    "lat": 43.9117,
-    "lng": 5.2011,
-    "description": "Perched dramatically on a rocky hilltop in the Luberon, Gordes is one of the most photographed villages in France. Its terraced stone houses cascade down the cliff face, lit gold in the late afternoon sun.",
-    "tags": ["provence", "medieval", "photography", "gastronomy", "hidden"],
-    "heroImage": "https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?w=1200&q=80"
+    "lat": 43.7442,
+    "lng": 5.4767,
+    "description": "Couronné d'un château médiéval habité depuis mille ans, Ansouis domine les vignobles et les oliveraies du Luberon oriental. Ses ruelles silencieuses, ses jardins en terrasses et sa vue sur les Alpilles en font un village hors du temps.",
+    "tags": [
+      "provence",
+      "medieval",
+      "hidden",
+      "wine"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1631/ansouis-ambiance-ruelle-village.webp",
+    "visitDurationMinutes": 120
   },
   {
-    "slug": "les-baux-de-provence",
-    "name": "Les Baux-de-Provence",
-    "region": "Provence-Alpes-Côte d'Azur",
-    "department": "Bouches-du-Rhône",
-    "lat": 43.7443,
-    "lng": 4.7948,
-    "description": "A medieval citadel rising from the limestone Alpilles, Les Baux commands sweeping views across olive groves and vineyards. Its ruined castle and Renaissance hôtels particuliers make it feel frozen in the 16th century.",
-    "tags": ["provence", "medieval", "wine", "photography", "architectural"],
-    "heroImage": "https://images.unsplash.com/photo-1499678329028-101435549a4e?w=1200&q=80"
+    "slug": "apremont-sur-allier",
+    "name": "Apremont-sur-Allier",
+    "region": "Centre-Val de Loire",
+    "department": "Cher",
+    "lat": 46.9072,
+    "lng": 3.0053,
+    "description": "Château médiéval aux jardins fleuris surplombant l'Allier, Apremont est un village de maisons fleuries méticuleusement entretenu dans la tradition des jardins anglais. Un écrin de douceur berrichonne au bord de la Loire.",
+    "tags": [
+      "architectural",
+      "photography",
+      "gastronomy"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1613/apremont-sur-allier-vue-du-ciel.webp",
+    "visitDurationMinutes": 120
   },
   {
-    "slug": "eguisheim",
-    "name": "Eguisheim",
-    "region": "Grand Est",
-    "department": "Haut-Rhin",
-    "lat": 48.0430,
-    "lng": 7.3073,
-    "description": "Eguisheim is a perfectly preserved medieval village built in concentric circles around its octagonal castle. Half-timbered houses painted in ochre, rose and pale blue line cobblestone streets.",
-    "tags": ["alsace", "wine", "medieval", "gastronomy", "photography"],
-    "heroImage": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&q=80"
+    "slug": "arlempdes",
+    "name": "Arlempdes",
+    "region": "Auvergne-Rhône-Alpes",
+    "department": "Haute-Loire",
+    "lat": 44.9025,
+    "lng": 3.8797,
+    "description": "Sur un rocher basaltique dominant les gorges de la Loire naissante, les ruines du château d'Arlempdes et son village de lave noire forment une des visions les plus saisissantes du Velay volcanique.",
+    "tags": [
+      "medieval",
+      "photography",
+      "architectural"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1632/arlempdes-vue-panoramique-sur-les-toits.webp",
+    "visitDurationMinutes": 90
   },
   {
-    "slug": "rocamadour",
-    "name": "Rocamadour",
+    "slug": "ars-en-re",
+    "name": "Ars-en-Ré",
+    "region": "Nouvelle-Aquitaine",
+    "department": "Charente-Maritime",
+    "lat": 46.2083,
+    "lng": -1.5167,
+    "description": "Sur l'île de Ré, Ars-en-Ré se distingue par son clocher noir et blanc qui guide les marins depuis des siècles. Ses ruelles bordées de roses trémières et ses marais salants créent un univers insulaire unique.",
+    "tags": [
+      "coastal",
+      "nature",
+      "photography",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1678/ars-en-re-le-port.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "aubeterre-sur-dronne",
+    "name": "Aubeterre-sur-Dronne",
+    "region": "Nouvelle-Aquitaine",
+    "department": "Charente",
+    "lat": 45.2706,
+    "lng": 0.168,
+    "description": "Aubeterre abrite l'une des plus grandes et surprenantes églises monolithiques d'Europe, entièrement creusée dans la falaise calcaire. Au-dessus, le village de maisons blanches contemple la Dronne depuis ses terrasses.",
+    "tags": [
+      "architectural",
+      "medieval",
+      "photography",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1679/aubeterre-sur-dronne-cur-de-village.webp",
+    "visitDurationMinutes": 180
+  },
+  {
+    "slug": "autoire",
+    "name": "Autoire",
     "region": "Occitanie",
     "department": "Lot",
-    "lat": 44.7989,
-    "lng": 1.6183,
-    "description": "Built vertically into a sheer cliff face above the Alzou canyon, Rocamadour defies gravity. A medieval pilgrimage site, its sanctuaries and carved stone stairs create one of France's most dramatic architectural silhouettes.",
-    "tags": ["medieval", "architectural", "hidden", "photography"],
-    "heroImage": "https://images.unsplash.com/photo-1520466809213-7b9a56adcd45?w=1200&q=80"
+    "lat": 44.8804,
+    "lng": 1.8035,
+    "description": "Dans un cirque naturel fermé par des falaises et une cascade, Autoire niche ses manoirs à tourelles et ses maisons lotois dans un cadre qui évoque la Périgord profond. L'un des plus beaux villages peu connus du Lot.",
+    "tags": [
+      "hidden",
+      "photography",
+      "medieval"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1680/autoire-entree-du-village.webp",
+    "visitDurationMinutes": 90
   },
   {
-    "slug": "la-roque-gageac",
-    "name": "La Roque-Gageac",
+    "slug": "auvillar",
+    "name": "Auvillar",
+    "region": "Occitanie",
+    "department": "Tarn-et-Garonne",
+    "lat": 44.0632,
+    "lng": 0.9013,
+    "description": "Halle circulaire du XVIIIe siècle et tour de l'Horloge sur un belvédère dominant la Garonne — Auvillar possède l'une des plus élégantes places de marché du Midi. Village de potiers, étape de Saint-Jacques.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "gastronomy"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1681/auvillar-promeneuse-halle.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "balazuc",
+    "name": "Balazuc",
+    "region": "Auvergne-Rhône-Alpes",
+    "department": "Ardèche",
+    "lat": 44.5021,
+    "lng": 4.3921,
+    "description": "Accroché à une falaise calcaire au-dessus de l'Ardèche, Balazuc offre un spectaculaire panorama sur les gorges. Ses maisons de pierre blanche aux toits de lauzes témoignent de siècles d'architecture vernaculaire méridionale.",
+    "tags": [
+      "medieval",
+      "photography",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1633/balazuc-vue-village-et-riviere.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "barfleur",
+    "name": "Barfleur",
+    "region": "Normandie",
+    "department": "Manche",
+    "lat": 49.6716,
+    "lng": -1.2651,
+    "description": "Ancien premier port de Normandie du temps de Guillaume le Conquérant, Barfleur est aujourd'hui un village de pêcheurs en granit gris au bout du Cotentin. Son phare, ses quais fleuris de roses et ses maisons d'ardoise témoignent d'une beauté maritime sobre et durable.",
+    "tags": [
+      "coastal",
+      "medieval",
+      "photography",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1591/barfleur-vue-aerienne.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "bargeme",
+    "name": "Bargème",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "department": "Var",
+    "lat": 43.6988,
+    "lng": 6.6443,
+    "description": "Plus haut village du Var à 1 097 mètres, Bargème dresse les ruines de son château médiéval dans un paysage de Haut-Var sauvage et préservé. Un bout du monde provençal entre chênes et ciels d'altitude.",
+    "tags": [
+      "hidden",
+      "photography",
+      "medieval"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1634/bargeme-facade-batisses.webp",
+    "visitDurationMinutes": 60
+  },
+  {
+    "slug": "baume-les-messieurs",
+    "name": "Baume-les-Messieurs",
+    "region": "Bourgogne-Franche-Comté",
+    "department": "Jura",
+    "lat": 46.6666,
+    "lng": 5.6392,
+    "description": "Au confluent de trois reculées jurassiennes, Baume-les-Messieurs abrite une abbaye bénédictine du VIe siècle et des cascades tombant de cirques rocheux vertigineux. Un lieu d'une beauté sauvage et spirituelle unique.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "hidden",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1614/baume-les-messieurs-vue-village-et-vallee.webp",
+    "visitDurationMinutes": 180
+  },
+  {
+    "slug": "beaulieu-sur-dordogne",
+    "name": "Beaulieu-sur-Dordogne",
+    "region": "Nouvelle-Aquitaine",
+    "department": "Corrèze",
+    "lat": 44.9774,
+    "lng": 1.8397,
+    "description": "L'abbaye Saint-Pierre de Beaulieu abrite l'un des plus beaux tympans roman de France, dit le «tympan du jugement dernier». Le village s'étend en bord de Dordogne dans un décor de fraises et de noyers corréziens.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "gastronomy"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s3505/beaulieu-sur-dordogne-vue-du-ciel.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "belcastel",
+    "name": "Belcastel",
+    "region": "Occitanie",
+    "department": "Aveyron",
+    "lat": 44.3636,
+    "lng": 2.328,
+    "description": "Château restauré par Fernand Pouillon, pont gothique à cinq arches et maisons de calcaire rouge se mirant dans l'Aveyron — Belcastel est un tableau médiéval d'une beauté méticuleuse.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1683/belcastel-vue-village-et-chateau.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "belves",
+    "name": "Belvès",
     "region": "Nouvelle-Aquitaine",
     "department": "Dordogne",
-    "lat": 44.8288,
-    "lng": 1.1916,
-    "description": "Nestled between a golden limestone cliff and the Dordogne river, La Roque-Gageac is one of France's most beautiful villages. Its troglodyte fort and the slow rhythm of the river give it a timeless quality.",
-    "tags": ["dordogne", "medieval", "gastronomy", "photography", "hidden"],
-    "heroImage": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=1200&q=80"
+    "lat": 44.7756,
+    "lng": 1.0002,
+    "description": "Bastide médiévale aux sept clochers visible de loin depuis la route, Belvès abrite des habitations troglodytiques souterraines habitées jusqu'au XVIIIe siècle. Sa halle du XVe siècle et ses maisons à couverts composent un cœur médiéval homogène.",
+    "tags": [
+      "dordogne",
+      "medieval",
+      "architectural"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1684/belves-vue-generale.webp",
+    "visitDurationMinutes": 120
   },
   {
-    "slug": "vezelay",
-    "name": "Vézelay",
-    "region": "Bourgogne-Franche-Comté",
-    "department": "Yonne",
-    "lat": 47.4647,
-    "lng": 3.7453,
-    "description": "Crowned by a UNESCO-listed Romanesque basilica, Vézelay sits atop a hill above the Cure valley. The village is a starting point for the pilgrimage to Santiago de Compostela and exudes quiet spiritual beauty.",
-    "tags": ["medieval", "architectural", "wine", "gastronomy", "hidden"],
-    "heroImage": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1200&q=80"
-  },
-  {
-    "slug": "locronan",
-    "name": "Locronan",
-    "region": "Bretagne",
-    "department": "Finistère",
-    "lat": 48.0986,
-    "lng": -4.2093,
-    "description": "Locronan's Renaissance granite square is so perfectly preserved that it regularly doubles as a film set. The village's grey stone architecture and misty Atlantic light create an otherworldly atmosphere.",
-    "tags": ["bretagne", "medieval", "architectural", "photography", "hidden", "coastal"],
-    "heroImage": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&q=80"
-  },
-  {
-    "slug": "saint-cirq-lapopie",
-    "name": "Saint-Cirq-Lapopie",
-    "region": "Occitanie",
-    "department": "Lot",
-    "lat": 44.4648,
-    "lng": 1.6686,
-    "description": "Hanging above a bend in the Lot river, Saint-Cirq-Lapopie is a village of medieval houses and craftsmen's workshops clinging to a promontory 100m above the valley. André Breton called it 'the impossible'.",
-    "tags": ["medieval", "hidden", "photography", "gastronomy"],
-    "heroImage": "https://images.unsplash.com/photo-1533587851505-d119e13fa0d7?w=1200&q=80"
-  },
-  {
-    "slug": "riquewihr",
-    "name": "Riquewihr",
+    "slug": "bergheim",
+    "name": "Bergheim",
     "region": "Grand Est",
     "department": "Haut-Rhin",
-    "lat": 48.1668,
-    "lng": 7.2954,
-    "description": "One of the wine capitals of Alsace, Riquewihr is encircled by 16th-century ramparts and filled with Renaissance half-timbered houses. Its vineyards produce some of France's finest Rieslings.",
-    "tags": ["alsace", "wine", "medieval", "gastronomy"],
-    "heroImage": "https://images.unsplash.com/photo-1597757212040-6f0e3eff0d3b?w=1200&q=80"
+    "lat": 48.2008,
+    "lng": 7.3561,
+    "description": "Village viticole alsacien ceint de remparts du XIVe siècle avec ses portes fortifiées, Bergheim est célèbre pour ses maisons à colombages Renaissance et ses tilleuls centenaires. Ses vins de tilleul et de pinot gris perpétuent une tradition viticole alsacienne.",
+    "tags": [
+      "alsace",
+      "wine",
+      "medieval",
+      "architectural"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s3504/bergheim-vue-panoramique.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "beuvron-en-auge",
+    "name": "Beuvron-en-Auge",
+    "region": "Normandie",
+    "department": "Calvados",
+    "lat": 49.1816,
+    "lng": -0.0686,
+    "description": "Village normand par excellence — ses maisons à colombages à motifs géométriques entourent un manoir Renaissance du XVIe siècle. Cidre, calvados et teurgoule se savourent dans ce concentré de Pays d'Auge.",
+    "tags": [
+      "architectural",
+      "gastronomy",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1593/beuvron-en-auge.webp",
+    "visitDurationMinutes": 120
   },
   {
     "slug": "beynac-et-cazenac",
@@ -105,8 +316,2727 @@
     "department": "Dordogne",
     "lat": 44.8282,
     "lng": 1.1509,
-    "description": "A medieval castle perches impossibly on a sheer cliff above the Dordogne valley at Beynac. The village below, with its stone houses and riverside views, was fought over by English and French kings for centuries.",
-    "tags": ["dordogne", "medieval", "architectural", "photography"],
-    "heroImage": "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=1200&q=80"
+    "description": "Un château médiéval se dresse impossiblement sur une falaise abrupte au-dessus de la vallée de la Dordogne. Le village en contrebas, avec ses maisons de pierre et ses vues sur la rivière, fut âprement disputé par les rois d'Angleterre et de France.",
+    "tags": [
+      "dordogne",
+      "medieval",
+      "architectural",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1685/beynac-et-cazenac-toit-et-tours-chateaux.webp",
+    "visitDurationMinutes": 180
+  },
+  {
+    "slug": "blangy-le-chateau",
+    "name": "Blangy-le-Château",
+    "region": "Normandie",
+    "department": "Calvados",
+    "lat": 49.2333,
+    "lng": 0.3167,
+    "description": "Dans le pays d'Auge normand, Blangy-le-Château offre un paysage bocager typique avec ses colombages et son château médiéval. Village discret au cœur du terroir cidricole normand.",
+    "tags": [
+      "normandy",
+      "medieval",
+      "nature",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s3727/blangy-le-chateau-rue-principale.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "blesle",
+    "name": "Blesle",
+    "region": "Auvergne-Rhône-Alpes",
+    "department": "Haute-Loire",
+    "lat": 45.3051,
+    "lng": 3.1715,
+    "description": "Dans les gorges de la Senouire, Blesle déploie ses maisons médiévales autour d'une abbaye bénédictine du IXe siècle. Ce village de l'Auvergne profonde respire une sérénité monacale.",
+    "tags": [
+      "medieval",
+      "hidden",
+      "architectural"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1686/blesle-vue-ensoleillee.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "bonneval-sur-arc",
+    "name": "Bonneval-sur-Arc",
+    "region": "Auvergne-Rhône-Alpes",
+    "department": "Savoie",
+    "lat": 45.3667,
+    "lng": 7.0667,
+    "description": "Niché à 1800 mètres dans le Parc national de la Vanoise, Bonneval-sur-Arc est le village de haute montagne le mieux préservé des Alpes françaises. Ses chalets de pierre aux toits de lauze semblent surgis d'un autre temps.",
+    "tags": [
+      "mountain",
+      "nature",
+      "photography",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1636/bonneval-sur-arc-sous-la-neige.webp",
+    "visitDurationMinutes": 180
+  },
+  {
+    "slug": "bormes-les-mimosas",
+    "name": "Bormes-les-Mimosas",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "department": "Var",
+    "lat": 43.1536,
+    "lng": 6.3418,
+    "description": "Au-dessus du golfe de Lavandou, ce village médiéval fleuri de bougainvillées et mimosas dégringole vers la Méditerranée. Ses ruelles colorées, ses terrasses et son château du XIIIe siècle offrent une vue imprenable sur les Îles d'Or.",
+    "tags": [
+      "coastal",
+      "provence",
+      "photography",
+      "medieval"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s3736/bormes-les-mimosas-vue-generale.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "brouage",
+    "name": "Brouage",
+    "region": "Nouvelle-Aquitaine",
+    "department": "Charente-Maritime",
+    "lat": 45.8667,
+    "lng": -1.0667,
+    "description": "Ancienne place forte royale entourée de marais, Brouage conserve intactes ses imposantes fortifications du XVIIe siècle. Berceau de Samuel de Champlain, fondateur de Québec, le village est aujourd'hui une cité-fantôme habitée par l'histoire.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "history",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1687/brouage-balade.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "brousse-le-chateau",
+    "name": "Brousse-le-Château",
+    "region": "Occitanie",
+    "department": "Aveyron",
+    "lat": 44.0057,
+    "lng": 2.7082,
+    "description": "Château médiéval dominant la confluence du Dourdou et de l'Alrance, Brousse-le-Château est un village de schiste aux ruelles en pente, au calme saisissant. Sa position sur l'eau lui confère un charme intime et secret.",
+    "tags": [
+      "medieval",
+      "hidden",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1688/brousse-le-chateau-depuis-le-pont.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "bruniquel",
+    "name": "Bruniquel",
+    "region": "Occitanie",
+    "department": "Tarn-et-Garonne",
+    "lat": 44.0647,
+    "lng": 1.6627,
+    "description": "Deux châteaux jumeaux coiffent le promontoire de Bruniquel au-dessus des gorges boisées de l'Aveyron. Ce village de ruelle médiévale et d'art contemporain réserve aussi l'accès à une grotte néandertalienne unique au monde.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1689/bruniquel-vue-chateau-et-falaise.webp",
+    "visitDurationMinutes": 180
+  },
+  {
+    "slug": "camon",
+    "name": "Camon",
+    "region": "Occitanie",
+    "department": "Ariège",
+    "lat": 43.0167,
+    "lng": 1.85,
+    "description": "Perché au-dessus de l'Hers-Vif, Camon est ceint d'une double enceinte médiévale et dominé par son abbaye fortifiée. Au printemps, les rosiers en fleurs envahissent ses ruelles de pierre.",
+    "tags": [
+      "medieval",
+      "photography",
+      "hidden",
+      "nature"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1690/camon-rue-du-village-et-ses-rosiers.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "candes-saint-martin",
+    "name": "Candes-Saint-Martin",
+    "region": "Centre-Val de Loire",
+    "department": "Indre-et-Loire",
+    "lat": 47.2167,
+    "lng": 0.0667,
+    "description": "À la confluence de la Loire et de la Vienne, Candes-Saint-Martin abrite une collégiale gothique militaire où saint Martin mourut en 397. Son architecture angevine est un chef-d'œuvre du gothique Plantagenêt.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "history",
+      "nature"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1594/candes-saint-martin-vue-depuis-la-loire.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "capdenac-le-haut",
+    "name": "Capdenac-le-Haut",
+    "region": "Occitanie",
+    "department": "Aveyron",
+    "lat": 44.5667,
+    "lng": 2.0833,
+    "description": "Posé sur un éperon rocheux dans un méandre du Lot, Capdenac-le-Haut est identifié par certains comme l'antique Uxellodunum de César. Ses remparts médiévaux offrent une vue panoramique sur la vallée verdoyante.",
+    "tags": [
+      "medieval",
+      "photography",
+      "nature",
+      "history"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1691/capdenac-le-haut-vue-sur-les-toits.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "cardaillac",
+    "name": "Cardaillac",
+    "region": "Occitanie",
+    "department": "Lot",
+    "lat": 44.6734,
+    "lng": 1.9776,
+    "description": "Forteresse médiévale des comtes de Cardaillac dominant le Célé et le Drauzou, ce village lotois a conservé ses deux tours et son bourg ancien dans un état de préservation rare. Musée éclaté dans les rues, il fait revivre l'artisanat d'antan.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1692/cardaillac-vue-haute.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "carennac",
+    "name": "Carennac",
+    "region": "Occitanie",
+    "department": "Lot",
+    "lat": 44.9213,
+    "lng": 1.7315,
+    "description": "Prieuré clunisien du XIe siècle, manor tourellé et maisons Renaissance en calcaire doré au bord de la Dordogne — Carennac est l'un des plus séduisants villages du Lot, où Fénelon rédigea les Aventures de Télémaque.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "gastronomy"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1693/carennac-bati-fleuri.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "castelnau-de-montmiral",
+    "name": "Castelnau-de-Montmiral",
+    "region": "Occitanie",
+    "department": "Tarn",
+    "lat": 43.9689,
+    "lng": 1.8205,
+    "description": "Bastide médiévale aux couverts à arcades dominée par une croix de Malte, Castelnau-de-Montmiral produit du Gaillac AOC et veille sur le Gresigne. Une qualité de silence et d'air rare dans la campagne tarnaise.",
+    "tags": [
+      "medieval",
+      "wine",
+      "gastronomy"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1694/castelnau-de-montmiral-vue-aerienne.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "castelnaud-la-chapelle",
+    "name": "Castelnaud-la-Chapelle",
+    "region": "Nouvelle-Aquitaine",
+    "department": "Dordogne",
+    "lat": 44.8167,
+    "lng": 1.15,
+    "description": "Dominant le confluent de la Dordogne et de la Céou, le château de Castelnaud fut l'un des principaux bastions anglais pendant la guerre de Cent Ans. Son musée de la guerre médiévale est l'un des plus complets d'Europe.",
+    "tags": [
+      "dordogne",
+      "medieval",
+      "history",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1695/castelnaud-la-chapelle-vue-densemble.webp",
+    "visitDurationMinutes": 210
+  },
+  {
+    "slug": "castelnou",
+    "name": "Castelnou",
+    "region": "Occitanie",
+    "department": "Pyrénées-Orientales",
+    "lat": 42.6048,
+    "lng": 2.6885,
+    "description": "Château médiéval et village castral catalan au pied du Canigou, Castelnou a conservé ses remparts intacts et ses ruelles de galets noirs. Un condensé de Catalogne française dominant la plaine du Roussillon.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1696/castelnou-vue-densemble.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "chambon-sur-voueize",
+    "name": "Chambon-sur-Voueize",
+    "region": "Nouvelle-Aquitaine",
+    "department": "Creuse",
+    "lat": 46.1833,
+    "lng": 2.4167,
+    "description": "Au bord de la Voueize dans la Creuse profonde, Chambon possède une abbatiale romane d'une beauté rare, inscrite au patrimoine mondial. Son clocher gothique domine un village figé dans une sérénité campagnarde.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "hidden",
+      "nature"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s6766/chambon-sur-voueize-pont-roman-sur-la-voueize.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "charroux",
+    "name": "Charroux",
+    "region": "Auvergne-Rhône-Alpes",
+    "department": "Allier",
+    "lat": 46.1593,
+    "lng": 3.162,
+    "description": "Village médiéval parfaitement préservé du Bourbonnais, Charroux déroule ses ruelles de pierre autour d'une abbaye romane. L'entrée d'une seule porte classée en fait un village-musée vivant.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "gastronomy"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1637/charroux-porte-dorient.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "chateau-chalon",
+    "name": "Château-Chalon",
+    "region": "Bourgogne-Franche-Comté",
+    "department": "Jura",
+    "lat": 46.7829,
+    "lng": 5.5303,
+    "description": "Capitale du vin jaune du Jura, Château-Chalon trône sur un éperon calcaire surplombant les vignes de savagnin. Ses maisons de pierres blondes, son église romane et ses caves à vin typé confèrent au village une noblesse vigneronne unique.",
+    "tags": [
+      "wine",
+      "medieval",
+      "gastronomy",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1615/chateau-chalon-vue.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "chateauneuf",
+    "name": "Châteauneuf",
+    "region": "Bourgogne-Franche-Comté",
+    "department": "Côte-d'Or",
+    "lat": 47.2167,
+    "lng": 4.6333,
+    "description": "Son château médiéval domine le canal de Bourgogne et les vignobles alentour. Ce village fortifié du XIIe siècle, entouré de ses remparts, réserve une des vues les plus saisissantes de toute la Bourgogne.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "wine",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1616/chateauneuf-vue-chateau.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "chatillon-en-diois",
+    "name": "Châtillon-en-Diois",
+    "region": "Auvergne-Rhône-Alpes",
+    "department": "Drôme",
+    "lat": 44.6833,
+    "lng": 5.4833,
+    "description": "Adossé aux contreforts du Vercors dans le Diois, Châtillon-en-Diois est entouré de lavande et de vignes. Ses ruelles médiévales et ses fontaines en font l'un des secrets bien gardés de la Drôme.",
+    "tags": [
+      "provence",
+      "nature",
+      "hidden",
+      "medieval"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s3432/chatillon-en-diois-vue-densemble.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "coaraze",
+    "name": "Coaraze",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "department": "Alpes-Maritimes",
+    "lat": 43.8712,
+    "lng": 7.3699,
+    "description": "«Village du soleil», Coaraze est orné de cadrans solaires créés par Cocteau et Pignon sur les façades de ses maisons médiévales. Dans l'arrière-pays niçois, ce village en terrasses offre lumière et tranquillité.",
+    "tags": [
+      "medieval",
+      "photography",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1643/coaraze-vue-generale.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "collonges-la-rouge",
+    "name": "Collonges-la-Rouge",
+    "region": "Nouvelle-Aquitaine",
+    "department": "Corrèze",
+    "lat": 45.0524,
+    "lng": 1.6559,
+    "description": "Entièrement construit en grès rouge local, Collonges est l'un des villages les plus singuliers de France. Tours, tourelles et manoirs de grès pourpre forment un ensemble médiéval d'une cohérence chromatique stupéfiante.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1697/collonges-la-rouge-vue-densemble.webp",
+    "visitDurationMinutes": 180
+  },
+  {
+    "slug": "colmars",
+    "name": "Colmars",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "department": "Alpes-de-Haute-Provence",
+    "lat": 44.1833,
+    "lng": 6.6333,
+    "description": "Cité fortifiée par Vauban au cœur du Haut-Verdon, Colmars-les-Alpes conserve intactes ses tours et ses portes défensives du XVIIe siècle. Village alpin exceptionnel, c'est un point de départ idéal pour les randonnées.",
+    "tags": [
+      "mountain",
+      "medieval",
+      "architectural",
+      "nature"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s6991/colmars-vue-depuis-la-caponniere-du-fort-de-savoie.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "conques",
+    "name": "Conques",
+    "region": "Occitanie",
+    "department": "Aveyron",
+    "lat": 44.5994,
+    "lng": 2.3989,
+    "description": "L'abbatiale de Conques, chef-d'œuvre de l'art roman avec son tympan du Jugement dernier, domine un vallon boisé sur le chemin de Saint-Jacques. Le village de schiste aux ruelles en escalier est d'une spiritualité saisissante.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1698/conques-ambiance-rue.webp",
+    "visitDurationMinutes": 240
+  },
+  {
+    "slug": "cordes-sur-ciel",
+    "name": "Cordes-sur-Ciel",
+    "region": "Occitanie",
+    "department": "Tarn",
+    "lat": 44.0641,
+    "lng": 1.957,
+    "description": "Fondée en 1222, cette cité gothique disparaît dans les brouillards matinaux et réapparaît «dans le ciel». Ses hôtels particuliers gothiques, ses ruelles à arcades et ses artisans témoignent d'un art de vivre médiéval raffiné.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "photography",
+      "gastronomy"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s3431/cordes-sur-ciel-vue-densemble.webp",
+    "visitDurationMinutes": 210
+  },
+  {
+    "slug": "cotignac",
+    "name": "Cotignac",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "department": "Var",
+    "lat": 43.5766,
+    "lng": 6.1552,
+    "description": "Village provençal adossé à une falaise de tuf de 80 mètres criblée de grottes habitées jusqu'au XVIIIe siècle, Cotignac étire ses maisons aux façades colorées au bord du Cassole. Ses places animées, ses fontaines et ses ruelles ont le parfum du midi éternel.",
+    "tags": [
+      "provence",
+      "photography",
+      "medieval"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s3577/cotignac-vue-du-village-au-pied-de-la-falaise.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "crissay-sur-manse",
+    "name": "Crissay-sur-Manse",
+    "region": "Centre-Val de Loire",
+    "department": "Indre-et-Loire",
+    "lat": 47.1233,
+    "lng": 0.3715,
+    "description": "Ce hameau de tuffeau blanc aux ruelles silencieuses, presque hors du monde, conserve les restes d'un château médiéval et une église romane dans un écrin de Touraine secrète.",
+    "tags": [
+      "medieval",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1595/crissay-sur-manse-patrimoine-bati.webp",
+    "visitDurationMinutes": 60
+  },
+  {
+    "slug": "curemonte",
+    "name": "Curemonte",
+    "region": "Nouvelle-Aquitaine",
+    "department": "Corrèze",
+    "lat": 44.9924,
+    "lng": 1.736,
+    "description": "Trois châteaux médiévaux se dressent côte à côte sur le même éperon dominant les gorges boisées de la Sourdoire. Ce village corrézien à l'écart du monde fut cher à Colette, qui y trouva l'inspiration.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1700/curemonte-vue-panoramique.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "domme",
+    "name": "Domme",
+    "region": "Nouvelle-Aquitaine",
+    "department": "Dordogne",
+    "lat": 44.8015,
+    "lng": 1.2067,
+    "description": "Bastide royale perchée à 150 mètres au-dessus de la Dordogne, Domme offre l'un des panoramas les plus spectaculaires du Périgord. Ses remparts dorés, ses halles médiévales et ses grottes en font un village d'exception.",
+    "tags": [
+      "dordogne",
+      "medieval",
+      "photography",
+      "gastronomy"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1701/domme-place-mairie.webp",
+    "visitDurationMinutes": 180
+  },
+  {
+    "slug": "eguisheim",
+    "name": "Eguisheim",
+    "region": "Grand Est",
+    "department": "Haut-Rhin",
+    "lat": 48.043,
+    "lng": 7.3073,
+    "description": "Eguisheim est un village médiéval parfaitement conservé construit en cercles concentriques autour de son château octogonal. Des maisons à colombages peintes en ocre, rose et bleu pâle bordent des ruelles pavées.",
+    "tags": [
+      "alsace",
+      "wine",
+      "medieval",
+      "gastronomy",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1617/eguisheim-place-du-chateau.webp",
+    "visitDurationMinutes": 180
+  },
+  {
+    "slug": "entrevaux",
+    "name": "Entrevaux",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "department": "Alpes-de-Haute-Provence",
+    "lat": 43.9574,
+    "lng": 6.8139,
+    "description": "Village médiéval fortifié par Vauban au bord du Var, accessible uniquement par un pont-levis, Entrevaux est un bijou défensif intact. Ses ruelles ombragées et sa citadelle sur rocher dominent les gorges du Var.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s3627/entrevaux-vue-densemble.webp",
+    "visitDurationMinutes": 180
+  },
+  {
+    "slug": "estaing",
+    "name": "Estaing",
+    "region": "Occitanie",
+    "department": "Aveyron",
+    "lat": 44.5713,
+    "lng": 2.6638,
+    "description": "Au confluent du Lot et de la Coussane, le château des comtes d'Estaing veille sur un village médiéval aux maisons de schiste. Ce village du Lot aveyronnais est étape majeure du chemin de Compostelle.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1702/estaing-vue-sur-le-village-le-pont-et-le-lot.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "eus",
+    "name": "Eus",
+    "region": "Occitanie",
+    "department": "Pyrénées-Orientales",
+    "lat": 42.6085,
+    "lng": 2.3774,
+    "description": "Village catalan en terrasses montant à son église romane dressée sur le roc, Eus domine la plaine du Conflent et le défilé de la Têt. L'enchevêtrement de ses ruelles de galets et le bleu du ciel catalan captivent.",
+    "tags": [
+      "medieval",
+      "photography",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1703/eus-vue-village.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "evol",
+    "name": "Evol",
+    "region": "Occitanie",
+    "department": "Pyrénées-Orientales",
+    "lat": 42.5595,
+    "lng": 2.3671,
+    "description": "Village de schiste noir en amphithéâtre dans la haute vallée de la Rotja, Évol conserve un château des Chevaliers de Malte et des maisons médiévales dans un isolement pyrénéen absolu.",
+    "tags": [
+      "medieval",
+      "hidden",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1704/evol-vue.webp",
+    "visitDurationMinutes": 60
+  },
+  {
+    "slug": "flavigny-sur-ozerain",
+    "name": "Flavigny-sur-Ozerain",
+    "region": "Bourgogne-Franche-Comté",
+    "department": "Côte-d'Or",
+    "lat": 47.5127,
+    "lng": 4.517,
+    "description": "Village de remparts bourguignons célèbre pour ses anis de Flavigny fabriqués depuis 1591. L'abbaye carolingienne abrite toujours la fabrique de bonbons, tandis que les ruelles médiévales conservent leur sérénité hors du temps.",
+    "tags": [
+      "medieval",
+      "gastronomy",
+      "architectural",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1618/flavigny-sur-ozerain-vue-densemble.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "fontevraud-l-abbaye",
+    "name": "Fontevraud-l'Abbaye",
+    "region": "Pays de la Loire",
+    "department": "Maine-et-Loire",
+    "lat": 47.1833,
+    "lng": 0.05,
+    "description": "L'abbaye royale de Fontevraud, la plus vaste de France, abrita les tombeaux des rois Plantagenêts. Son architecture cistercienne et sa cuisine troglodyte en font un monument d'exception de la Loire.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "history",
+      "gastronomy"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s3728/fontevraud-labbaye-abbaye-et-jardin.webp",
+    "visitDurationMinutes": 180
+  },
+  {
+    "slug": "fources",
+    "name": "Fourcès",
+    "region": "Occitanie",
+    "department": "Gers",
+    "lat": 43.8791,
+    "lng": 0.0976,
+    "description": "Rarissime bastide circulaire du Moyen Âge, Fourcès déploie ses maisons à colombages et à arcades autour d'une placette ronde ombragée de platanes. Au bord de l'Auzoue, ce village gascon hors du temps est d'une harmonie architecturale presque parfaite.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "hidden",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1706/fources-vue-aerienne.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "gargilesse-dampierre",
+    "name": "Gargilesse-Dampierre",
+    "region": "Centre-Val de Loire",
+    "department": "Indre",
+    "lat": 46.4879,
+    "lng": 1.7271,
+    "description": "Gorges de la Creuse et château féodal, église romane aux cryptes ornées de fresques — Gargilesse fut un repaire d'artistes cher à George Sand qui y possédait une maison. Le village allie nature sauvage et mémoire littéraire.",
+    "tags": [
+      "medieval",
+      "photography",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1596/gargilesse-dampierre-vue-panoramique.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "gassin",
+    "name": "Gassin",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "department": "Var",
+    "lat": 43.2333,
+    "lng": 6.5667,
+    "description": "Perché à 200 mètres au-dessus du golfe de Saint-Tropez, Gassin offre l'un des panoramas les plus spectaculaires du Var. Ses ruelles fleuries et son atmosphère préservée contrastent avec l'agitation balnéaire en contrebas.",
+    "tags": [
+      "provence",
+      "coastal",
+      "photography",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1640/gassin-table-dorientation.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "gerberoy",
+    "name": "Gerberoy",
+    "region": "Hauts-de-France",
+    "department": "Oise",
+    "lat": 49.4893,
+    "lng": 1.8247,
+    "description": "Village piccard de briques et de colombages envahi de roses, Gerberoy a été sauvé et embelli par le peintre Henri Le Sidaner au début du XXe siècle. Au printemps, ses ruelles disparaissent sous les fleurs.",
+    "tags": [
+      "photography",
+      "hidden",
+      "architectural"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1597/gerberoy-ambiance-rue-village.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "gordes",
+    "name": "Gordes",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "department": "Vaucluse",
+    "lat": 43.9117,
+    "lng": 5.2011,
+    "description": "Perché dramatiquement sur un éperon rocheux dans le Luberon, Gordes est l'un des villages les plus photographiés de France. Ses maisons de pierre en terrasses descendent la falaise, dorées dans la lumière de fin d'après-midi.",
+    "tags": [
+      "provence",
+      "medieval",
+      "photography",
+      "gastronomy",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1641/gordes-vue-densemble-depuis-le-rocher-de-bel-air.webp",
+    "visitDurationMinutes": 240
+  },
+  {
+    "slug": "gourdon-am",
+    "name": "Gourdon",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "department": "Alpes-Maritimes",
+    "lat": 43.7258,
+    "lng": 6.9983,
+    "description": "Accroché à 760 mètres au-dessus des gorges du Loup, Gourdon est un «nid d'aigle» médiéval offrant un panorama vertigineux de la mer à l'Esterel. Son château Renaissance aux jardins suspendus dessinés par Le Nôtre complète ce décor stupéfiant.",
+    "tags": [
+      "medieval",
+      "photography",
+      "architectural"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1642/gourdon-vue-generale.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "grignan",
+    "name": "Grignan",
+    "region": "Auvergne-Rhône-Alpes",
+    "department": "Drôme",
+    "lat": 44.4179,
+    "lng": 4.907,
+    "description": "Le château de Grignan, l'un des plus grands châteaux Renaissance du midi, surplombe ce village de la Drôme provençale. C'est là que Mme de Sévigné passa ses dernières années, immortalisant la Provence dans ses lettres.",
+    "tags": [
+      "architectural",
+      "wine",
+      "gastronomy",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s3283/grignan-vue-chateau-et-village.webp",
+    "visitDurationMinutes": 180
+  },
+  {
+    "slug": "hell-bourg",
+    "name": "Hell-Bourg",
+    "region": "La Réunion",
+    "department": "La Réunion",
+    "lat": -21.05,
+    "lng": 55.4833,
+    "description": "Dans le cirque de Salazie à La Réunion, Hell-Bourg est un village thermal créole d'une beauté tropicale saisissante. Ses cases créoles colorées aux vérandas en dentelle de bois sont parmi les plus belles de l'île.",
+    "tags": [
+      "nature",
+      "photography",
+      "hidden",
+      "tropical"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1746/hell-bourg-vue-generale.webp",
+    "visitDurationMinutes": 180
+  },
+  {
+    "slug": "hierges",
+    "name": "Hierges",
+    "region": "Grand Est",
+    "department": "Ardennes",
+    "lat": 50.1,
+    "lng": 4.7167,
+    "description": "Dans les Ardennes au bord de la Meuse, Hierges est dominé par les ruines romantiques de son château médiéval. Village discret aux confins franco-belges, il offre un panorama exceptionnel sur les méandres du fleuve.",
+    "tags": [
+      "medieval",
+      "nature",
+      "hidden",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s6992/hierges-vue-sur-le-chateau-et-le-village.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "hunawihr",
+    "name": "Hunawihr",
+    "region": "Grand Est",
+    "department": "Haut-Rhin",
+    "lat": 48.1855,
+    "lng": 7.3113,
+    "description": "Hunawihr abrite une église fortifiée du XVe siècle entourée de vignes, et un centre de réintroduction des cigognes. Le village incarne la douceur tranquille de la Route des Vins.",
+    "tags": [
+      "alsace",
+      "wine",
+      "medieval",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1619/hunawihr-vignes-et-eglise.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "hunspach",
+    "name": "Hunspach",
+    "region": "Grand Est",
+    "department": "Bas-Rhin",
+    "lat": 48.9484,
+    "lng": 7.9517,
+    "description": "Réputé village le plus fleuri d'Alsace, Hunspach aligne de parfaites maisons à colombages blancs aux volets bleus, dans un silence préservé loin des routes touristiques.",
+    "tags": [
+      "alsace",
+      "architectural",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1620/hunspach-visite-village-fleuri.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "la-bastide-clairence",
+    "name": "La Bastide-Clairence",
+    "region": "Nouvelle-Aquitaine",
+    "department": "Pyrénées-Atlantiques",
+    "lat": 43.4139,
+    "lng": -1.193,
+    "description": "Bastide gasconne au cœur du Pays basque, ce village de maisons à colombages blanc et rouge est classé pour son caractère hybride et la qualité de sa conservation. Marché artisanal et vie de village authentique.",
+    "tags": [
+      "architectural",
+      "medieval",
+      "gastronomy"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1682/la-bastide-clairence-place-aux-arcades.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "la-couvertoirade",
+    "name": "La Couvertoirade",
+    "region": "Occitanie",
+    "department": "Aveyron",
+    "lat": 43.914,
+    "lng": 3.2686,
+    "description": "Sur le causse du Larzac, cette forteresse templière du XIIe siècle dresse ses remparts intacts autour d'un village figé dans le temps. Maisons de calcaire, rues désertes, troupeaux de brebis — le Moyen Âge absolu.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1699/la-couvertoirade-point-de-vue-du-village.webp",
+    "visitDurationMinutes": 180
+  },
+  {
+    "slug": "la-flotte",
+    "name": "La Flotte",
+    "region": "Nouvelle-Aquitaine",
+    "department": "Charente-Maritime",
+    "lat": 46.1947,
+    "lng": -1.3258,
+    "description": "Port ostréicole et fleurs de sel — La Flotte est le joyau médiéval de l'Île de Ré. Ses ruelles aux maisons basses avec volets bleus, son marché et son abbaye cistercienne composent le charme discret de l'Atlantique.",
+    "tags": [
+      "coastal",
+      "medieval",
+      "gastronomy",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1705/la-flotte-port-a-maree-basse.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "la-garde-adhemar",
+    "name": "La Garde-Adhémar",
+    "region": "Auvergne-Rhône-Alpes",
+    "department": "Drôme",
+    "lat": 44.3957,
+    "lng": 4.7558,
+    "description": "Village provençal de la Drôme dominé par une collégiale romane du XIIe siècle aux sculptures remarquables. Ses ruelles de pierres blanches, ses lavandes et sa vue sur le Rhône composent un tableau de Provence septentrionale.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "wine",
+      "provence"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1638/la-garde-adhemar-vue-depuis-les-champs-de-lavande.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "la-garde-guerrin",
+    "name": "La Garde-Guérin",
+    "region": "Occitanie",
+    "department": "Lozère",
+    "lat": 44.4706,
+    "lng": 3.7846,
+    "description": "Forteresse médiévale perchée sur la montagne cévenole de la Régordane, La Garde-Guérin protégeait autrefois les marchands et pèlerins. Ses tours, ses murs et son isolement absolu en font un lieu hors du temps.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1639/la-garde-guerin-vue-aerienne.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "la-roche-guyon",
+    "name": "La Roche-Guyon",
+    "region": "Île-de-France",
+    "department": "Val-d'Oise",
+    "lat": 49.0833,
+    "lng": 1.6167,
+    "description": "Serré entre la Seine et les falaises crayeuses, La Roche-Guyon possède un château troglodyte creusé dans la craie. À une heure de Paris, ce village normand-francilien est un joyau méconnu de l'Île-de-France.",
+    "tags": [
+      "medieval",
+      "nature",
+      "history",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1605/la-roche-guyon-vue-jardin-et-chateau.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "la-romieu",
+    "name": "La Romieu",
+    "region": "Occitanie",
+    "department": "Gers",
+    "lat": 43.9833,
+    "lng": 0.5,
+    "description": "Ce village gersois abrite une collégiale gothique et un cloître du XIVe siècle classés monuments historiques. Étape sur la route de Saint-Jacques-de-Compostelle, La Romieu est connue pour sa légende des chats qui sauvèrent le village.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "history",
+      "gastronomy"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s2827/la-romieu-vue-collegiale-depuis-le-cloitre.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "la-roque-gageac",
+    "name": "La Roque-Gageac",
+    "region": "Nouvelle-Aquitaine",
+    "department": "Dordogne",
+    "lat": 44.8288,
+    "lng": 1.1916,
+    "description": "Niché entre une falaise de calcaire doré et la Dordogne, La Roque-Gageac est l'un des plus beaux villages de France. Son fort troglodyte et le rythme lent de la rivière lui confèrent une qualité intemporelle.",
+    "tags": [
+      "dordogne",
+      "medieval",
+      "gastronomy",
+      "photography",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1727/la-roque-gageac-vue-dordogne-et-village.webp",
+    "visitDurationMinutes": 180
+  },
+  {
+    "slug": "la-roque-sur-ceze",
+    "name": "La Roque-sur-Cèze",
+    "region": "Occitanie",
+    "department": "Gard",
+    "lat": 44.192,
+    "lng": 4.5043,
+    "description": "Village médiéval en terrasses au-dessus de la Cèze, La Roque se déploie autour de son château chapelle dans un paysage de calcaire et de garrigue. En contrebas, les cascades du Sautadet complètent un tableau de nature sauvage.",
+    "tags": [
+      "medieval",
+      "photography",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1659/la-roque-sur-ceze-vue-depuis-les-vignes.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "lagrasse",
+    "name": "Lagrasse",
+    "region": "Occitanie",
+    "department": "Aude",
+    "lat": 43.0982,
+    "lng": 2.6165,
+    "description": "L'abbaye carolingienne de Lagrasse, fondée selon la légende par Charlemagne, domine un village de pierres médiévales au bord de l'Orbieu. Pont roman, halle du XIVe siècle et artisans animent ce bourg languedocien paisible.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "wine"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1707/lagrasse-vue-haute.webp",
+    "visitDurationMinutes": 180
+  },
+  {
+    "slug": "larressingle",
+    "name": "Larressingle",
+    "region": "Occitanie",
+    "department": "Gers",
+    "lat": 43.8649,
+    "lng": 0.1671,
+    "description": "Surnommée «la Carcassonne du Gers», Larressingle est une minuscule cité fortifiée du XIIIe siècle entièrement ceinte de remparts intacts. Ses maisons de pierre blanche, son donjon triangulaire et ses fossés composent le plus petit village fortifié médiéval de France.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1708/larressingle-vignes-et-village.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "lautrec",
+    "name": "Lautrec",
+    "region": "Occitanie",
+    "department": "Tarn",
+    "lat": 43.7004,
+    "lng": 2.1385,
+    "description": "Village natal du peintre Toulouse-Lautrec, couronné d'un moulin et de remparts médiévaux, Lautrec est réputé pour son ail rose AOP. Ses ruelles à pans de bois et son marché de pays restent d'une authenticité absolue.",
+    "tags": [
+      "medieval",
+      "gastronomy",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1709/lautrec-moulin-a-vent-de-la-salette.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "lauzerte",
+    "name": "Lauzerte",
+    "region": "Occitanie",
+    "department": "Tarn-et-Garonne",
+    "lat": 44.2511,
+    "lng": 1.1365,
+    "description": "Bastide percée sur une crête dominant deux vallées, Lauzerte est l'un des «plus beaux villages» et étape phare du chemin de Saint-Jacques. Sa place à couverts, ses maisons de calcaire blanc et ses panoramas apaisants charment pèlerins et voyageurs.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "gastronomy"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1716/lauzerte-vue-densemble.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "lavardens",
+    "name": "Lavardens",
+    "region": "Occitanie",
+    "department": "Gers",
+    "lat": 43.7667,
+    "lng": 0.5167,
+    "description": "Dominant les coteaux gascons, Lavardens est couronné par un imposant château du XVIIe siècle. Ses ruelles pavées et ses maisons médiévales en font l'un des plus beaux villages du Gers.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "gastronomy",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1710/lavardens-vue-densemble-en-ete.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "lavardin",
+    "name": "Lavardin",
+    "region": "Centre-Val de Loire",
+    "department": "Loir-et-Cher",
+    "lat": 47.7456,
+    "lng": 0.8758,
+    "description": "Les ruines imposantes du château médiéval de Lavardin se reflètent dans le Loir. Ce village du Val, aux maisons troglodytes et à l'église romane ornée de fresques du XIIe siècle, est d'une poésie mélancolique.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1598/lavardin-vue-village.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "lavaudieu",
+    "name": "Lavaudieu",
+    "region": "Auvergne-Rhône-Alpes",
+    "department": "Haute-Loire",
+    "lat": 45.2751,
+    "lng": 3.3483,
+    "description": "Lavaudieu abrite le seul cloître roman intact d'Auvergne, avec ses colonnes jumelées et ses chapiteaux historiés. Le village s'étire le long de l'Senouire dans un cadre d'une sérénité absolue.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1645/lavaudieu-pont-sur-la-senouire-et-abbaye.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "lavoute-chilhac",
+    "name": "Lavoûte-Chilhac",
+    "region": "Auvergne-Rhône-Alpes",
+    "department": "Haute-Loire",
+    "lat": 45.1833,
+    "lng": 3.3833,
+    "description": "Dans un méandre de l'Allier, Lavoûte-Chilhac est ceint par la rivière sur trois côtés. Son prieuré bénédictin et ses vieilles pierres dorées créent un tableau saisissant au cœur de la Haute-Loire.",
+    "tags": [
+      "medieval",
+      "nature",
+      "photography",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s3578/lavoute-chilhac-vue-village-et-allier.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "le-bec-hellouin",
+    "name": "Le Bec-Hellouin",
+    "region": "Normandie",
+    "department": "Eure",
+    "lat": 49.2336,
+    "lng": 0.7284,
+    "description": "L'abbaye bénédictine fondée en 1034, l'une des plus illustres du Moyen Âge, domine ce village de chaumières normandes au bord du Bec. Ses moines, ses jardins et ses vêpres en grégorien invitent à la contemplation.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1592/le-bec-hellouin-vue-facades-a-pans-de-bois-printemps.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "le-castellet",
+    "name": "Le Castellet",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "department": "Var",
+    "lat": 43.2,
+    "lng": 5.7667,
+    "description": "Village médiéval perché à 252 mètres sur un éperon du massif de la Sainte-Baume, Le Castellet domine les vignobles de Bandol et offre un panorama sur la mer Méditerranée. Ses ruelles pavées, ses remparts et son château du XIe siècle en font un joyau provençal préservé.",
+    "tags": [
+      "provence",
+      "medieval",
+      "photography",
+      "wine"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s3576/le-castellet-vue-densemble.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "le-malzieu-ville",
+    "name": "Le Malzieu-Ville",
+    "region": "Occitanie",
+    "department": "Lozère",
+    "lat": 44.8667,
+    "lng": 3.3167,
+    "description": "Ancienne cité médiévale de la Margeride, Le Malzieu conserve ses remparts, ses portes fortifiées et une tour d'horloge du Moyen Âge. Aux portes du pays de la Bête du Gévaudan, il offre une atmosphère médiévale exceptionnelle.",
+    "tags": [
+      "medieval",
+      "history",
+      "hidden",
+      "nature"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s3450/le-malzieu-ville-vue-toits-et-paysages.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "le-poet-laval",
+    "name": "Le Poët-Laval",
+    "region": "Auvergne-Rhône-Alpes",
+    "department": "Drôme",
+    "lat": 44.5333,
+    "lng": 5.0333,
+    "description": "Accroché à un éperon rocheux dominant la Jabron dans la Drôme provençale, Le Poët-Laval est un village médiéval commanderie des Hospitaliers. Ses ruelles en terrasses, son donjon et ses maisons de pierre ocre dominent lavande et oliviers.",
+    "tags": [
+      "medieval",
+      "provence",
+      "photography",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1657/le-poet-laval-vestiges-commanderie.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "les-baux-de-provence",
+    "name": "Les Baux-de-Provence",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "department": "Bouches-du-Rhône",
+    "lat": 43.7443,
+    "lng": 4.7948,
+    "description": "Une citadelle médiévale surgissant des Alpilles calcaires, Les Baux domine oliveraies et vignobles. Son château en ruine et ses hôtels particuliers Renaissance la figent au XVIe siècle.",
+    "tags": [
+      "provence",
+      "medieval",
+      "wine",
+      "photography",
+      "architectural"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1635/les-baux-de-provence-vue-de-la-roche.webp",
+    "visitDurationMinutes": 210
+  },
+  {
+    "slug": "limeuil",
+    "name": "Limeuil",
+    "region": "Nouvelle-Aquitaine",
+    "department": "Dordogne",
+    "lat": 44.8883,
+    "lng": 0.8962,
+    "description": "Au confluent de la Dordogne et de la Vézère, Limeuil s'étage sur une colline couverte de jardins en terrasses. Ce village médiéval aux maisons de calcaire blond offre un panorama sur deux rivières et des siècles d'histoire fluviale.",
+    "tags": [
+      "dordogne",
+      "medieval",
+      "photography",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1711/limeuil-vue-village-et-dordogne.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "locronan",
+    "name": "Locronan",
+    "region": "Bretagne",
+    "department": "Finistère",
+    "lat": 48.0986,
+    "lng": -4.2093,
+    "description": "La place Renaissance en granit de Locronan est si parfaitement préservée qu'elle sert régulièrement de décor de cinéma. L'architecture de pierre grise et la lumière brumeuse de l'Atlantique créent une atmosphère irréelle.",
+    "tags": [
+      "bretagne",
+      "medieval",
+      "architectural",
+      "photography",
+      "hidden",
+      "coastal"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1599/locronan-place-de-leglise.webp",
+    "visitDurationMinutes": 180
+  },
+  {
+    "slug": "lods",
+    "name": "Lods",
+    "region": "Bourgogne-Franche-Comté",
+    "department": "Doubs",
+    "lat": 47.0607,
+    "lng": 6.2768,
+    "description": "Accroché aux versants de la vallée de la Loue, Lods est un village de vignerons aux maisons de calcaire couvertes de treilles. Ses caves voûtées et ses ruelles fleuries témoignent d'une viticulture ancestrale.",
+    "tags": [
+      "wine",
+      "hidden",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1621/lods-tombee-de-la-nuit.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "loubressac",
+    "name": "Loubressac",
+    "region": "Occitanie",
+    "department": "Lot",
+    "lat": 44.8872,
+    "lng": 1.8419,
+    "description": "Perché au-dessus du confluent de la Dordogne et du Célé, Loubressac domine depuis sa colline un panorama de vallées vertes. Ses maisons de calcaire brun et ses châteaux féodaux signalent un village hors du temps.",
+    "tags": [
+      "medieval",
+      "photography",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1712/loubressac-vue-densemble.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "lourmarin",
+    "name": "Lourmarin",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "department": "Vaucluse",
+    "lat": 43.7661,
+    "lng": 5.3641,
+    "description": "Là où Albert Camus repose dans son dernier voyage, Lourmarin est peut-être le plus élégant des villages du Luberon. Son château Renaissance, ses galeries d'art et son marché du vendredi captivent sans ostentation.",
+    "tags": [
+      "provence",
+      "architectural",
+      "gastronomy",
+      "wine",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1646/lourmarin-vue-printaniere.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "lussan",
+    "name": "Lussan",
+    "region": "Occitanie",
+    "department": "Gard",
+    "lat": 44.1167,
+    "lng": 4.3833,
+    "description": "Sur un plateau calcaire dominant les garrigues du Gard, Lussan conserve ses remparts et sa tour médiévale. Village des causses gardois, il offre des panoramas sauvages sur les gorges de l'Aiguillon.",
+    "tags": [
+      "medieval",
+      "nature",
+      "photography",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1647/lussan-vue-paysahes-depuis-remparts.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "lyons-la-foret",
+    "name": "Lyons-la-Forêt",
+    "region": "Normandie",
+    "department": "Eure",
+    "lat": 49.4,
+    "lng": 1.4795,
+    "description": "Bourgade normande de colombages et de halles du XVIIIe siècle au cœur d'une hêtraie classée. Ravel y composa Le Tombeau de Couperin ; aujourd'hui ses façades fleuries et ses auberges attirent gourmets et promeneurs.",
+    "tags": [
+      "architectural",
+      "gastronomy",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1600/lyons-la-foret-vue-depuis-la-halle.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "marcoles",
+    "name": "Marcolès",
+    "region": "Auvergne-Rhône-Alpes",
+    "department": "Cantal",
+    "lat": 44.9521,
+    "lng": 2.4742,
+    "description": "Bastide médiévale cantalienne aux maisons de basalte et de grès, Marcolès a conservé ses couverts à arcades et ses ruelles ombragées dans un cadre volcanique du Châtaignier préservé.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "gastronomy"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s3739/marcoles-facades-boutiques.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "martel",
+    "name": "Martel",
+    "region": "Occitanie",
+    "department": "Lot",
+    "lat": 44.9333,
+    "lng": 1.6167,
+    "description": "Surnommée la ville aux sept tours, Martel fut une puissante cité médiévale du Quercy. Ses sept tours défensives, ses hôtels particuliers et ses marchés en font un témoin exceptionnel de l'architecture médiévale lotoise.",
+    "tags": [
+      "medieval",
+      "history",
+      "gastronomy",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s3506/martel-halle.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "minerve",
+    "name": "Minerve",
+    "region": "Occitanie",
+    "department": "Hérault",
+    "lat": 43.39,
+    "lng": 2.7829,
+    "description": "Ultime bastion cathare entouré de deux gorges, Minerve repose sur un éperon de calcaire blanc isolé entre le Cesse et la Briane. Ses ruelles, ses ponts naturels creusés par la rivière et son histoire tragique en font un site unique.",
+    "tags": [
+      "medieval",
+      "photography",
+      "hidden",
+      "architectural"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1713/minerve-vue-village-et-paysages.webp",
+    "visitDurationMinutes": 180
+  },
+  {
+    "slug": "mirmande",
+    "name": "Mirmande",
+    "region": "Auvergne-Rhône-Alpes",
+    "department": "Drôme",
+    "lat": 44.7052,
+    "lng": 4.8786,
+    "description": "Village perché dominant la plaine du Rhône, Mirmande fut redécouvert et restauré par le peintre cubiste Lhote dans les années 1920. Ses ruelles de pierre bleue, ses maisons fleuries et ses vues sur les Alpes en font un lieu d'art et de silence.",
+    "tags": [
+      "architectural",
+      "photography",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1649/mirmande-vue-printemps.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "mittelbergheim",
+    "name": "Mittelbergheim",
+    "region": "Grand Est",
+    "department": "Bas-Rhin",
+    "lat": 48.4139,
+    "lng": 7.4458,
+    "description": "Village viticole de la Route des Vins d'Alsace, Mittelbergheim possède un extraordinaire ensemble Renaissance avec ses maisons de vignerons aux façades sculptées et ses caves millénaires.",
+    "tags": [
+      "alsace",
+      "wine",
+      "architectural",
+      "medieval"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1622/mittelbergheim-vue-densemble.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "moncontour",
+    "name": "Moncontour",
+    "region": "Bretagne",
+    "department": "Côtes-d'Armor",
+    "lat": 48.3648,
+    "lng": -2.6349,
+    "description": "Cité médiévale fortifiée sur un éperon rocheux, Moncontour a conservé ses remparts, ses maisons à pans de bois et son église gothique. Ce village des Côtes-d'Armor rayonne d'une austère beauté bretonne.",
+    "tags": [
+      "bretagne",
+      "medieval",
+      "architectural"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1601/moncontour-ambiance-rue-village.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "monestiers",
+    "name": "Monestiés",
+    "region": "Occitanie",
+    "department": "Tarn",
+    "lat": 44.0804,
+    "lng": 2.0939,
+    "description": "Sur les rives du Cérou, Monestiés garde dans sa chapelle Saint-Jacques un remarquable ensemble de sculptures polychromes de la fin du XVe siècle. Ses ruelles ombragées et son pont médiéval invitent au recueillement.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1714/monesties-vue-densemble.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "monflanquin",
+    "name": "Monflanquin",
+    "region": "Nouvelle-Aquitaine",
+    "department": "Lot-et-Garonne",
+    "lat": 44.5333,
+    "lng": 0.7667,
+    "description": "Bastide royale fondée en 1256, Monflanquin conserve son plan médiéval original avec sa place à couverts. Perchée sur une colline dominant le Pays de Serres, c'est l'une des plus belles bastides du Lot-et-Garonne.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "gastronomy",
+      "history"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1715/monflanquin-vue-au-soleil-couchant.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "monpazier",
+    "name": "Monpazier",
+    "region": "Nouvelle-Aquitaine",
+    "department": "Dordogne",
+    "lat": 44.68,
+    "lng": 0.8979,
+    "description": "L'une des bastides anglaises les mieux conservées de France, Monpazier déploie autour de sa place à cornières un plan en damier parfaitement intact depuis le XIIIe siècle. Un chef-d'œuvre d'urbanisme médiéval.",
+    "tags": [
+      "dordogne",
+      "medieval",
+      "architectural"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1717/monpazier-ambiance-rue-village.webp",
+    "visitDurationMinutes": 180
+  },
+  {
+    "slug": "mont-dauphin",
+    "name": "Mont-Dauphin",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "department": "Hautes-Alpes",
+    "lat": 44.6667,
+    "lng": 6.6167,
+    "description": "Cité Vauban inscrite au patrimoine mondial de l'UNESCO, Mont-Dauphin est perchée sur un éperon rocheux dominant le Guillestrois. Ses fortifications intactes et son architecture militaire du XVIIe siècle sont parmi les mieux conservées d'Europe.",
+    "tags": [
+      "mountain",
+      "architectural",
+      "history",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s6765/mont-dauphin-pont-dormant-et-porte-de-briancon.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "montbrun-les-bains",
+    "name": "Montbrun-les-Bains",
+    "region": "Auvergne-Rhône-Alpes",
+    "department": "Drôme",
+    "lat": 44.1739,
+    "lng": 5.4477,
+    "description": "Village thermal en terrasses dominant les gorges de la Méouge et du Toulourenc, Montbrun-les-Bains est une station médiévale aux maisons ocre serrées sous les ruines de son château. Entre Provence et Alpes, un site de bout du monde.",
+    "tags": [
+      "medieval",
+      "photography",
+      "hidden",
+      "provence"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1650/montbrun-les-bains-vue-sur-le-village-depuis-les-champs-de-coquelicot.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "montclus",
+    "name": "Montclus",
+    "region": "Occitanie",
+    "department": "Gard",
+    "lat": 44.25,
+    "lng": 4.3833,
+    "description": "Accroché au-dessus des gorges de la Cèze, Montclus est dominé par une tour médiévale et ses ruelles en escaliers descendent jusqu'à la rivière. Village secret de l'Ardèche gardoise, il offre baignade et sérénité.",
+    "tags": [
+      "medieval",
+      "nature",
+      "photography",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1651/montclus-vue-lavandes.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "montpeyroux",
+    "name": "Montpeyroux",
+    "region": "Occitanie",
+    "department": "Hérault",
+    "lat": 43.6568,
+    "lng": 3.486,
+    "description": "Village viticole languedocien dans sa bure de calcaire blanc, Montpeyroux a conservé ses remparts du XIIIe siècle, sa porte médiévale et ses maisons de pierres blondes. Une route des vins à taille humaine.",
+    "tags": [
+      "wine",
+      "medieval",
+      "gastronomy"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1652/montpeyroux-vue-densemble.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "montreal-aude",
+    "name": "Montréal",
+    "region": "Occitanie",
+    "department": "Aude",
+    "lat": 43.2037,
+    "lng": 2.1411,
+    "description": "L'une des plus anciennes bastides du Languedoc, Montréal (Aude) domine les collines et les vignobles de la Razès depuis ses remparts du XIIe siècle. Sa collégiale gothique, son château et ses ruelles de pierre composent un village cathare d'une rare cohérence.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "wine",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1718/montreal-mairie-et-arcades-fleuries.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "montresor",
+    "name": "Montrésor",
+    "region": "Centre-Val de Loire",
+    "department": "Indre-et-Loire",
+    "lat": 47.1619,
+    "lng": 1.2009,
+    "description": "Château Renaissance aux reflets dans l'Indrois, collégiale gothique et jardins à l'anglaise — Montrésor condense trois siècles d'art de vivre tourangeau dans un cadre intime et préservé.",
+    "tags": [
+      "architectural",
+      "medieval",
+      "wine",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1602/montresor-vue-des-balcons-de-lindrois.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "montsoreau",
+    "name": "Montsoreau",
+    "region": "Pays de la Loire",
+    "department": "Maine-et-Loire",
+    "lat": 47.2175,
+    "lng": -0.0647,
+    "description": "Château de la Renaissance à la confluence de la Loire et de la Vienne, Montsoreau fut immortalisé par Alexandre Dumas. Le tuffeau blanc de ses façades brille au soleil du Val de Loire classé à l'UNESCO.",
+    "tags": [
+      "architectural",
+      "wine",
+      "gastronomy",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1603/montsoreau-vue-village-et-chateau-depuis-la-loire.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "mornac-sur-seudre",
+    "name": "Mornac-sur-Seudre",
+    "region": "Nouvelle-Aquitaine",
+    "department": "Charente-Maritime",
+    "lat": 45.7042,
+    "lng": -1.0214,
+    "description": "Village ostréicole charentais au bord de la Seudre, Mornac déroule ses maisons basses entre claires à huîtres et marais salants. Un port de pêche qui dort depuis des siècles dans la lumière atlantique.",
+    "tags": [
+      "coastal",
+      "gastronomy",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1719/mornac-sur-seudre-cabanes-ostreicoles-et-chenal.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "mortemart",
+    "name": "Mortemart",
+    "region": "Nouvelle-Aquitaine",
+    "department": "Haute-Vienne",
+    "lat": 46.1037,
+    "lng": 1.0521,
+    "description": "Plus petit village de France distingué par l'association, Mortemart est un concentré de Limousin : château du XVe siècle, couvent des Augustins et halles médiévales sur une place tranquille. Berceau des ducs de Mortemart, favoris de Louis XIV.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1720/mortemart-halle-et-place.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "moustiers-sainte-marie",
+    "name": "Moustiers-Sainte-Marie",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "department": "Alpes-de-Haute-Provence",
+    "lat": 43.8455,
+    "lng": 6.2236,
+    "description": "Niché dans une faille des falaises calcaires au bord du lac de Sainte-Croix, Moustiers est célèbre depuis le XVIIe siècle pour sa faïence. Une étoile dorée tendue entre deux falaises veille sur ses ruelles fleuries.",
+    "tags": [
+      "provence",
+      "gastronomy",
+      "photography",
+      "architectural"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1653/moustiers-sainte-marie-vue-sur-les-toits-et-les-paysages.webp",
+    "visitDurationMinutes": 210
+  },
+  {
+    "slug": "menerbes",
+    "name": "Ménerbes",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "department": "Vaucluse",
+    "lat": 43.8338,
+    "lng": 5.2071,
+    "description": "Éperon calcaire dans le Luberon rendu célèbre par Peter Mayle et son «Une année en Provence», Ménerbes domine les vignobles et oliveraies depuis ses remparts médiévaux. Un village entre art de vivre lubéronien et lumière de Cézanne.",
+    "tags": [
+      "provence",
+      "wine",
+      "photography",
+      "gastronomy"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1648/menerbes-vue-toits.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "najac",
+    "name": "Najac",
+    "region": "Occitanie",
+    "department": "Aveyron",
+    "lat": 44.2258,
+    "lng": 1.9724,
+    "description": "Une longue rue médiévale s'étire sur l'arête d'un éperon dominant les gorges de l'Aveyron, couronnée par un château royal du XIIIe siècle d'une silhouette saisissante. Village cathare, village de caractère.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1721/najac-vue-panoramique.webp",
+    "visitDurationMinutes": 180
+  },
+  {
+    "slug": "navarrenx",
+    "name": "Navarrenx",
+    "region": "Nouvelle-Aquitaine",
+    "department": "Pyrénées-Atlantiques",
+    "lat": 43.3333,
+    "lng": -0.7667,
+    "description": "Première bastide du Béarn, Navarrenx possède des remparts Renaissance en excellent état, uniques dans le Sud-Ouest. Étape majeure du chemin de Saint-Jacques, ce havre militaire du XVIe siècle domine le gave d'Oloron.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "history",
+      "nature"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1722/navarrenx-vue-village-et-paysages.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "noyers",
+    "name": "Noyers",
+    "region": "Bourgogne-Franche-Comté",
+    "department": "Yonne",
+    "lat": 47.6986,
+    "lng": 4.0086,
+    "description": "Ceint de remparts médiévaux et d'une boucle de la Serein, Noyers est un village de maisons à colombages et d'hôtels particuliers gothiques d'une cohérence architecturale rare. Ses ruelles pavées ont traversé les siècles intactes.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "wine",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1623/noyers-rue.webp",
+    "visitDurationMinutes": 180
+  },
+  {
+    "slug": "oingt",
+    "name": "Oingt",
+    "region": "Auvergne-Rhône-Alpes",
+    "department": "Rhône",
+    "lat": 45.9333,
+    "lng": 4.5167,
+    "description": "Perché au sommet des Pierres Dorées dans le Beaujolais, Oingt semble couler de la colline en dorures de grès ocre. Ses vieilles maisons et sa tour-mirador offrent un panorama exceptionnel sur les vignobles beaujolais.",
+    "tags": [
+      "medieval",
+      "wine",
+      "photography",
+      "gastronomy"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1654/oingt-couple-en-balade.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "olargues",
+    "name": "Olargues",
+    "region": "Occitanie",
+    "department": "Hérault",
+    "lat": 43.5686,
+    "lng": 2.9154,
+    "description": "Dominé par un clocher-tour du XIe siècle, Olargues se reflète dans la rivière Jaur au pied des monts de l'Espinouse. Ses ruelles médiévales en pente, son pont diable et les cerisiers en fleur au printemps le rendent inoubliable.",
+    "tags": [
+      "medieval",
+      "photography",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1723/olargues-vue-panoramique.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "parfondeval",
+    "name": "Parfondeval",
+    "region": "Hauts-de-France",
+    "department": "Aisne",
+    "lat": 49.7773,
+    "lng": 3.9961,
+    "description": "Village fortifié de Thiérache aux maisons de brique rouge et à l'église-forteresse, Parfondeval est une curiosité défensive unique en France. Ses remparts incorporés aux maisons paysannes témoignent d'une architecture populaire ingénieuse.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1624/parfondeval-vue-de-drone-promeneurs.webp",
+    "visitDurationMinutes": 60
+  },
+  {
+    "slug": "penne-d-agenais",
+    "name": "Penne-d'Agenais",
+    "region": "Nouvelle-Aquitaine",
+    "department": "Lot-et-Garonne",
+    "lat": 44.3524,
+    "lng": 0.9934,
+    "description": "Cité médiévale sur un piton dominant le Lot, Penne-d'Agenais couronne ses remparts d'une basilique moderne mais garde ses ruelles de brique et ses maisons à encorbellement. Vue imprenable sur le vignoble et la vallée.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "wine"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s3612/penne-dagenais-ambiance-village-et-patrimoine.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "pesmes",
+    "name": "Pesmes",
+    "region": "Bourgogne-Franche-Comté",
+    "department": "Haute-Saône",
+    "lat": 47.2868,
+    "lng": 5.5687,
+    "description": "Joyau méconnu de la Haute-Saône, Pesmes domine l'Ognon depuis ses remparts médiévaux. Ses ruelles en terrasses, ses maisons à échauguettes et son château témoignent d'une histoire millénaire.",
+    "tags": [
+      "medieval",
+      "hidden",
+      "architectural"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1625/pesmes-vue-sur-le-village-et-reflet-dans-la-riviere-ognon.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "peyre",
+    "name": "Peyre",
+    "region": "Occitanie",
+    "department": "Aveyron",
+    "lat": 44.2167,
+    "lng": 3.0167,
+    "description": "Village troglodyte suspendu dans les falaises au-dessus du Tarn, Peyre est l'un des villages les plus singuliers de France. Ses maisons creusées dans la roche rouge et son église rupestre créent un spectacle architectural unique.",
+    "tags": [
+      "medieval",
+      "photography",
+      "nature",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1724/peyre-vue-generale.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "piana",
+    "name": "Piana",
+    "region": "Corse",
+    "department": "Corse-du-Sud",
+    "lat": 42.2399,
+    "lng": 8.5838,
+    "description": "Au-dessus des Calanques de Piana, ce village rose domine un spectacle géologique unique — des rochers de granit pourpre sculptés par l'érosion plongent dans une mer émeraude. Classé au patrimoine mondial de l'UNESCO.",
+    "tags": [
+      "photography",
+      "coastal",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1656/piana-vue-densemble.webp",
+    "visitDurationMinutes": 210
+  },
+  {
+    "slug": "polignac",
+    "name": "Polignac",
+    "region": "Auvergne-Rhône-Alpes",
+    "department": "Haute-Loire",
+    "lat": 45.0833,
+    "lng": 3.85,
+    "description": "Dominant Le Puy-en-Velay depuis son dyke volcanique, la forteresse de Polignac inspire la crainte depuis des siècles. Ses remparts en basalte noir se dressent au-dessus d'un paysage de volcans éteints d'une beauté saisissante.",
+    "tags": [
+      "medieval",
+      "photography",
+      "history",
+      "volcanic"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s3451/polignac-vue-sur-la-forteresse-et-les-paysages.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "pradelles",
+    "name": "Pradelles",
+    "region": "Auvergne-Rhône-Alpes",
+    "department": "Haute-Loire",
+    "lat": 44.7653,
+    "lng": 3.8709,
+    "description": "Sur le chemin de Stevenson, Pradelles veille depuis ses remparts médiévaux sur les hauteurs du Velay. Ses ruelles de lave noire et sa collégiale gothique en font une étape de caractère.",
+    "tags": [
+      "medieval",
+      "hidden",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1658/pradelles-vue-eglise.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "prats-de-mollo-la-preste",
+    "name": "Prats-de-Mollo-la-Preste",
+    "region": "Occitanie",
+    "department": "Pyrénées-Orientales",
+    "lat": 42.4,
+    "lng": 2.4667,
+    "description": "Ville fortifiée par Vauban à la frontière espagnole, Prats-de-Mollo conserve ses remparts et sa citadelle intacts. Ses rues catalanes pavées et son architecture militaire baroque en font un joyau des Pyrénées orientales.",
+    "tags": [
+      "medieval",
+      "mountain",
+      "architectural",
+      "history"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s3611/prats-de-mollo-la-preste-vue-densemble.webp",
+    "visitDurationMinutes": 180
+  },
+  {
+    "slug": "pujols-le-haut",
+    "name": "Pujols-le-Haut",
+    "region": "Nouvelle-Aquitaine",
+    "department": "Lot-et-Garonne",
+    "lat": 44.3697,
+    "lng": 0.6944,
+    "description": "Village médiéval fortifié dominant la vallée du Lot depuis ses remparts du XIIe siècle, Pujols offre des panoramas étendus sur le vignoble de Villeneuve et les coteaux agenais.",
+    "tags": [
+      "medieval",
+      "wine",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1725/pujols-le-haut-facade-fleurie.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "puycelsi",
+    "name": "Puycelsi",
+    "region": "Occitanie",
+    "department": "Tarn",
+    "lat": 43.9519,
+    "lng": 1.8024,
+    "description": "Forteresse médiévale ceinte de remparts dominant la forêt de Grésigne, Puycelsi est un village de caractère au-dessus de la vallée de la Vère. Ses maisons de brique et ses vues immenses sur le Tarn composent un tableau saisissant.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1726/puycelsi-vue-du-ciel.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "perouges",
+    "name": "Pérouges",
+    "region": "Auvergne-Rhône-Alpes",
+    "department": "Ain",
+    "lat": 45.8962,
+    "lng": 5.1818,
+    "description": "Cité médiévale ceinte de remparts intacts dominant la plaine de l'Ain, Pérouges est un havre de maisons des XVe et XVIe siècles. Ses ruelles pavées en galets de la Côtière ont servi de décor à de nombreux films historiques.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1655/perouges-vue-aerienne.webp",
+    "visitDurationMinutes": 240
+  },
+  {
+    "slug": "riquewihr",
+    "name": "Riquewihr",
+    "region": "Grand Est",
+    "department": "Haut-Rhin",
+    "lat": 48.1668,
+    "lng": 7.2954,
+    "description": "L'une des capitales viticoles d'Alsace, Riquewihr est ceint de remparts du XVIe siècle et peuplé de maisons Renaissance à colombages. Ses vignobles produisent certains des meilleurs Rieslings de France.",
+    "tags": [
+      "alsace",
+      "wine",
+      "medieval",
+      "gastronomy"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1626/riquewihr-vue-panoramique-vignoble-et-village.webp",
+    "visitDurationMinutes": 180
+  },
+  {
+    "slug": "rocamadour",
+    "name": "Rocamadour",
+    "region": "Occitanie",
+    "department": "Lot",
+    "lat": 44.7989,
+    "lng": 1.6183,
+    "description": "Construit verticalement dans une falaise à pic au-dessus du canyon de l'Alzou, Rocamadour défie la gravité. Site de pèlerinage médiéval, ses sanctuaires et escaliers de pierre taillée créent l'une des silhouettes architecturales les plus dramatiques de France.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "hidden",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s3512/rocamadour-vue-depuis-lhospitalet.webp",
+    "visitDurationMinutes": 240
+  },
+  {
+    "slug": "rochefort-en-terre",
+    "name": "Rochefort-en-Terre",
+    "region": "Bretagne",
+    "department": "Morbihan",
+    "lat": 47.6987,
+    "lng": -2.3425,
+    "description": "Château du XVIe siècle et maisons en schiste couvertes de fleurs — Rochefort-en-Terre est la quintessence du village breton soigné. Ses ruelles fleuries et ses galeries d'artistes en font une escale artistique sans pareil.",
+    "tags": [
+      "bretagne",
+      "medieval",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1604/rochefort-en-terre-place-ensoleillee.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "rodemack",
+    "name": "Rodemack",
+    "region": "Grand Est",
+    "department": "Moselle",
+    "lat": 49.4752,
+    "lng": 6.3696,
+    "description": "Surnommée «la petite Carcassonne de la Lorraine», Rodemack a conservé ses remparts médiévaux intacts. Ses ruelles pavées et son château dominant la Moselle témoignent d'un passé frontalier disputé.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1627/rodemack-vue-chateau.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "roussillon",
+    "name": "Roussillon",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "department": "Vaucluse",
+    "lat": 43.8974,
+    "lng": 5.2946,
+    "description": "Construit dans 17 nuances d'ocre rouge et orange, Roussillon est unique en Europe. Ses falaises d'ocre, ses maisons crépies de pigments naturels et ses couchers de soleil flamboyants composent une palette picturale incomparable.",
+    "tags": [
+      "provence",
+      "photography",
+      "architectural"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1660/roussillon-passage-voute-ogive.webp",
+    "visitDurationMinutes": 180
+  },
+  {
+    "slug": "saint-amand-de-coly",
+    "name": "Saint-Amand-de-Coly",
+    "region": "Nouvelle-Aquitaine",
+    "department": "Dordogne",
+    "lat": 45.0527,
+    "lng": 1.219,
+    "description": "L'abbatiale de Saint-Amand-de-Coly est considérée comme l'une des plus belles abbayes romanes fortifiées du Périgord. Clocher-donjon, voûtes ogivales et salle des moines constituent un ensemble du XIIe siècle d'une austère grandeur.",
+    "tags": [
+      "dordogne",
+      "medieval",
+      "architectural",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1728/saint-amand-de-coly-bati-cur-de-village.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "saint-antoine-l-abbaye",
+    "name": "Saint-Antoine-l'Abbaye",
+    "region": "Auvergne-Rhône-Alpes",
+    "department": "Isère",
+    "lat": 45.15,
+    "lng": 5.25,
+    "description": "L'abbatiale gothique de Saint-Antoine, chef-d'œuvre rayonnant du XIVe siècle, domine ce village de l'Isère. Ancien centre mondial de pèlerinage contre le mal des Ardents, il conserve un trésor d'art sacré exceptionnel.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "history",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1661/saint-antoine-labbaye-abbaye-et-jardins.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "saint-benoit-du-sault",
+    "name": "Saint-Benoît-du-Sault",
+    "region": "Centre-Val de Loire",
+    "department": "Indre",
+    "lat": 46.4384,
+    "lng": 1.3895,
+    "description": "Village médiéval de schiste perché au-dessus de la vallée du Portefeuille, Saint-Benoît-du-Sault dévoile ses ruelles en lacets et ses maisons aux toits de lauzes dans un Berry encore sauvage.",
+    "tags": [
+      "medieval",
+      "hidden",
+      "architectural"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1606/saint-benoit-du-sault-vue-pireure-et-portefeuille.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "saint-bertrand-de-comminges",
+    "name": "Saint-Bertrand-de-Comminges",
+    "region": "Occitanie",
+    "department": "Haute-Garonne",
+    "lat": 43.0196,
+    "lng": 0.5727,
+    "description": "Village médiéval fortifié au pied des Pyrénées, couronné par une cathédrale romane et gothique d'une richesse extraordinaire — jubé Renaissance, stalles sculptées, orgue du XVIe siècle. Ancienne cité romaine de Lugdunum Convenarum, c'est l'un des hauts lieux de l'art chrétien en France.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1729/saint-bertrand-de-comminges-vue-cathedrale-de-nuit.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "saint-cirq-lapopie",
+    "name": "Saint-Cirq-Lapopie",
+    "region": "Occitanie",
+    "department": "Lot",
+    "lat": 44.4648,
+    "lng": 1.6686,
+    "description": "Suspendu au-dessus d'un méandre du Lot, Saint-Cirq-Lapopie est un village de maisons médiévales et d'ateliers d'artisans accrochés à un promontoire à 100 m au-dessus de la vallée. André Breton l'appelait «l'impossible».",
+    "tags": [
+      "medieval",
+      "hidden",
+      "photography",
+      "gastronomy"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1730/saint-cirq-lapopie-vue-village-et-riviere-lot.webp",
+    "visitDurationMinutes": 240
+  },
+  {
+    "slug": "saint-ceneri-le-gerei",
+    "name": "Saint-Céneri-le-Gérei",
+    "region": "Normandie",
+    "department": "Orne",
+    "lat": 48.428,
+    "lng": 0.075,
+    "description": "Blotti dans un méandre de la Sarthe aux confins des Alpes mancelles, Saint-Céneri est un village de granit et de verdure qui inspira de nombreux peintres du XIXe siècle. Son église romane et son pont de pierre se reflètent dans la rivière claire.",
+    "tags": [
+      "medieval",
+      "photography",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1607/saint-ceneri-le-gerei-vue-pont.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "saint-come-d-olt",
+    "name": "Saint-Côme-d'Olt",
+    "region": "Occitanie",
+    "department": "Aveyron",
+    "lat": 44.513,
+    "lng": 2.8284,
+    "description": "Son clocher torsadé du XVIe siècle, unique en France, domine un village fortifié de caractère sur les bords du Lot. Maisons Renaissance, église gothique flamboyant et porte médiévale intacte signalent une histoire riche.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1731/saint-come-dolt-vue-village-et-lot.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "saint-guilhem-le-desert",
+    "name": "Saint-Guilhem-le-Désert",
+    "region": "Occitanie",
+    "department": "Hérault",
+    "lat": 43.7338,
+    "lng": 3.5416,
+    "description": "Dans les gorges de l'Hérault, l'abbaye de Gellone du IXe siècle ancre ce village de pèlerinage. Les gorges de l'Hérault, le pont du diable et les ruelles médiévales en font un site classé hors du commun.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1662/saint-guilhem-le-desert-zoom-abbaye.webp",
+    "visitDurationMinutes": 180
+  },
+  {
+    "slug": "saint-jean-pied-de-port",
+    "name": "Saint-Jean-Pied-de-Port",
+    "region": "Nouvelle-Aquitaine",
+    "department": "Pyrénées-Atlantiques",
+    "lat": 43.1667,
+    "lng": -1.2333,
+    "description": "Dernière étape française avant le col de Roncevaux, Saint-Jean-Pied-de-Port est le point de départ classique du Camino Francés. Sa rue de la Citadelle en grès rouge résonnant des pas des pèlerins est d'une émotion incomparable.",
+    "tags": [
+      "medieval",
+      "mountain",
+      "history",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1734/saint-jean-pied-de-port-chemin-saint-jacques-de-compostelle.webp",
+    "visitDurationMinutes": 180
+  },
+  {
+    "slug": "saint-jean-de-cole",
+    "name": "Saint-Jean-de-Côle",
+    "region": "Nouvelle-Aquitaine",
+    "department": "Dordogne",
+    "lat": 45.4237,
+    "lng": 0.8109,
+    "description": "Autour du château de la Marthonie et de son prieuré roman, Saint-Jean-de-Côle déroule ses maisons de calcaire brun le long de la Côle. Ses halles médiévales, son pont et ses jardins à l'anglaise forment le Périgord Vert idéal.",
+    "tags": [
+      "dordogne",
+      "medieval",
+      "architectural",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1733/saint-jean-de-cole-chateaux-et-viisteurs.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "saint-leon-sur-vezere",
+    "name": "Saint-Léon-sur-Vézère",
+    "region": "Nouvelle-Aquitaine",
+    "department": "Dordogne",
+    "lat": 45.0001,
+    "lng": 1.0795,
+    "description": "Dans la vallée préhistorique de la Vézère, ce village abrite une église romane du XIIe siècle et un château médiéval en bord de rivière. Grotte de Lascaux, abris sous roche et chênaies immenses constituent son écrin.",
+    "tags": [
+      "dordogne",
+      "medieval",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1735/saint-leon-sur-vezere-vue-du-ciel.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "saint-quirin",
+    "name": "Saint-Quirin",
+    "region": "Grand Est",
+    "department": "Moselle",
+    "lat": 48.6,
+    "lng": 7.0667,
+    "description": "Dans les Vosges du Nord, Saint-Quirin est dominé par son église baroque aux deux tours coiffées de bulbes dorés. Ce village lorrain discret est un havre de tranquillité au cœur de la forêt vosgienne.",
+    "tags": [
+      "hidden",
+      "nature",
+      "medieval",
+      "architectural"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1628/saint-quirin-clochers-dans-le-ciel.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "saint-robert",
+    "name": "Saint-Robert",
+    "region": "Nouvelle-Aquitaine",
+    "department": "Corrèze",
+    "lat": 45.267,
+    "lng": 1.5178,
+    "description": "Village de grès rose aux maisons à tourelles dans un paysage de Corrèze profonde, Saint-Robert possède une belle église romane et une atmosphère préservée loin des routes touristiques.",
+    "tags": [
+      "medieval",
+      "hidden",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1736/saint-robert-vue-sur-les-toits.webp",
+    "visitDurationMinutes": 60
+  },
+  {
+    "slug": "saint-suliac",
+    "name": "Saint-Suliac",
+    "region": "Bretagne",
+    "department": "Ille-et-Vilaine",
+    "lat": 48.5497,
+    "lng": -1.9658,
+    "description": "Village de pêcheurs en granit sur l'estuaire de la Rance, Saint-Suliac déroule ses maisons de marin le long du bord de l'eau. L'église romane du XIIe siècle, les marées et le calme des quais composent une Bretagne intime.",
+    "tags": [
+      "bretagne",
+      "coastal",
+      "hidden",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1608/saint-suliac-rue-apres-la-pluie.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "saint-veran",
+    "name": "Saint-Véran",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "department": "Hautes-Alpes",
+    "lat": 44.7075,
+    "lng": 6.8766,
+    "description": "À 2 040 m d'altitude, Saint-Véran est le plus haut village habité de l'Union européenne. Ses chalets de mélèze aux balcons sculptés et ses fontaines de marbre rose défient le vertige des sommets.",
+    "tags": [
+      "hidden",
+      "photography",
+      "architectural"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1663/saint-veran-village-et-randonneurs.webp",
+    "visitDurationMinutes": 180
+  },
+  {
+    "slug": "sainte-agnes",
+    "name": "Sainte-Agnès",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "department": "Alpes-Maritimes",
+    "lat": 43.795,
+    "lng": 7.5111,
+    "description": "Plus haut village côtier d'Europe à 800 mètres d'altitude, Sainte-Agnès domine Monaco et la mer depuis ses ruelles de pierres grises. Son château fort troglodyte et ses ruelles fleuries surplombent la Riviera de façon vertigineuse.",
+    "tags": [
+      "coastal",
+      "medieval",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1664/sainte-agnes-vue-densemble.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "sainte-croix-en-jarez",
+    "name": "Sainte-Croix-en-Jarez",
+    "region": "Auvergne-Rhône-Alpes",
+    "department": "Loire",
+    "lat": 45.4448,
+    "lng": 4.6411,
+    "description": "Village installé dans les bâtiments d'une chartreuse du XIIIe siècle dont les habitants vivent encore entre les anciens cloîtres et les cellules des moines. Ce cas unique en France — une communauté villageoise dans un monastère — est d'une étrangeté et d'une beauté saisissantes.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1665/sainte-croix-en-jarez-entree-du-site-de-la-chartreuse.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "sainte-enimie",
+    "name": "Sainte-Enimie",
+    "region": "Occitanie",
+    "department": "Lozère",
+    "lat": 44.363,
+    "lng": 3.4234,
+    "description": "Lovée dans les gorges du Tarn, Sainte-Énimie est un village de calcaire blanc dont les maisons escaladent la falaise en terrasses. La rivière, les canoës, les cirques et la lumière lozérienne en font un décor inoubliable.",
+    "tags": [
+      "medieval",
+      "photography",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1666/sainte-enimie-vue-village-et-paysage.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "sainte-eulalie-d-olt",
+    "name": "Sainte-Eulalie-d'Olt",
+    "region": "Occitanie",
+    "department": "Aveyron",
+    "lat": 44.4914,
+    "lng": 2.9827,
+    "description": "Moulin à eau, manoirs Renaissance et roue de moulin dans le Lot — Sainte-Eulalie-d'Olt est un joyau discret de l'Aveyron. Ses maisons de grès rouge et ses calades médiévales composent un décor d'une rare harmonie.",
+    "tags": [
+      "medieval",
+      "hidden",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1732/sainte-eulalie-dolt-chateau-de-curieres.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "sainte-suzanne",
+    "name": "Sainte-Suzanne",
+    "region": "Pays de la Loire",
+    "department": "Mayenne",
+    "lat": 48.0983,
+    "lng": -0.3543,
+    "description": "Village fortifié perché sur un éperon dominant l'Erve, Sainte-Suzanne est la seule place de l'Ouest à avoir résisté aux assauts de Guillaume le Conquérant. Son donjon roman et ses remparts ceinturent un bourg médiéval intact.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "historical"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1609/sainte-suzanne-vue-panoramique.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "salers",
+    "name": "Salers",
+    "region": "Auvergne-Rhône-Alpes",
+    "department": "Cantal",
+    "lat": 45.1368,
+    "lng": 2.4918,
+    "description": "Village de pierre volcanique noire aux rues Renaissance, Salers domine les hauts plateaux du Cantal. Ses hôtels particuliers à tourelles et ses fromages d'estive lui confèrent une personnalité unique.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "gastronomy",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1737/salers-place.webp",
+    "visitDurationMinutes": 180
+  },
+  {
+    "slug": "sancerre",
+    "name": "Sancerre",
+    "region": "Centre-Val de Loire",
+    "department": "Cher",
+    "lat": 47.3333,
+    "lng": 2.8333,
+    "description": "Perchée sur sa colline au-dessus de la Loire, Sancerre est la capitale mondiale du sauvignon blanc. Ses vignobles en coteaux, ses caves troglodytes et sa tour des Fiefs médiévale en font une destination incontournable du Berry.",
+    "tags": [
+      "wine",
+      "gastronomy",
+      "photography",
+      "medieval"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s3579/sancerre-vue-densemble.webp",
+    "visitDurationMinutes": 180
+  },
+  {
+    "slug": "sant-antonino",
+    "name": "Sant'Antonino",
+    "region": "Corse",
+    "department": "Haute-Corse",
+    "lat": 42.5618,
+    "lng": 8.8118,
+    "description": "Perché à 500 mètres d'altitude sur un piton rocheux dominant le golfe de la Balagne, Sant'Antonino est l'un des plus anciens villages de Corse. Ses ruelles étroites en granit et ses vues panoramiques sont à couper le souffle.",
+    "tags": [
+      "medieval",
+      "photography",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1667/santantonino-chemin-vers-leglise.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "saorge",
+    "name": "Saorge",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "department": "Alpes-Maritimes",
+    "lat": 43.9833,
+    "lng": 7.55,
+    "description": "Village médiéval accroché dans la haute Roya à 520 mètres, Saorge présente ses maisons aux couleurs méditerranéennes en amphithéâtre. Ses ruelles voûtées et ses oratoires baroques révèlent l'influence ligure et piémontaise.",
+    "tags": [
+      "medieval",
+      "mountain",
+      "photography",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s3626/saorge-vue-generale.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "sare",
+    "name": "Sare",
+    "region": "Nouvelle-Aquitaine",
+    "department": "Pyrénées-Atlantiques",
+    "lat": 43.3167,
+    "lng": -1.5833,
+    "description": "Au pied de la montagne La Rhune dans le Pays Basque, Sare est le village le plus typique d'Iparralde. Ses maisons labouradines à pans de bois rouges, son fronton et ses grottes paléolithiques incarnent l'âme basque.",
+    "tags": [
+      "basque",
+      "mountain",
+      "nature",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1738/sare-voie-romaine.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "sarrant",
+    "name": "Sarrant",
+    "region": "Occitanie",
+    "department": "Gers",
+    "lat": 43.7667,
+    "lng": 0.8167,
+    "description": "Village médiéval perché du Gers, Sarrant est ceint de remparts presque intacts et dominé par une tour-porte fortifiée. Depuis ses hauteurs, le panorama sur la Lomagne gasconne est d'une sérénité absolue.",
+    "tags": [
+      "medieval",
+      "gastronomy",
+      "hidden",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1739/sarrant-maison-jaune.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "sauveterre-de-rouergue",
+    "name": "Sauveterre-de-Rouergue",
+    "region": "Occitanie",
+    "department": "Aveyron",
+    "lat": 44.2176,
+    "lng": 2.3209,
+    "description": "Bastide royale du XIIIe siècle aux maisons de grès brun, Sauveterre déploie autour de sa place centrale à couverts un plan géométrique d'une rigueur exemplaire. Une capsule médiévale dans la campagne aveyronnaise.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "gastronomy"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1740/sauveterre-de-rouergue-place-des-arcades.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "seillans",
+    "name": "Seillans",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "department": "Var",
+    "lat": 43.6168,
+    "lng": 6.6034,
+    "description": "Village perché du Haut-Var aimé de Max Ernst qui y vécut ses dernières années, Seillans conserve ses ruelles médiévales, ses fontaines et ses maisons aux couleurs chaudes dans une Provence de l'intérieur préservée.",
+    "tags": [
+      "provence",
+      "photography",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1669/seillans-terrasse-et-porte-sarrazine.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "semur-en-brionnais",
+    "name": "Semur-en-Brionnais",
+    "region": "Bourgogne-Franche-Comté",
+    "department": "Saône-et-Loire",
+    "lat": 46.2617,
+    "lng": 4.0713,
+    "description": "Berceau du Brionnais roman, Semur est dominé par un donjon carré du IXe siècle qui surveille une collégiale aux chapiteaux historiés remarquables. Village natal de Saint Hugues de Cluny, il rayonne d'une tranquillité monastique.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1670/semur-en-brionnais-entree-chateau-saint-hugues.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "segur-le-chateau",
+    "name": "Ségur-le-Château",
+    "region": "Nouvelle-Aquitaine",
+    "department": "Corrèze",
+    "lat": 45.3684,
+    "lng": 1.6014,
+    "description": "Dans un méandre de l'Auvézère, Ségur-le-Château est une perle médiévale oubliée. Ses tours, ses moulins et ses lavoirs au bord de la rivière forment un ensemble médiéval d'une rare intimité.",
+    "tags": [
+      "medieval",
+      "hidden",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1741/segur-le-chateau-facades-colombages.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "seguret",
+    "name": "Séguret",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "department": "Vaucluse",
+    "lat": 44.2401,
+    "lng": 4.9969,
+    "description": "Accroché aux Dentelles de Montmirail au-dessus des Côtes-du-Rhône, Séguret est un village-belvédère d'où le regard plonge sur les vignobles et le géant assoupi du mont Ventoux. Un décor pour l'art de vivre provençal.",
+    "tags": [
+      "provence",
+      "wine",
+      "photography",
+      "gastronomy"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1668/seguret-vue-vignoble.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "talmont-sur-gironde",
+    "name": "Talmont-sur-Gironde",
+    "region": "Nouvelle-Aquitaine",
+    "department": "Charente-Maritime",
+    "lat": 45.5267,
+    "lng": -0.8942,
+    "description": "Sur un promontoire battu par les vents au-dessus de l'estuaire de la Gironde, l'église romane de Sainte-Radegonde semble flotter sur les eaux. Le village de roses trémières est d'une beauté fragile et maritime.",
+    "tags": [
+      "coastal",
+      "medieval",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1742/talmont-sur-gironde-vue-sur-presquile-et-eglise.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "tournemire",
+    "name": "Tournemire",
+    "region": "Auvergne-Rhône-Alpes",
+    "department": "Cantal",
+    "lat": 45.1093,
+    "lng": 2.6382,
+    "description": "Le château d'Anjony du XVe siècle, aux quatre tours majestueuses, domine ce village cantalien dont les maisons de basalte forment un écrin médiéval préservé.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "hidden",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1743/tournemire-chateau-danjony-et-paysages.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "tournon-d-agenais",
+    "name": "Tournon-d'Agenais",
+    "region": "Nouvelle-Aquitaine",
+    "department": "Lot-et-Garonne",
+    "lat": 44.3833,
+    "lng": 1.0,
+    "description": "Bastide médiévale perchée sur un éperon dominant la vallée du Boudouyssou, Tournon-d'Agenais offre un panorama à 360° unique. Son beffroi gothique et ses arcades médiévales témoignent d'une prospérité commerciale passée.",
+    "tags": [
+      "medieval",
+      "gastronomy",
+      "photography",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s3433/tournon-dagenais-vue-drone.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "tourtour",
+    "name": "Tourtour",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "department": "Var",
+    "lat": 43.5842,
+    "lng": 6.3754,
+    "description": "Surnommé «village dans le ciel», Tourtour se perche à 635 mètres dans l'arrière-pays varois. Ses platanes millénaires, son château et son panorama — des Maures aux Alpes — en font un belvédère de Provence intérieure.",
+    "tags": [
+      "provence",
+      "photography",
+      "gastronomy"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1672/tourtour-ambiance-village.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "turenne",
+    "name": "Turenne",
+    "region": "Nouvelle-Aquitaine",
+    "department": "Corrèze",
+    "lat": 45.058,
+    "lng": 1.58,
+    "description": "Sur son piton calcaire, Turenne fut la capitale indépendante des puissants Vicomtes de Turenne jusqu'en 1738. Ses deux tours, ses hôtels du XVe siècle et sa vue sur le Midi corrézien imposent le respect.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "photography",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1744/turenne-vue-village-et-paysages.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "usson",
+    "name": "Usson",
+    "region": "Auvergne-Rhône-Alpes",
+    "department": "Puy-de-Dôme",
+    "lat": 45.5267,
+    "lng": 3.4049,
+    "description": "Perché sur un dyke volcanique dominant la plaine de la Limagne, Usson fut la prison dorée de Marie Stuart pendant 18 ans. Ses maisons de lave et son panorama exceptionnel en font un village hors du temps.",
+    "tags": [
+      "medieval",
+      "hidden",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1673/usson-vue-densemble.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "venasque",
+    "name": "Venasque",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "department": "Vaucluse",
+    "lat": 43.993,
+    "lng": 5.1606,
+    "description": "Berceau du Comtat Venaissin, Venasque abrite l'un des plus anciens baptistères de France, du VIe siècle, et des ruelles dominant le paysage de cerisiers en fleur. Un Luberon moins fréquenté et plus intime.",
+    "tags": [
+      "provence",
+      "medieval",
+      "hidden",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1674/venasque-eglise.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "veules-les-roses",
+    "name": "Veules-les-Roses",
+    "region": "Normandie",
+    "department": "Seine-Maritime",
+    "lat": 49.8667,
+    "lng": 0.8,
+    "description": "Village normand traversé par la Veules, le plus court fleuve de France, Veules-les-Roses enchante par ses jardins fleuris et ses moulins à eau. Ses maisons à colombages et ses falaises crayeuses en font un joyau de la Côte d'Albâtre.",
+    "tags": [
+      "normandy",
+      "coastal",
+      "nature",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1610/veules-les-roses-vue-du-ciel.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "villefranche-de-conflent",
+    "name": "Villefranche-de-Conflent",
+    "region": "Occitanie",
+    "department": "Pyrénées-Orientales",
+    "lat": 42.6066,
+    "lng": 2.3704,
+    "description": "Ville médiévale fortifiée par Vauban, classée au patrimoine mondial de l'UNESCO, Villefranche-de-Conflent est encaissée dans les gorges du Têt. Ses remparts roses, ses tours et son escalier souterrain vers le Fort Libéria sont d'une rigueur militaire absolue.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1745/villefranche-de-conflent-remparts-fort-liberia.webp",
+    "visitDurationMinutes": 180
+  },
+  {
+    "slug": "villeneuve",
+    "name": "Villeneuve",
+    "region": "Occitanie",
+    "department": "Aveyron",
+    "lat": 44.4333,
+    "lng": 2.0167,
+    "description": "Bastide fondée au XIIIe siècle sur un promontoire dominant le Lot, Villeneuve conserve son plan géométrique médiéval. Sa place centrale à couverts et son église gothique témoignent de l'architecture de la Guyenne médiévale.",
+    "tags": [
+      "medieval",
+      "history",
+      "gastronomy",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s3737/villeneuve-place-village.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "villereal",
+    "name": "Villeréal",
+    "region": "Nouvelle-Aquitaine",
+    "department": "Lot-et-Garonne",
+    "lat": 44.6333,
+    "lng": 0.75,
+    "description": "Bastide du XIIIe siècle avec sa place centrale et ses couverts en bois, Villeréal est l'une des mieux conservées du Périgord Noir. Son marché du samedi perpétue une tradition médiévale ininterrompue depuis plus de 750 ans.",
+    "tags": [
+      "medieval",
+      "gastronomy",
+      "history",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s2828/villereal-halle-et-eglise-tombee-de-la-nuit.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "vogue",
+    "name": "Vogüé",
+    "region": "Auvergne-Rhône-Alpes",
+    "department": "Ardèche",
+    "lat": 44.5383,
+    "lng": 4.4068,
+    "description": "Dominé par son château Renaissance aux sept tours, Vogüé descend en terrasses vers l'Ardèche. L'ombre des platanes, les terrasses ensoleillées et les eaux vertes de la rivière composent un tableau de Provence intérieure.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1675/vogue-vue-chateau-et-village.webp",
+    "visitDurationMinutes": 120
+  },
+  {
+    "slug": "vouvant",
+    "name": "Vouvant",
+    "region": "Pays de la Loire",
+    "department": "Vendée",
+    "lat": 46.5632,
+    "lng": -0.7757,
+    "description": "Dans la forêt de Mervent, Vouvant dresse sa tour Mélusine du XIIe siècle et ses remparts médiévaux au-dessus d'un méandre. Ce village vendéen hors des chemins battus réserve une église romane ornée de chapiteaux étonnants.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1611/vouvant-vue-du-ciel.webp",
+    "visitDurationMinutes": 90
+  },
+  {
+    "slug": "vezelay",
+    "name": "Vézelay",
+    "region": "Bourgogne-Franche-Comté",
+    "department": "Yonne",
+    "lat": 47.4647,
+    "lng": 3.7453,
+    "description": "Couronné par une basilique romane classée à l'UNESCO, Vézelay domine la vallée de la Cure. Point de départ du pèlerinage vers Saint-Jacques-de-Compostelle, le village respire une beauté spirituelle apaisée.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "wine",
+      "gastronomy",
+      "hidden"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1629/vezelay-basilique-au-soleil-couchant.webp",
+    "visitDurationMinutes": 240
+  },
+  {
+    "slug": "yvoire",
+    "name": "Yvoire",
+    "region": "Auvergne-Rhône-Alpes",
+    "department": "Haute-Savoie",
+    "lat": 46.3763,
+    "lng": 6.3198,
+    "description": "Village médiéval fortifié au bord du lac Léman, Yvoire est célèbre pour ses remparts du XIVe siècle et ses ruelles fleuries. Du port, les Alpes enneigées se réfléchissent dans les eaux turquoise du lac.",
+    "tags": [
+      "medieval",
+      "coastal",
+      "photography",
+      "architectural"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1676/yvoire-village-et-ports-vue-du-ciel.webp",
+    "visitDurationMinutes": 150
+  },
+  {
+    "slug": "yevre-le-chatel",
+    "name": "Yèvre-le-Châtel",
+    "region": "Centre-Val de Loire",
+    "department": "Loiret",
+    "lat": 48.1671,
+    "lng": 2.1682,
+    "description": "Château royal du XIIIe siècle aux tours rondes et à l'église romane inachevée dans un village quasi désert — Yèvre-le-Châtel est une capsule médiévale figée dans la plaine de Beauce, d'une intensité mélancolique.",
+    "tags": [
+      "medieval",
+      "architectural",
+      "photography"
+    ],
+    "heroImage": "https://media.les-plus-beaux-villages-de-france.org/photos/s1612/yevre-le-chatel-vue-densemble.webp",
+    "visitDurationMinutes": 90
   }
 ]

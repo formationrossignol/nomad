@@ -5,6 +5,13 @@ interface DayBlockProps {
   day: ItineraryDay
 }
 
+function formatDuration(minutes: number): string {
+  const h = Math.floor(minutes / 60)
+  const m = minutes % 60
+  if (m === 0) return `${h}h`
+  return `${h}h${m.toString().padStart(2, '0')}`
+}
+
 export function DayBlock({ day }: DayBlockProps) {
   return (
     <div className="py-10 border-b border-sand/40 last:border-0">
@@ -13,6 +20,9 @@ export function DayBlock({ day }: DayBlockProps) {
           {day.label}
         </h3>
         <div className="h-px flex-1 bg-sand/60" />
+        <span className="font-inter text-[7.5px] tracking-[0.15em] uppercase text-stone flex-shrink-0">
+          ~{formatDuration(day.totalTimeMinutes)}
+        </span>
       </div>
       <p className="font-cormorant italic text-[14px] text-stone mb-8">
         {day.atmosphereNote}
@@ -29,7 +39,7 @@ export function DayBlock({ day }: DayBlockProps) {
             <div className="flex-1">
               {stop.driveTimeFromPrevMinutes !== null && (
                 <p className="font-inter text-[7.5px] tracking-[0.15em] uppercase text-stone mb-1">
-                  {stop.driveTimeFromPrevMinutes} min drive
+                  {stop.driveTimeFromPrevMinutes} min en voiture
                 </p>
               )}
               <Link
@@ -38,9 +48,15 @@ export function DayBlock({ day }: DayBlockProps) {
               >
                 {stop.village.name}
               </Link>
-              <p className="font-inter text-[8px] tracking-[0.1em] text-stone mt-0.5">
-                {stop.village.department}
-              </p>
+              <div className="flex items-center gap-3 mt-0.5">
+                <p className="font-inter text-[8px] tracking-[0.1em] text-stone">
+                  {stop.village.department}
+                </p>
+                <span className="text-sand">·</span>
+                <p className="font-inter text-[8px] tracking-[0.1em] text-stone">
+                  {formatDuration(stop.visitDurationMinutes)} de visite
+                </p>
+              </div>
               <p className="font-cormorant text-[14px] text-midnight/70 leading-relaxed mt-2 line-clamp-2">
                 {stop.village.description}
               </p>
@@ -48,7 +64,7 @@ export function DayBlock({ day }: DayBlockProps) {
             {/* Village photo */}
             <div className="w-20 h-20 flex-shrink-0 overflow-hidden">
               <img
-                src={`${stop.village.heroImage}&w=120&q=60`}
+                src={stop.village.heroImage}
                 alt={stop.village.name}
                 className="w-full h-full object-cover"
               />

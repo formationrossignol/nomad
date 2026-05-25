@@ -6,7 +6,7 @@ interface MemoryBlockProps {
 }
 
 export function MemoryBlock({ memory }: MemoryBlockProps) {
-  const date = new Date(memory.created_at).toLocaleDateString('en-GB', {
+  const date = new Date(memory.created_at).toLocaleDateString('fr-FR', {
     day: 'numeric', month: 'long', year: 'numeric',
   })
 

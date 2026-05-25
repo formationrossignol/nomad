@@ -10,7 +10,7 @@ export default {
         'petroleum': '#234A6B',
         'ivory': '#F7F5F1',
         'sand': '#DCC9A3',
-        'stone': '#C8CDD4',
+        'stone': '#6B7A8D',
         'midnight': '#0D1B2A',
         'champagne': '#D6C3A5',
       },

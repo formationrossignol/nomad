@@ -1,24 +1,39 @@
 'use client'
 import Link from 'next/link'
-import { motion, useScroll, useTransform } from 'framer-motion'
+
+function NomadLogo() {
+  return (
+    <Link href="/" className="flex items-center gap-0 group" aria-label="NØmad — accueil">
+      <span
+        className="font-cormorant italic text-[20px] text-ivory leading-none tracking-tight"
+        style={{ letterSpacing: '-0.01em' }}
+      >
+        N
+      </span>
+      <span
+        className="font-cormorant italic text-[20px] leading-none"
+        style={{
+          color: '#D6C3A5',
+          letterSpacing: '-0.01em',
+        }}
+      >
+        ø
+      </span>
+      <span
+        className="font-cormorant italic text-[20px] text-ivory/80 leading-none tracking-tight"
+        style={{ letterSpacing: '-0.01em' }}
+      >
+        mad
+      </span>
+    </Link>
+  )
+}
 
 export function NavBar() {
-  const { scrollY } = useScroll()
-  const bgOpacity = useTransform(scrollY, [0, 80], [0, 1])
-
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 h-[52px] flex items-center justify-between px-8">
-      <motion.div
-        className="absolute inset-0 bg-midnight"
-        style={{ opacity: bgOpacity }}
-      />
-      <Link
-        href="/"
-        className="relative z-10 font-cormorant italic text-[14px] tracking-[0.15em] text-ivory"
-      >
-        Voyages
-      </Link>
-      <nav aria-label="Site navigation" className="relative z-10 flex gap-7 items-center">
+    <header className="fixed top-0 left-0 right-0 z-50 h-[52px] flex items-center justify-between px-8 bg-midnight/95 border-b border-champagne/10">
+      <NomadLogo />
+      <nav aria-label="Navigation du site" className="flex gap-7 items-center">
         <Link
           href="/villages"
           className="font-inter text-[9px] tracking-[0.2em] uppercase text-ivory/70 hover:text-ivory focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ivory/60 transition-colors duration-200"
@@ -29,13 +44,13 @@ export function NavBar() {
           href="/journeys"
           className="font-inter text-[9px] tracking-[0.2em] uppercase text-ivory/70 hover:text-ivory focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ivory/60 transition-colors duration-200"
         >
-          Journeys
+          Voyages
         </Link>
         <Link
           href="/itineraries"
           className="font-inter text-[9px] tracking-[0.2em] uppercase text-ivory/70 hover:text-ivory focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ivory/60 transition-colors duration-200"
         >
-          Itineraries
+          Itinéraires
         </Link>
       </nav>
     </header>

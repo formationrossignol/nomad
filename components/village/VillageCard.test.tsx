@@ -12,6 +12,7 @@ const mockVillage: Village = {
   description: 'A beautiful village.',
   tags: ['provence', 'medieval'],
   heroImage: 'https://example.com/gordes.jpg',
+  visitDurationMinutes: 120,
 }
 
 describe('VillageCard', () => {

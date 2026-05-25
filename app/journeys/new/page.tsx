@@ -65,26 +65,26 @@ export default function NewJourneyPage() {
       <div className="min-h-screen bg-ivory pt-[52px]">
         <div className="max-w-2xl mx-auto px-8 py-16">
           <p className="font-inter text-[9px] tracking-[0.25em] uppercase text-stone mb-6">
-            New journey
+            Nouveau voyage
           </p>
           <h1 className="font-cormorant italic text-[40px] text-deep-blue mb-12">
-            Open a new chapter
+            Ouvrir un nouveau chapitre
           </h1>
 
           <form onSubmit={handleSubmit}>
-            <EditorialField label="Journey title">
+            <EditorialField label="Titre du voyage">
               <input
                 type="text"
                 value={title}
                 onChange={e => setTitle(e.target.value)}
-                placeholder="Provence, Summer 2024"
+                placeholder="Provence, Été 2024"
                 className={editorialInputClass}
                 required
                 autoFocus
               />
             </EditorialField>
 
-            <EditorialField label="Year">
+            <EditorialField label="Année">
               <input
                 type="number"
                 value={year}
@@ -106,22 +106,22 @@ export default function NewJourneyPage() {
               />
             </EditorialField>
 
-            <EditorialField label="Hero photograph">
+            <EditorialField label="Photo de couverture">
               {heroPreview ? (
                 <div className="relative">
-                  <img src={heroPreview} alt="Preview" className="w-full h-48 object-cover" />
+                  <img src={heroPreview} alt="Aperçu" className="w-full h-48 object-cover" />
                   <button
                     type="button"
                     onClick={() => { setHeroFile(null); setHeroPreview(null) }}
                     className="absolute top-2 right-2 font-inter text-[8px] tracking-[0.1em] uppercase bg-midnight/70 text-ivory px-2 py-1"
                   >
-                    Remove
+                    Retirer
                   </button>
                 </div>
               ) : (
                 <label className="flex items-center justify-center h-32 border border-dashed border-sand cursor-pointer hover:border-deep-blue transition-colors duration-200">
                   <span className="font-inter text-[9px] tracking-[0.15em] uppercase text-stone">
-                    Upload photo
+                    Télécharger une photo
                   </span>
                   <input type="file" accept="image/*" onChange={handleFileChange} className="sr-only" />
                 </label>
@@ -134,7 +134,7 @@ export default function NewJourneyPage() {
                 disabled={saving || !title.trim()}
                 className="font-inter text-[10px] tracking-[0.18em] uppercase px-8 py-3 bg-deep-blue text-ivory hover:bg-cobalt disabled:opacity-40 transition-colors duration-200"
               >
-                {saving ? 'Creating…' : 'Begin Journey'}
+                {saving ? 'Création…' : 'Commencer le voyage'}
               </button>
             </div>
           </form>

@@ -22,17 +22,17 @@ export default async function JourneysPage() {
         <div className="px-12 py-16 flex items-end justify-between border-b border-sand/60">
           <div>
             <p className="font-inter text-[9px] tracking-[0.25em] uppercase text-stone mb-4">
-              Your archive
+              Votre archive
             </p>
             <h1 className="font-cormorant italic text-[44px] text-deep-blue leading-tight">
-              Journeys
+              Voyages
             </h1>
           </div>
           <Link
             href="/journeys/new"
             className="font-inter text-[9px] tracking-[0.18em] uppercase px-6 py-3 bg-deep-blue text-ivory hover:bg-cobalt transition-colors duration-200"
           >
-            New Journey
+            Nouveau voyage
           </Link>
         </div>
 
@@ -41,13 +41,13 @@ export default async function JourneysPage() {
           {allJourneys.length === 0 ? (
             <div className="text-center py-24">
               <p className="font-cormorant italic text-[22px] text-stone">
-                Your first journey awaits.
+                Votre premier voyage vous attend.
               </p>
               <Link
                 href="/journeys/new"
                 className="inline-block mt-6 font-inter text-[9px] tracking-[0.18em] uppercase text-deep-blue border-b border-deep-blue pb-0.5"
               >
-                Begin <span aria-hidden="true">→</span>
+                Commencer <span aria-hidden="true">→</span>
               </Link>
             </div>
           ) : (

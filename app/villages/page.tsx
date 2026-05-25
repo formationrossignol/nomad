@@ -57,7 +57,7 @@ export default function VillagesPage() {
               type="text"
               value={search}
               onChange={e => setSearch(e.target.value)}
-              placeholder="Search villages…"
+              placeholder="Rechercher des villages…"
               className="w-full font-inter text-[12px] tracking-[0.05em] px-4 py-3 border border-sand rounded-none bg-white placeholder:text-stone focus:outline-none focus:border-cobalt transition-colors duration-200"
             />
             <div className="flex gap-2 mt-3 flex-wrap">
@@ -71,7 +71,7 @@ export default function VillagesPage() {
                       : 'bg-white text-stone border-sand hover:border-deep-blue hover:text-deep-blue'
                   }`}
                 >
-                  {f}
+                  {f === 'all' ? 'Tous' : f === 'visited' ? 'Visités' : 'Non visités'}
                 </button>
               ))}
             </div>
@@ -85,7 +85,7 @@ export default function VillagesPage() {
                 !activeRegion ? 'bg-deep-blue text-ivory border-deep-blue' : 'bg-white text-stone border-sand hover:border-deep-blue'
               }`}
             >
-              All
+              Toutes régions
             </button>
             {regions.map(r => (
               <button
