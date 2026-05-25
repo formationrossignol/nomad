@@ -10,6 +10,7 @@ const L = {
     addTo: jest.fn().mockReturnThis(),
     remove: jest.fn(),
   })),
+  divIcon: jest.fn(() => ({ options: {} })),
 }
 export default L
 module.exports = L

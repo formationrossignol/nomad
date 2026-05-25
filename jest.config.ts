@@ -11,6 +11,7 @@ const config: Config = {
     '^@/(.*)$': '<rootDir>/$1',
     '^react-leaflet$': '<rootDir>/__mocks__/react-leaflet.tsx',
     '^leaflet$': '<rootDir>/__mocks__/leaflet.ts',
+    '^react-leaflet-cluster$': '<rootDir>/__mocks__/react-leaflet-cluster.tsx',
   },
 }
 
