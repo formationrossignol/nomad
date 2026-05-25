@@ -1,5 +1,6 @@
 'use client'
-import { MapContainer, TileLayer, Marker } from 'react-leaflet'
+import { useEffect } from 'react'
+import { MapContainer, TileLayer, Marker, useMap } from 'react-leaflet'
 import MarkerClusterGroup from 'react-leaflet-cluster'
 import L from 'leaflet'
 import 'react-leaflet-cluster/dist/assets/MarkerCluster.css'
@@ -69,6 +70,14 @@ interface Props {
   onSelect: (p: Pepite) => void
 }
 
+function ClusterForcer() {
+  const map = useMap()
+  useEffect(() => {
+    map.fire('zoomend')
+  }, [map])
+  return null
+}
+
 export default function PepitesMapInner({ pepites, selected, onSelect }: Props) {
   return (
     <MapContainer center={FRANCE_CENTER} zoom={6} className="h-full w-full" zoomControl={false}>
@@ -78,6 +87,7 @@ export default function PepitesMapInner({ pepites, selected, onSelect }: Props) 
         tileSize={512}
         zoomOffset={-1}
       />
+      <ClusterForcer />
       <MarkerClusterGroup
         chunkedLoading
         iconCreateFunction={createClusterIcon}
