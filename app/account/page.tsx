@@ -9,11 +9,14 @@ function AccountContent() {
   const router = useRouter()
 
   async function handleSignOut() {
-    await signOut()
-    router.push('/')
+    try {
+      await signOut()
+    } finally {
+      router.push('/')
+    }
   }
 
-  const initials = (user?.email ?? '??').slice(0, 2).toUpperCase()
+  const initials = (user?.email ?? '').slice(0, 2).toUpperCase() || '??'
 
   return (
     <section className="bg-ivory min-h-screen py-20 px-12">
