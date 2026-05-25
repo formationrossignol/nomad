@@ -8,6 +8,10 @@ jest.mock('@/lib/supabase/auth', () => ({
 }))
 
 describe('AuthModal', () => {
+  afterEach(() => {
+    jest.clearAllMocks()
+  })
+
   it('renders nothing when closed', () => {
     render(<AuthModal isOpen={false} onClose={jest.fn()} />)
     expect(screen.queryByPlaceholderText('Email')).not.toBeInTheDocument()

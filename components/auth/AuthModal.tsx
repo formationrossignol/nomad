@@ -35,6 +35,8 @@ export function AuthModal({ isOpen, onClose }: Props) {
       } else {
         await signUp(email, password)
       }
+      setEmail('')
+      setPassword('')
       onClose()
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Connexion impossible, réessayez.')
@@ -69,6 +71,7 @@ export function AuthModal({ isOpen, onClose }: Props) {
             value={email}
             onChange={e => setEmail(e.target.value)}
             required
+            disabled={loading}
             className="font-inter text-[11px] tracking-[0.05em] border-b border-deep-blue/30 bg-transparent py-2 outline-none focus:border-deep-blue placeholder:text-deep-blue/30"
           />
           <input
@@ -77,6 +80,7 @@ export function AuthModal({ isOpen, onClose }: Props) {
             value={password}
             onChange={e => setPassword(e.target.value)}
             required
+            disabled={loading}
             className="font-inter text-[11px] tracking-[0.05em] border-b border-deep-blue/30 bg-transparent py-2 outline-none focus:border-deep-blue placeholder:text-deep-blue/30"
           />
           {error && (
