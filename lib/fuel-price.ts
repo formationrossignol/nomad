@@ -40,7 +40,10 @@ async function fetchPrices(col: string, dateFilter?: string): Promise<{ avg: num
   if (dateFilter) where += ` AND ${majCol} >= date'${dateFilter}'`
 
   const url = `${BASE}?select=${priceCol},${majCol}&where=${encodeURIComponent(where)}&limit=15000&order_by=${majCol}+desc`
-  const res = await fetch(url, { next: { revalidate: 3600 } })
+  const res = await fetch(url, {
+    headers: { 'User-Agent': 'Mozilla/5.0', 'Accept': 'application/json' },
+    next: { revalidate: 3600 },
+  })
   if (!res.ok) return null
 
   const json = await res.json()
