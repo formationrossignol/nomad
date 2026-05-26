@@ -6,38 +6,29 @@ const BASE = `https://tabular-api.data.gouv.fr/api/resources/${RESOURCE_ID}/data
 export interface VehicleRecord {
   marque: string
   libelle_modele: string
-  description_commerciale: string
+  description_commerciale: string | null
   energie: string
-  conso_mixte_min: number | null
-  conso_mixte_max: number | null
-  co2_mixte_min: number | null
-  co2_mixte_max: number | null
-  conso_elec_min: number | null
-  conso_elec_max: number | null
-  puissance_maximale: number | null
-  type_de_boite: string | null
+  conso_mixte: number | null
 }
 
 function mapRecord(r: Record<string, unknown>): VehicleRecord {
+  const min = r['Conso vitesse mixte Min'] as number | null
+  const max = r['Conso vitesse mixte Max'] as number | null
+  const conso_mixte = min !== null && max !== null
+    ? Math.round(((min + max) / 2) * 10) / 10
+    : (min ?? max ?? null)
   return {
     marque: r['Marque'] as string,
     libelle_modele: r['Libellé modèle'] as string,
-    description_commerciale: r['Description Commerciale'] as string,
+    description_commerciale: (r['Description Commerciale'] as string) || null,
     energie: r['Energie'] as string,
-    conso_mixte_min: r['Conso vitesse mixte Min'] as number | null,
-    conso_mixte_max: r['Conso vitesse mixte Max'] as number | null,
-    co2_mixte_min: r['CO2 vitesse mixte Min'] as number | null,
-    co2_mixte_max: r['CO2 vitesse mixte Max'] as number | null,
-    conso_elec_min: r['Conso elec Min'] as number | null,
-    conso_elec_max: r['Conso elec Max'] as number | null,
-    puissance_maximale: r['Puissance maximale'] as number | null,
-    type_de_boite: r['Type de boite'] as string | null,
+    conso_mixte,
   }
 }
 
 export async function GET(req: NextRequest) {
   const brand = req.nextUrl.searchParams.get('brand')?.trim().toUpperCase()
-  if (!brand) return NextResponse.json([])
+  if (!brand) return NextResponse.json({ models: [] })
 
   const PAGE_SIZE = 100
   const all: VehicleRecord[] = []
@@ -57,5 +48,5 @@ export async function GET(req: NextRequest) {
     if (page > 10) break  // safety cap: max 1000 records
   }
 
-  return NextResponse.json(all)
+  return NextResponse.json({ models: all })
 }
