@@ -91,6 +91,7 @@ function VehicleSearch() {
   const [selectedBrand, setSelectedBrand] = useState('')
   const [models, setModels] = useState<VehicleRecord[]>([])
   const [selectedModel, setSelectedModel] = useState<VehicleRecord | null>(null)
+  const [modelQuery, setModelQuery] = useState('')
   const [saving, setSaving] = useState(false)
 
   useEffect(() => {
@@ -106,6 +107,8 @@ function VehicleSearch() {
 
   useEffect(() => {
     if (!selectedBrand) { setModels([]); return }
+    setModelQuery('')
+    setSelectedModel(null)
     fetch(`/api/vehicles/models?brand=${encodeURIComponent(selectedBrand)}`)
       .then(r => r.ok ? r.json() : { models: [] })
       .then(d => setModels(d.models ?? []))
@@ -129,7 +132,13 @@ function VehicleSearch() {
     setSelectedModel(null)
   }
 
-  const groupedModels = models.reduce<Record<string, VehicleRecord[]>>((acc, m) => {
+  const filteredModels = modelQuery.trim()
+    ? models.filter(m =>
+        (m.description_commerciale ?? m.libelle_modele).toLowerCase().includes(modelQuery.toLowerCase())
+      )
+    : models
+
+  const groupedModels = filteredModels.reduce<Record<string, VehicleRecord[]>>((acc, m) => {
     const key = m.energie
     if (!acc[key]) acc[key] = []
     acc[key].push(m)
@@ -180,6 +189,13 @@ function VehicleSearch() {
           <label className="font-inter text-[7.5px] tracking-[0.15em] uppercase text-stone block mb-2">
             Modèle
           </label>
+          <input
+            type="text"
+            value={modelQuery}
+            onChange={e => { setModelQuery(e.target.value); setSelectedModel(null) }}
+            placeholder={`Filtrer parmi ${models.length} modèles…`}
+            className="w-full bg-transparent border-b border-sand font-cormorant italic text-[14px] text-deep-blue pb-1 mb-3 focus:outline-none focus:border-deep-blue placeholder:text-stone/40"
+          />
           <select
             value={selectedModel ? JSON.stringify(selectedModel) : ''}
             onChange={e => setSelectedModel(e.target.value ? JSON.parse(e.target.value) : null)}
