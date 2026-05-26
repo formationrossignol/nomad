@@ -138,17 +138,26 @@ export function generateItinerary(villages: Village[], input: ItineraryInput): G
 
   // Return drive time from last stop to departure city
   let returnTimeMinutes: number | null = null
+  let returnDistanceKm = 0
   if (departureCity && itineraryDays.length > 0) {
     const lastDay = itineraryDays[itineraryDays.length - 1]
     const lastStop = lastDay.stops[lastDay.stops.length - 1]
-    returnTimeMinutes = driveTimeMinutes(
-      haversineKm(lastStop.village.lat, lastStop.village.lng, departureCity.lat, departureCity.lng)
-    )
+    const returnKm = haversineKm(lastStop.village.lat, lastStop.village.lng, departureCity.lat, departureCity.lng)
+    returnTimeMinutes = driveTimeMinutes(returnKm)
+    returnDistanceKm = returnKm
   }
+
+  // driveTimeMinutes at 60 km/h → minutes ≈ km numerically
+  const totalDistanceKm = Math.round(
+    itineraryDays.reduce((sum, d) =>
+      sum + d.stops.reduce((s, stop) => s + (stop.driveTimeFromPrevMinutes ?? 0), 0), 0
+    ) + returnDistanceKm
+  )
 
   return {
     days: itineraryDays,
     totalVillages: itineraryDays.reduce((s, d) => s + d.stops.length, 0),
+    totalDistanceKm,
     poolExhausted: villageIdx >= selected.length && itineraryDays.length < days,
     departureCity,
     returnTimeMinutes,

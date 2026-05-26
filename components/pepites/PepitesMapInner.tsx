@@ -19,6 +19,7 @@ const CATEGORY_STYLE: Record<PepiteFilterCategory, { bg: string; emoji: string }
   'Châteaux':          { bg: '#6A1B9A', emoji: '🏰' },
   'Monuments & musées':{ bg: '#BF360C', emoji: '🏛️' },
   'Littoral & îles':   { bg: '#0277BD', emoji: '🏖️' },
+  'Plus beaux villages': { bg: '#9A7B2E', emoji: '⭐' },
 }
 
 function createIcon(category: PepiteFilterCategory, active: boolean) {

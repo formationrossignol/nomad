@@ -36,11 +36,7 @@ const SLIDES = [
 
 const INTERVAL_MS = 5000
 
-interface HeroCarouselProps {
-  villageCount: number
-}
-
-export function HeroCarousel({ villageCount }: HeroCarouselProps) {
+export function HeroCarousel() {
   const [current, setCurrent] = useState(0)
   const [fading, setFading] = useState(false)
 
@@ -63,7 +59,6 @@ export function HeroCarousel({ villageCount }: HeroCarouselProps) {
 
   return (
     <div className="relative flex-1 overflow-hidden">
-      {/* Images — preload all, show current */}
       {SLIDES.map((s, i) => (
         <img
           key={s.src}
@@ -74,14 +69,12 @@ export function HeroCarousel({ villageCount }: HeroCarouselProps) {
         />
       ))}
 
-      {/* Gradient bleed left */}
       <div
         className="absolute inset-0 z-10"
         style={{ background: 'linear-gradient(90deg, #F7F5F1 0%, transparent 30%)' }}
         aria-hidden="true"
       />
 
-      {/* Village name */}
       <div
         className="absolute bottom-8 left-8 z-20 transition-opacity duration-500"
         style={{ opacity: fading ? 0 : 1 }}
@@ -94,8 +87,7 @@ export function HeroCarousel({ villageCount }: HeroCarouselProps) {
         </p>
       </div>
 
-      {/* Village count badge */}
-      <div className="absolute bottom-8 right-8 z-20 flex flex-col items-end gap-3">
+      <div className="absolute bottom-8 right-8 z-20">
         <div className="flex gap-1.5">
           {SLIDES.map((_, i) => (
             <button
@@ -109,10 +101,6 @@ export function HeroCarousel({ villageCount }: HeroCarouselProps) {
               }}
             />
           ))}
-        </div>
-        <div className="w-16 h-16 rounded-full bg-midnight/75 border border-champagne/30 flex flex-col items-center justify-center">
-          <span className="font-cormorant italic text-[20px] text-champagne leading-none">{villageCount}</span>
-          <span className="font-inter text-[7px] tracking-[0.1em] uppercase text-stone mt-0.5">villages</span>
         </div>
       </div>
     </div>

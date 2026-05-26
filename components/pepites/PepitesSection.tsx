@@ -25,6 +25,7 @@ const CATEGORY_COLOR: Record<PepiteFilterCategory, string> = {
   'Châteaux':           '#6A1B9A',
   'Monuments & musées': '#BF360C',
   'Littoral & îles':    '#0277BD',
+  'Plus beaux villages': '#9A7B2E',
 }
 
 export function PepitesSection() {

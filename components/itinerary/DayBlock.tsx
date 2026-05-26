@@ -3,6 +3,8 @@ import type { ItineraryDay } from '@/types'
 
 interface DayBlockProps {
   day: ItineraryDay
+  departureCity?: string
+  returnLeg?: { city: string; minutes: number }
 }
 
 function formatDuration(minutes: number): string {
@@ -12,7 +14,18 @@ function formatDuration(minutes: number): string {
   return `${h}h${m.toString().padStart(2, '0')}`
 }
 
-export function DayBlock({ day }: DayBlockProps) {
+function TravelLeg({ from, to, minutes }: { from: string; to: string; minutes: number }) {
+  return (
+    <div className="flex items-center gap-3 py-3 border-b border-sand/30">
+      <div className="w-6 flex-shrink-0" />
+      <p className="font-inter text-[7.5px] tracking-[0.15em] uppercase text-stone/60">
+        {from} → → → {to} · {formatDuration(minutes)} en voiture
+      </p>
+    </div>
+  )
+}
+
+export function DayBlock({ day, departureCity, returnLeg }: DayBlockProps) {
   return (
     <div className="py-10 border-b border-sand/40 last:border-0">
       <div className="flex items-baseline gap-4 mb-2">
@@ -29,6 +42,13 @@ export function DayBlock({ day }: DayBlockProps) {
       </p>
 
       <div className="space-y-6">
+        {departureCity && day.stops[0] && (
+          <TravelLeg
+            from={departureCity}
+            to={day.stops[0].village.name}
+            minutes={day.stops[0].driveTimeFromPrevMinutes ?? 0}
+          />
+        )}
         {day.stops.map((stop, i) => (
           <div key={stop.village.slug} className="flex gap-6">
             {/* Stop number */}
@@ -37,7 +57,12 @@ export function DayBlock({ day }: DayBlockProps) {
             </div>
             {/* Village info */}
             <div className="flex-1">
-              {stop.driveTimeFromPrevMinutes !== null && (
+              {stop.driveTimeFromPrevMinutes !== null && !departureCity && i === 0 && (
+                <p className="font-inter text-[7.5px] tracking-[0.15em] uppercase text-stone mb-1">
+                  {stop.driveTimeFromPrevMinutes} min en voiture
+                </p>
+              )}
+              {stop.driveTimeFromPrevMinutes !== null && i > 0 && (
                 <p className="font-inter text-[7.5px] tracking-[0.15em] uppercase text-stone mb-1">
                   {stop.driveTimeFromPrevMinutes} min en voiture
                 </p>
@@ -71,6 +96,13 @@ export function DayBlock({ day }: DayBlockProps) {
             </div>
           </div>
         ))}
+        {returnLeg && (
+          <TravelLeg
+            from={day.stops[day.stops.length - 1]?.village.name ?? ''}
+            to={returnLeg.city}
+            minutes={returnLeg.minutes}
+          />
+        )}
       </div>
     </div>
   )

@@ -1,10 +1,8 @@
 import Link from 'next/link'
 import { PageTransition } from '@/components/layout/PageTransition'
 import { HeroCarousel } from '@/components/layout/HeroCarousel'
-import { getAllVillages } from '@/lib/villages'
 
 export default function HomePage() {
-  const villageCount = getAllVillages().length
   return (
     <PageTransition>
       {/* HERO — Asymmetric Atlas */}
@@ -32,7 +30,7 @@ export default function HomePage() {
               Un atlas cinématique du voyage en France<br />et des plus beaux villages de France.
             </p>
             <Link
-              href="/villages"
+              href="/pepites"
               className="font-inter text-[10px] tracking-[0.18em] uppercase text-deep-blue border-b border-deep-blue pb-0.5 hover:text-cobalt hover:border-cobalt transition-colors duration-200"
             >
               Commencer l&apos;exploration
@@ -41,11 +39,11 @@ export default function HomePage() {
         </div>
 
         {/* Right photo — carousel */}
-        <HeroCarousel villageCount={villageCount} />
+        <HeroCarousel />
       </section>
 
       {/* FEATURE BLOCKS */}
-      <section className="grid grid-cols-4 h-[220px]">
+      <section className="grid grid-cols-3 h-[220px]">
         {/* Block 1 — Design a Journey */}
         <Link href="/journeys/new" className="group relative flex flex-col justify-end p-8 bg-deep-blue overflow-hidden">
           <div
@@ -64,21 +62,8 @@ export default function HomePage() {
           </span>
         </Link>
 
-        {/* Block 2 — Villages */}
-        <Link href="/villages" className="group relative flex flex-col justify-end p-8 bg-sand/40 overflow-hidden border-x border-sand">
-          <p className="font-inter text-[8px] tracking-[0.22em] uppercase text-stone mb-3">
-            Explorer
-          </p>
-          <h2 className="font-cormorant italic text-[22px] text-deep-blue leading-tight mb-4">
-            {villageCount} Villages de France
-          </h2>
-          <span className="font-inter text-[9px] tracking-[0.15em] uppercase text-deep-blue border-b border-deep-blue/40 pb-0.5 w-fit group-hover:border-deep-blue transition-colors duration-200">
-            Voir la carte <span aria-hidden="true">→</span>
-          </span>
-        </Link>
-
-        {/* Block 3 — Plan an Itinerary */}
-        <Link href="/itineraries" className="group relative flex flex-col justify-end p-8 bg-ivory overflow-hidden border-r border-sand">
+        {/* Block 2 — Plan an Itinerary */}
+        <Link href="/itineraries/new" className="group relative flex flex-col justify-end p-8 bg-ivory overflow-hidden border-x border-sand">
           <p className="font-inter text-[8px] tracking-[0.22em] uppercase text-stone mb-3">
             Planifier
           </p>
@@ -90,8 +75,8 @@ export default function HomePage() {
           </span>
         </Link>
 
-        {/* Block 4 — Pépites */}
-        <Link href="/pepites" className="group relative flex flex-col justify-end p-8 bg-sand/60 overflow-hidden border-r border-sand">
+        {/* Block 3 — Pépites */}
+        <Link href="/pepites" className="group relative flex flex-col justify-end p-8 bg-sand/60 overflow-hidden">
           <p className="font-inter text-[8px] tracking-[0.22em] uppercase text-stone mb-3">
             Découvrir
           </p>

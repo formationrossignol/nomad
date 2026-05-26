@@ -1,6 +1,12 @@
 import type { Pepite } from '@/types'
+import villagesJson from './villages.json'
 
-export const PEPITES: Pepite[] = [
+export function getUniquePepiteRegions(): string[] {
+  const regions = new Set(PEPITES.map(p => p.region))
+  return Array.from(regions).sort()
+}
+
+const PEPITES_BASE: Pepite[] = [
   {
     id: 'mont-saint-michel',
     name: 'Mont-Saint-Michel et sa baie',
@@ -3448,3 +3454,21 @@ export const PEPITES: Pepite[] = [
     imageUrl: 'https://images.unsplash.com/photo-1533587851505-d119e13fa0d7?w=800&q=80',
   },
 ]
+
+const VILLAGES_AS_PEPITES: Pepite[] = (villagesJson as Array<{
+  slug: string; name: string; region: string; department: string;
+  lat: number; lng: number; heroImage: string
+}>).map(v => ({
+  id: `village-${v.slug}`,
+  name: v.name,
+  slug: v.slug,
+  filterCategory: 'Plus beaux villages',
+  region: v.region,
+  department: v.department,
+  lat: v.lat,
+  lng: v.lng,
+  shortDescription: `${v.name} fait partie des Plus Beaux Villages de France.`,
+  imageUrl: v.heroImage,
+}))
+
+export const PEPITES: Pepite[] = [...PEPITES_BASE, ...VILLAGES_AS_PEPITES]

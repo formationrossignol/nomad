@@ -6,6 +6,7 @@ export type PepiteFilterCategory =
   | 'Châteaux'
   | 'Monuments & musées'
   | 'Littoral & îles'
+  | 'Plus beaux villages'
 
 export interface Pepite {
   id: string
@@ -70,6 +71,23 @@ export interface VisitedVillage {
   personal_note: string | null
 }
 
+export interface VisitedPepite {
+  id: string
+  pepite_slug: string
+  visited_at: string | null
+}
+
+export interface SavedVehicle {
+  id: string
+  user_id: string
+  marque: string
+  libelle_modele: string
+  description_commerciale: string | null
+  energie: string
+  conso_mixte: number | null
+  created_at: string
+}
+
 export type TravelPace = 'slow' | 'moderate' | 'intensive'
 
 export interface Itinerary {
@@ -105,6 +123,7 @@ export interface DepartureCity {
 export interface GeneratedItinerary {
   days: ItineraryDay[]
   totalVillages: number
+  totalDistanceKm: number
   poolExhausted: boolean
   departureCity: DepartureCity | null
   returnTimeMinutes: number | null

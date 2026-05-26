@@ -7,7 +7,6 @@ import { AuthModal } from '@/components/auth/AuthModal'
 
 const NAV_LINKS = [
   { href: '/pepites', label: 'Pépites' },
-  { href: '/villages', label: 'Villages' },
   { href: '/journeys', label: 'Voyages' },
   { href: '/itineraries', label: 'Itinéraires' },
 ]
