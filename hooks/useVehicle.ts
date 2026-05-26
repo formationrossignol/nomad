@@ -18,10 +18,12 @@ export function useVehicle() {
       })
   }, [])
 
-  const saveVehicle = useCallback(async (v: Omit<SavedVehicle, 'id' | 'created_at'>) => {
+  const saveVehicle = useCallback(async (v: Omit<SavedVehicle, 'id' | 'user_id' | 'created_at'>) => {
+    const { data: { user } } = await supabase.auth.getUser()
+    if (!user) return false
     const { data, error } = await supabase
       .from('user_vehicles')
-      .upsert(v, { onConflict: 'user_id' })
+      .upsert({ ...v, user_id: user.id }, { onConflict: 'user_id' })
       .select()
       .single()
     if (!error && data) setVehicle(data as SavedVehicle)
