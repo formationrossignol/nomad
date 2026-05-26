@@ -28,7 +28,7 @@ const allRegions = getUniquePepiteRegions()
 
 export default function PepitesPage() {
   const { user } = useAuth()
-  const { visitedSlugs, toggle } = useVisitedPepites()
+  const { visitedSlugs, toggleVisited } = useVisitedPepites()
   const [search, setSearch] = useState('')
   const [categoryFilter, setCategoryFilter] = useState<FilterOption>('Tous')
   const [activeRegion, setActiveRegion] = useState<string | null>(null)
@@ -147,7 +147,7 @@ export default function PepitesPage() {
                   key={p.id}
                   pepite={p}
                   visited={visitedSlugs.has(p.slug)}
-                  onToggleVisited={user ? () => toggle(p.slug) : undefined}
+                  onToggleVisited={user ? () => toggleVisited(p.slug) : undefined}
                   active={selected?.id === p.id}
                   onClick={() => setSelected(selected?.id === p.id ? null : p)}
                 />
