@@ -69,6 +69,7 @@ interface Props {
   pepites: Pepite[]
   selected: Pepite | null
   onSelect: (p: Pepite) => void
+  className?: string
 }
 
 function ClusterForcer() {
@@ -79,9 +80,9 @@ function ClusterForcer() {
   return null
 }
 
-export default function PepitesMapInner({ pepites, selected, onSelect }: Props) {
+export default function PepitesMapInner({ pepites, selected, onSelect, className = '' }: Props) {
   return (
-    <MapContainer center={FRANCE_CENTER} zoom={6} className="h-full w-full" zoomControl={false}>
+    <MapContainer center={FRANCE_CENTER} zoom={6} className={`h-full w-full ${className}`} zoomControl={false}>
       <TileLayer
         url={TILE_URL}
         attribution='© <a href="https://www.maptiler.com">MapTiler</a> © <a href="https://www.openstreetmap.org">OpenStreetMap</a>'

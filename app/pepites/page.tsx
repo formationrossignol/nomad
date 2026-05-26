@@ -59,7 +59,7 @@ export default function PepitesPage() {
         <div className="w-[60%] flex-shrink-0 relative">
           <PepitesMap
             pepites={filtered}
-            activePepite={selected}
+            selected={selected}
             onSelect={setSelected}
             className="h-full"
           />

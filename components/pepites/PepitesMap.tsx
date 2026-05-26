@@ -12,6 +12,7 @@ interface Props {
   pepites: Pepite[]
   selected: Pepite | null
   onSelect: (p: Pepite) => void
+  className?: string
 }
 
 export function PepitesMap(props: Props) {
