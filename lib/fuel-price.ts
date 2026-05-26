@@ -23,7 +23,7 @@ export const ENERGIE_TO_FUEL: Record<string, string> = {
 
 export interface FuelPriceResult {
   price: number
-  count: number
+  stationCount: number
   period: 'today' | 'yesterday' | 'latest'
   date: string | null
   col: string
@@ -63,17 +63,17 @@ export async function getFuelPrice(fuelParam: string): Promise<FuelPriceResult |
 
   const todayResult = await fetchAvg(col, todayStart)
   if (todayResult && todayResult.count >= 100) {
-    return { price: todayResult.avg, count: todayResult.count, period: 'today', date: now.toISOString().slice(0, 10), col }
+    return { price: todayResult.avg, stationCount: todayResult.count, period: 'today', date: now.toISOString().slice(0, 10), col }
   }
 
   const yResult = await fetchAvg(col, yesterdayStart, todayStart)
   if (yResult && yResult.count >= 50) {
-    return { price: yResult.avg, count: yResult.count, period: 'yesterday', date: yesterday.toISOString().slice(0, 10), col }
+    return { price: yResult.avg, stationCount: yResult.count, period: 'yesterday', date: yesterday.toISOString().slice(0, 10), col }
   }
 
   const allResult = await fetchAvg(col, '2020-01-01T00:00:00Z')
   if (allResult) {
-    return { price: allResult.avg, count: allResult.count, period: 'latest', date: null, col }
+    return { price: allResult.avg, stationCount: allResult.count, period: 'latest', date: null, col }
   }
 
   return null
