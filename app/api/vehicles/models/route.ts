@@ -36,7 +36,7 @@ export async function GET(req: NextRequest) {
 
   while (true) {
     const url = `${BASE}?Marque__exact=${encodeURIComponent(brand)}&page_size=${PAGE_SIZE}&page=${page}`
-    const res = await fetch(url, { next: { revalidate: 3600 } })
+    const res = await fetch(url, { cache: 'no-store' })
     if (!res.ok) break
 
     const json = await res.json()

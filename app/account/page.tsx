@@ -98,9 +98,9 @@ function VehicleSearch() {
     if (brandQuery.length < 2) { setBrands([]); return }
     const t = setTimeout(() => {
       fetch(`/api/vehicles/brands?q=${encodeURIComponent(brandQuery)}`)
-        .then(r => r.ok ? r.json() : { brands: [] })
-        .then(d => setBrands(d.brands ?? []))
-        .catch(() => {})
+        .then(r => r.json())
+        .then(d => { console.log('[brands]', d); setBrands(d.brands ?? []) })
+        .catch(e => console.error('[brands error]', e))
     }, 300)
     return () => clearTimeout(t)
   }, [brandQuery])
@@ -110,9 +110,9 @@ function VehicleSearch() {
     setModelQuery('')
     setSelectedModel(null)
     fetch(`/api/vehicles/models?brand=${encodeURIComponent(selectedBrand)}`)
-      .then(r => r.ok ? r.json() : { models: [] })
-      .then(d => setModels(d.models ?? []))
-      .catch(() => {})
+      .then(r => r.json())
+      .then(d => { console.log('[models]', d); setModels(d.models ?? []) })
+      .catch(e => console.error('[models error]', e))
   }, [selectedBrand])
 
   async function handleSave() {
