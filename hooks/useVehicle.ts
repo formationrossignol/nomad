@@ -31,7 +31,9 @@ export function useVehicle() {
   }, [])
 
   const deleteVehicle = useCallback(async () => {
-    await supabase.from('user_vehicles').delete().neq('id', '')
+    const { data: { user } } = await supabase.auth.getUser()
+    if (!user) return
+    await supabase.from('user_vehicles').delete().eq('user_id', user.id)
     setVehicle(null)
   }, [])
 

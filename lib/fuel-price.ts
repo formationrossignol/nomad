@@ -29,26 +29,28 @@ export interface FuelPriceResult {
   col: string
 }
 
-function dayStart(d: Date): string {
-  return `${d.toISOString().slice(0, 10)}T00:00:00Z`
+function isoDate(d: Date): string {
+  return d.toISOString().slice(0, 10)
 }
 
-async function fetchAvg(col: string, since: string, before?: string): Promise<{ avg: number; count: number } | null> {
-  let where = `${col}_prix > 0 and ${col}_maj > "${since}"`
-  if (before) where += ` and ${col}_maj < "${before}"`
+async function fetchPrices(col: string, dateFilter?: string): Promise<{ avg: number; count: number; date: string | null } | null> {
+  const priceCol = `${col}_prix`
+  const majCol = `${col}_maj`
+  let where = `${priceCol} > 0`
+  if (dateFilter) where += ` AND ${majCol} >= date'${dateFilter}'`
 
-  const url = `${BASE}?select=${col}_prix,${col}_maj&where=${encodeURIComponent(where)}&limit=15000`
+  const url = `${BASE}?select=${priceCol},${majCol}&where=${encodeURIComponent(where)}&limit=15000&order_by=${majCol}+desc`
   const res = await fetch(url, { next: { revalidate: 3600 } })
   if (!res.ok) return null
 
   const json = await res.json()
-  const prices: number[] = (json.results ?? [])
-    .map((r: Record<string, unknown>) => r[`${col}_prix`] as number)
-    .filter((p: number) => p > 0)
-
+  const rows: Array<Record<string, unknown>> = json.results ?? []
+  const prices = rows.map(r => r[priceCol] as number).filter(p => p > 0)
   if (prices.length === 0) return null
+
   const avg = Math.round((prices.reduce((s, p) => s + p, 0) / prices.length) * 1000) / 1000
-  return { avg, count: prices.length }
+  const latestMaj = rows[0]?.[majCol] as string | undefined
+  return { avg, count: prices.length, date: latestMaj ? latestMaj.slice(0, 10) : null }
 }
 
 export async function getFuelPrice(fuelParam: string): Promise<FuelPriceResult | null> {
@@ -56,24 +58,22 @@ export async function getFuelPrice(fuelParam: string): Promise<FuelPriceResult |
   if (!col) return null
 
   const now = new Date()
-  const todayStart = dayStart(now)
-  const yesterday = new Date(now)
-  yesterday.setDate(yesterday.getDate() - 1)
-  const yesterdayStart = dayStart(yesterday)
+  const today = isoDate(now)
+  const yesterday = isoDate(new Date(now.getTime() - 86400000))
 
-  const todayResult = await fetchAvg(col, todayStart)
-  if (todayResult && todayResult.count >= 100) {
-    return { price: todayResult.avg, stationCount: todayResult.count, period: 'today', date: now.toISOString().slice(0, 10), col }
+  const todayResult = await fetchPrices(col, today)
+  if (todayResult && todayResult.count >= 50) {
+    return { price: todayResult.avg, stationCount: todayResult.count, period: 'today', date: today, col }
   }
 
-  const yResult = await fetchAvg(col, yesterdayStart, todayStart)
-  if (yResult && yResult.count >= 50) {
-    return { price: yResult.avg, stationCount: yResult.count, period: 'yesterday', date: yesterday.toISOString().slice(0, 10), col }
+  const yResult = await fetchPrices(col, yesterday)
+  if (yResult && yResult.count >= 20) {
+    return { price: yResult.avg, stationCount: yResult.count, period: 'yesterday', date: yesterday, col }
   }
 
-  const allResult = await fetchAvg(col, '2020-01-01T00:00:00Z')
+  const allResult = await fetchPrices(col)
   if (allResult) {
-    return { price: allResult.avg, stationCount: allResult.count, period: 'latest', date: null, col }
+    return { price: allResult.avg, stationCount: allResult.count, period: 'latest', date: allResult.date, col }
   }
 
   return null
